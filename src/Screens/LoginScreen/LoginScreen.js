@@ -2,7 +2,6 @@ import {View} from "cherries";
 import css from "./LoginScreen.module.css";
 import {ButtonView,SwitchField,InputField} from "components";
 import {userlogin0} from "assets";
-import { language } from "localdb";
 
 
 export default function LoginScreen(props){
@@ -41,6 +40,7 @@ export default function LoginScreen(props){
         parent:fieldsEl,
         styleId:1,
         label:language.login,
+        style:"margin:auto",
         onClick:()=>{
             console.log(input);
         },

@@ -27,3 +27,9 @@
     top:0;bottom:0;margin:auto 0;
     right:2.133em;
 }
+
+@media(min-width:15cm){
+    .buttonview{
+        max-width:80em;
+    }
+}
