@@ -1,0 +1,10 @@
+{
+    "$id":"fr",
+    "$name":"français",
+    "username":"nom d'utilisateur",
+    "poweredby":"powered by",
+    "pass":"passer",
+    "password":"mot de passe",
+    "rememberme":"mémoriser mes informations",
+    "login":"se connecter"
+}

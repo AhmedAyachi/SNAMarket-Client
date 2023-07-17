@@ -15,6 +15,8 @@
     <!-- <preference name="android-targetSdkVersion" value=""/> -->
     <!-- <preference name="android-maxSdkVersion" value=""/> -->
     <preference name="BackgroundColor" value="#ffffff"/>
+    <preference name="StatusBarOverlaysWebView" value="false"/>
+    <preference name="StatusBarBackgroundColor" value="#016c34"/>
     <!-- <icon src=""/> -->
     <platform name="android">
         <edit-config 
@@ -29,7 +31,6 @@
     </platform>
     <platform name="ios">
         <preference name="UseSwiftLanguageVersion" value="5"/>
-        <preference name="StatusBarOverlaysWebView" value="false"/>
         <!-- <icon src="src/Assets/Icon/Icon_20x1.png" width="20"/>
         <icon src="src/Assets/Icon/Icon_20x2.png" width="40"/>
         <icon src="src/Assets/Icon/Icon_20x3.png" width="60"/>

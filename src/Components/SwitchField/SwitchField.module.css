@@ -1,0 +1,21 @@
+.switchfield{
+    max-width:100%;
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+    align-items:center;
+}
+.label{
+    flex:1;
+    font-size:3em;
+    font-weight:700;
+    white-space:normal;
+    color:var(--mainColor);
+    overflow-x:auto;
+}
+.label::first-letter{
+    text-transform:uppercase;
+}
+.switch{
+    margin-left:2em;
+}

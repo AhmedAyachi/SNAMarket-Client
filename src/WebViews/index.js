@@ -1,14 +1,9 @@
 import "./index.css";
-import {langdata} from "resources";
+import * as localdb from "localdb";
 
 
 function onDeviceReady(){
-    WebView.useStore(store=>{
-        const langname=store.langname||"english";
-        const language=langdata[langname];
-        language.$name=langname;
-        window.language=Object.freeze(language);
-    });
+    window.language=Object.freeze(localdb.language);
     if(cordova.platformId==="ios"){
         window.addEventListener("touchstart",()=>{
             const {activeElement}=document;

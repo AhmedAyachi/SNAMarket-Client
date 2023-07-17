@@ -1,7 +1,5 @@
 
 
-export {default as langdata} from "./Language.json";
-
 export const makeStatusBarTranslucent=(styleId)=>{
     if(cordova.platformId!=="browser"){
         StatusBar.show();

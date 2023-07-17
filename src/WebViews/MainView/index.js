@@ -6,7 +6,7 @@ import WebViews from "../WebViews";
 
 
 function onDeviceReady(){
-    makeStatusBarTranslucent();
+    //makeStatusBarTranslucent();
     WebView.defineWebViews(WebViews);
     WebView.initiateStore(store,()=>{
         MainView({parent:document.body});

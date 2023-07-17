@@ -1,5 +1,6 @@
 import {View} from "cherries";
 import css from "./MainView.module.css";
+import {LoginScreen} from "screens";
 
 
 export default function MainView(props){
@@ -7,8 +8,8 @@ export default function MainView(props){
     const mainview=View({parent,id:"webview",className:css.mainview});
 
     mainview.innateHTML=`
-        <p>app created with create-cordova-app command</p>
     `;
+    LoginScreen({parent:mainview});
     
     return mainview;
 }

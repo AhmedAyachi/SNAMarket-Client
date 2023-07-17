@@ -1,0 +1,29 @@
+.buttonview{
+    position:relative;
+    max-width:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:4em;
+    font-size:1em;
+    font-weight:700;
+    border:none;
+    border-radius:10em;
+    overflow:hidden;
+}
+.icon{
+    margin-right:2em;
+}
+.buttonview>label{
+    font-family:var(--majorFont);
+    font-weight:inherit;
+    font-size:3.733em;
+    text-transform:uppercase;
+    white-space:nowrap;
+    color:white;
+}
+.alertbadge{
+    position:absolute;
+    top:0;bottom:0;margin:auto 0;
+    right:2.133em;
+}
