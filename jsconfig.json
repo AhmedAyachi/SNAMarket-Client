@@ -1,0 +1,13 @@
+{
+    "compilerOptions":{
+        "baseUrl":"./src/",
+        "paths":{
+            "assets":["Assets/index.js"],
+            "screens":["Screens/index.js"],
+            "actions":["Store/Actions/index.js"],
+            "resources":["Resources/index.js"],
+            "components":["Components/index.js"],
+            "localdb":["LocalDB/index.js"]
+        }
+    }
+}
