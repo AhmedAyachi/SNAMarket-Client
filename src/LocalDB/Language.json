@@ -1,6 +1,11 @@
 {
     "$id":"fr",
     "$name":"français",
+    "ruminants":"ruminants",
+    "poultry":"volailles",
+    "rabbit":"lapin",
+    "finditem":"trouver un article",
+    "productcatalog":"catalogue produits",
     "username":"nom d'utilisateur",
     "poweredby":"powered by",
     "pass":"passer",

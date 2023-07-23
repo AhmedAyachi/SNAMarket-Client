@@ -24,7 +24,8 @@ document.addEventListener("deviceready",onDeviceReady,false);
     });
     [
         "mainFont","majorFont","minorFont",
-        "mainColor","majorColor","minorColor","backgroundColor",
+        "mainColor","majorColor","minorColor",
+        "textColor","accentColor","backgroundColor",
     ].forEach(name=>{
         Object.defineProperty(window,name,{
             value:style.getPropertyValue(`--${name}`),

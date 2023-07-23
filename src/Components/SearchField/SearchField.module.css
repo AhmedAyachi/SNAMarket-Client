@@ -1,0 +1,28 @@
+.searchfield{
+    max-width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+.field{
+    flex:1;
+    font-size:4em;
+    color:inherit;
+}
+.field>input{
+    width:100%;
+    height:100%;
+    font-size:inherit;
+    color:inherit;
+    border:none;
+    background-color:transparent;
+}
+.field>input::placeholder{
+    color:inherit;
+    opacity:0.5;
+    text-transform:capitalize;
+}
+.searchbtn{
+    width:7em;
+    margin-left:3em;
+}

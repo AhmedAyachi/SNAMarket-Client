@@ -6,7 +6,6 @@
     flex-direction:column;
     justify-content:flex-end;
     align-items:center;
-    background-image:url("https://images7.alphacoders.com/718/718206.jpg");
     background-position:center;
     background-size:cover;
     background-repeat:no-repeat;
@@ -24,7 +23,7 @@
     padding:0 8em;
     margin:auto 5em;
     border-radius:2em;
-    background-color:rgba(255,255,255,0.5);
+    background-color:rgba(255,255,255,0.75);
 }
 .image{
     width:20em;

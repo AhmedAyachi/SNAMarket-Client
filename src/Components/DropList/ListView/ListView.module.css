@@ -1,0 +1,37 @@
+.listview{
+    position:absolute;
+    width:100%;
+    max-height:40em;
+    bottom:0;
+    border-bottom-left-radius:2em;
+    border-bottom-right-radius:2em;
+    background-color:var(--backgroundColor);
+    box-shadow:0 0 5px rgba(0,0,0,0.1);
+    translate:0 105%;
+}
+.listview>li{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:2em 3em;
+}
+.label{
+    flex:1;
+    font-size:4em;
+    text-transform:capitalize;
+}
+.icon{
+    width:4em;
+    margin-left:2em;
+}
+
+@keyframes slideDown {
+    from {
+        opacity:0;
+        translate:0 100%;
+    }
+    to {
+        opacity:1;
+        translate:0 105%;
+    }
+}

@@ -14,25 +14,32 @@ module.exports=(event)=>{
     const isDevEnv=env.startsWith("dev");
     const isTestEnv=env.startsWith("test");
     const isProdEnv=env.startsWith("prod");
-    return webviews.map(webview=>({
+    return {
         mode:isProdEnv?"production":"development",
-        entry:path.resolve("./src/WebViews/",webview.name,"index.js"),
+        entry:(()=>{
+            const entry={};
+            webviews.forEach(webview=>{
+                entry[webview.name]=path.resolve("./src/WebViews/",webview.name,"index.js");
+            });
+            return entry;
+        })(),
         output:{
             path:path.resolve(__dirname,"www"),
-            filename:`${webview.name}.js`,
+            filename:"[name].js",
         },
         plugins:[
             new webpack.DefinePlugin({
                 //Define more env-vars here
                 isDevEnv,isTestEnv,isProdEnv,
             }),
-            new HTMLPlugin({
+            ...webviews.map(webview=>new HTMLPlugin({
                 templateContent,
                 title:webview.name,
                 inject:"body",
                 minify:isProdEnv,
                 filename:webview.file,
-            }),
+                chunks:[webview.name],
+            })),
             new CopyPlugin({
                 patterns:[{from:"src/Assets/Fonts",to:"Fonts"}],
             }),
@@ -57,7 +64,10 @@ module.exports=(event)=>{
                 },
                 {
                     test: /\.(jpe?g|png|gif|svg|mp4)$/i,
-                    use:"url-loader",
+                    loader:"file-loader",
+                    options:{
+                        name:"Assets/[name]_[hash].[ext]",
+                    },
                 },
             ]
         },
@@ -86,7 +96,7 @@ module.exports=(event)=>{
                 "localdb":isDevEnv&&path.resolve(__dirname,"src/LocalDB/index.js"),
             },
         },
-    }));
+    };
 }
 
 const templateContent=`

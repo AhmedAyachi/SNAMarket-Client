@@ -1,9 +1,11 @@
 .mainview{
-    display:flex;
-    justify-content:center;
-    align-items:center;
     background-color:var(--backgroundColor);
+    --spacingHorizontal:4em;
 }
-.mainview>p{
-    font-size:3em;
+.header{
+    padding:var(--spacingHorizontal) !important;
+    background-color:var(--mainColor);
+}
+.header>*{
+    filter:invert(1);
 }
