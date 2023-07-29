@@ -14,15 +14,18 @@ export default function HomeScreen(props){
     `;
     SearchField({
         parent:homescreen.header,
+        className:css.searchfield,
         placeholder:language.finditem,
     });
     H.fetchProductTypes().then(producttypes=>{
         console.log(producttypes);
         DropList({
             parent:homescreen.header,
+            labelHidden:true,
+            iconColor:"white",
             options:producttypes?.map(type=>({
                 id:type.id,
-                label:language[type.name],
+                //label:language[type.name],
                 icon:ProductType.icon[type.id],
             })),
         });

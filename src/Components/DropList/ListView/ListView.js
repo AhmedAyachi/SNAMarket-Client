@@ -1,26 +1,17 @@
-import {View,map} from "cherries";
+import {FlatList} from "cherries";
 import css from "./ListView.module.css";
+import OptionView from "./OptionView/OptionView";
 
 
 export default function ListView(props){
     const {parent,options,onChange}=props;
-    const listview=View({
-        parent,tag:"ul",
+    const listview=FlatList({
+        parent,data:options,
         className:css.listview,
+        renderItem:({parent,item})=>OptionView({parent,option:item,onPick:onChange}),
     });
 
     listview.beforeEndHTML=`
-        ${map(options,()=>`
-            <li>
-                <text class="${css.label}">${label}</text>
-                ${icon?`
-                    <img 
-                        class="${css.icon}" 
-                        src="${typeof(icon)==="function"?icon():icon}"
-                    />
-                `:""}
-            </li>
-        `)}
     `;
 
     return listview;

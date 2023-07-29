@@ -1,29 +1,18 @@
 .listview{
     position:absolute;
-    width:100%;
+    max-width:unset !important;
+    width:fit-content;
+    min-width:100%;
     max-height:40em;
+    left:0;right:0;margin:0 auto;
     bottom:0;
     border-bottom-left-radius:2em;
     border-bottom-right-radius:2em;
-    background-color:var(--backgroundColor);
+    background:linear-gradient(to bottom,transparent,rgba(0,0,0,0.1));
     box-shadow:0 0 5px rgba(0,0,0,0.1);
-    translate:0 105%;
+    translate:0 100%;
 }
-.listview>li{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:2em 3em;
-}
-.label{
-    flex:1;
-    font-size:4em;
-    text-transform:capitalize;
-}
-.icon{
-    width:4em;
-    margin-left:2em;
-}
+
 
 @keyframes slideDown {
     from {
@@ -32,6 +21,6 @@
     }
     to {
         opacity:1;
-        translate:0 105%;
+        translate:0 100%;
     }
 }

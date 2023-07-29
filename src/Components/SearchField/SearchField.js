@@ -6,8 +6,8 @@ import {magnifier0} from "assets";
 export default function SearchField(props){
     const {parent,tintColor=backgroundColor,onSearch}=props;
     const searchfield=View({
-        parent,className:css.searchfield,
-        style:{color:tintColor},
+        parent,style:{color:tintColor},
+        className:`${css.searchfield} ${props.className||""}`,
     });
 
     searchfield.innateHTML=`

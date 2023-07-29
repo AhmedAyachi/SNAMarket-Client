@@ -9,6 +9,13 @@
 }
 .header{
     max-width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
     padding:var(--spacingHorizontal);
     background-color:var(--mainColor);
+}
+.searchfield{
+    flex:1;
+    margin-right:3em;
 }

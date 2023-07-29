@@ -1,0 +1,16 @@
+.optionview{
+    max-width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:2em 3em;
+}
+.label{
+    flex:1;
+    font-size:4em;
+    text-transform:capitalize;
+}
+.icon{
+    width:4em;
+    margin-left:2em;
+}
