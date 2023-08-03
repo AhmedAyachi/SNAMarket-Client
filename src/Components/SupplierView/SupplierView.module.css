@@ -1,0 +1,26 @@
+.supplierview{
+    max-width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:stretch;
+    padding:2em;
+    border-radius:1.067em;
+    box-shadow:0 0 20px rgba(0,0,0,0.08);
+}
+.col0{
+    display:flex;
+    justify-content:flex-start;
+    align-items:center;
+}
+.col1{
+    display:flex;
+    justify-content:flex-end;
+    align-items:center;
+}
+.logo{
+    width:30em;
+    margin-right:2em;
+}
+.name{
+    font-size:4em;
+}

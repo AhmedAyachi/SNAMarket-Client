@@ -7,7 +7,7 @@
     align-items:stretch;
     overflow:auto hidden;
 }
-.header{
+.homescreen>header{
     max-width:100%;
     display:flex;
     justify-content:space-between;
@@ -15,7 +15,16 @@
     padding:var(--spacingHorizontal);
     background-color:var(--mainColor);
 }
+.homescreen>main{
+    max-width:100%;
+    flex:1;
+    padding:var(--spacingHorizontal);
+    overflow:hidden;
+}
 .searchfield{
     flex:1;
     margin-right:3em;
+}
+.listcontainer>*{
+    margin-bottom:2.667em;
 }

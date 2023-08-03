@@ -1,7 +1,6 @@
 import {View,DrawerNavigator} from "cherries";
 import css from "./MainView.module.css";
 import {HomeScreen,LoginScreen} from "screens";
-import {LoadingView} from "components";
 
 
 export default function MainView(props){
@@ -12,7 +11,6 @@ export default function MainView(props){
     `;
 
     if(user){
-        const loadingview=LoadingView();
         DrawerNavigator({
             parent:mainview,
             headerClassName:css.header,
@@ -23,7 +21,6 @@ export default function MainView(props){
             }),
             initialId:"productcatalog",
         });
-        setTimeout(loadingview.unmount,300);
     }
     else{
         LoginScreen({parent:mainview});

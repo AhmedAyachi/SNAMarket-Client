@@ -24,7 +24,6 @@ export default function DropList(props){
                 onChange:(option)=>{
                     droplist.setOption(option.id);
                     droplist.toggle(false);
-                    onChange&&onChange(option);
                 },
             });
         }
@@ -48,6 +47,7 @@ export default function DropList(props){
                 parent:droplist,value:option,
                 labelHidden,iconColor,
             });
+            onChange&&onChange(option);
         }
     }
     droplist.setOption(options[0].id);
