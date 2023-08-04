@@ -6,6 +6,7 @@ import WebViews from "../WebViews";
 
 function onDeviceReady(){
     StatusBar.styleLightContent();
+    StatusBar.show();
     WebView.defineWebViews(WebViews);
     WebView.initiateStore(store,()=>{
         MainView({parent:document.body,store});

@@ -36,7 +36,8 @@
       "cordova-plugin-webview": {}
     },
     "platforms": [
-      "browser"
+      "browser",
+      "android"
     ]
   },
   "dependencies": {
