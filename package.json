@@ -12,6 +12,7 @@
   "license": "ISC",
   "devDependencies": {
     "copy-webpack-plugin": "^11.0.0",
+    "cordova-android": "^10.1.2",
     "cordova-browser": "^7.0.0",
     "cordova-ios": "^7.0.0",
     "cordova-plugin-appminimize": "^1.0.1",
@@ -35,8 +36,7 @@
       "cordova-plugin-webview": {}
     },
     "platforms": [
-      "browser",
-      "ios"
+      "browser"
     ]
   },
   "dependencies": {

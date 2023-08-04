@@ -15,16 +15,26 @@
     padding:var(--spacingHorizontal);
     background-color:var(--mainColor);
 }
-.homescreen>main{
+.tabnavigaotr{
     max-width:100%;
     flex:1;
-    padding:var(--spacingHorizontal);
     overflow:hidden;
 }
 .searchfield{
     flex:1;
-    margin-right:3em;
+}
+.tabnavheader{
+    background-color:var(--backgroundColor);
+}
+.flatlist{
+    height:100%;
+}
+.listcontainer{
+    padding:0 var(--spacingHorizontal);
 }
 .listcontainer>*{
-    margin-bottom:2.667em;
+    margin-bottom:5.333em;
+}
+.listcontainer>*:first-child{
+    margin-top:5.333em;
 }

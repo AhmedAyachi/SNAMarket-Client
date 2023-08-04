@@ -1,4 +1,4 @@
-import {View,FlatList} from "cherries";
+import {View,FlatList,TabNavigator, fadeIn} from "cherries";
 import css from "./HomeScreen.module.css";
 import {SupplierView,DropList,SearchField,LoadingView} from "components";
 import {ProductType} from "resources";
@@ -11,7 +11,6 @@ export default function HomeScreen(props){
 
     homescreen.innateHTML=`
         <header ref="header"></header>
-        <main ref="mainEl"></main>
     `;
     SearchField({
         parent:homescreen.header,
@@ -21,24 +20,27 @@ export default function HomeScreen(props){
     
     const loadingview=LoadingView();
     H.fetchProductTypes().then(producttypes=>{
-        DropList({
-            parent:homescreen.header,
-            labelHidden:true,
-            iconColor:"white",
-            options:producttypes?.map(type=>({
+        TabNavigator({
+            parent:homescreen,
+            className:css.tabnavigaotr,
+            headerClassName:css.tabnavheader,
+            tintColor:mainColor,
+            tabs:producttypes?.map(type=>({
                 id:type.id,
                 //label:language[type.name],
                 icon:ProductType.icon[type.id],
+                renderContent:({parent})=>{
+                    const flatlist=FlatList({
+                        parent,
+                        className:css.flatlist,
+                        containerClassName:css.listcontainer,
+                        data:type.suppliers,
+                        renderItem:({parent,item})=>SupplierView({parent,supplier:item}),
+                    });
+                    fadeIn(flatlist,500);
+                    return flatlist;
+                },
             })),
-            onChange:({id})=>{
-                const {suppliers}=producttypes.find(type=>type.id===id);
-                FlatList({
-                    parent:homescreen.mainEl,
-                    containerClassName:css.listcontainer,
-                    data:suppliers,
-                    renderItem:({parent,item})=>SupplierView({parent,supplier:item}),
-                });
-            },
         });
         console.log(producttypes);
         loadingview.unmount();

@@ -1,0 +1,25 @@
+.itemview{
+    max-width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:2em 4em;
+}
+.itemview:first-of-type,.itemview:last-of-type{
+    margin-top:2em;
+}
+.name{
+    font-size:5em;
+    font-weight:400;
+}
+.price{
+    font-size:5em;
+    text-transform:uppercase;
+}
+
+
+@media(hover:none){
+    .itemview:active{
+        background-color:rgba(0,0,0,0.05);
+    }
+}

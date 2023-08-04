@@ -1,6 +1,12 @@
 {
     "$id":"fr",
     "$name":"français",
+    "td":"dt",
+    "news":"actualités",
+    "events":"évènements",
+    "recipes":"recettes",
+    "company":"entreprise",
+    "commitment":"engagement",
     "ruminants":"ruminants",
     "poultry":"volailles",
     "rabbit":"lapin",

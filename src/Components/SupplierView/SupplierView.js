@@ -1,18 +1,28 @@
-import {View} from "cherries";
+import {AccordionView} from "cherries";
 import css from "./SupplierView.module.css";
+import Header from "./Header/Header";
+import ProductList from "./ProductList/ProductList"; 
 
 
 export default function SupplierView(props){
     const {parent,supplier}=props;
-    const supplierview=View({parent,className:css.supplierview});
+    const supplierview=AccordionView({
+        parent,className:css.supplierview,
+        renderHeader:(parent)=>Header({parent,supplier}),
+        renderContent:(parent)=>ProductList({parent,supplier}),
+        onOpen:()=>{
+            const {header}=supplierview;
+            header.toggleIndicator(true);
+        },
+        onClose:()=>{
+            const {header}=supplierview;
+            header.toggleIndicator(false);
+        },
+    });
 
-    supplierview.innateHTML=`
-        <div class="${css.col0}">
-            <img class="${css.logo}" src="${supplier.logo}"/>
-            <text class="${css.name}">${supplier.name}</text>
-        </div>
-        <div class="${css.col1}"></div>
+    supplierview.beforeEndHTML=`
     `;
+    
 
     return supplierview;
 }
