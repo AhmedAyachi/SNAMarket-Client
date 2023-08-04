@@ -1,6 +1,6 @@
 
 
-export {default as SupplierView} from "./SupplierView/SupplierView";
+export {default as SupplierAcd} from "./SupplierAcd/SupplierAcd";
 export {default as DropList} from "./DropList/DropList";
 export {default as SearchField} from "./SearchField/SearchField";
 export {default as LoadingView} from "./LoadingView/LoadingView";

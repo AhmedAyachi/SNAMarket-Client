@@ -15,7 +15,6 @@ export default function Header(props){
         <div class="${css.col1}">
             <img ref="indicator" class="${css.indicator}" src="${chevron0(textColor)}"/>
         </div>
-        <img class="${css.bgimg}" src="${supplier.logo}"/>
     `;
 
     header.toggleIndicator=(open)=>{

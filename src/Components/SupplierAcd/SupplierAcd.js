@@ -1,28 +1,30 @@
 import {AccordionView} from "cherries";
-import css from "./SupplierView.module.css";
+import css from "./SupplierAcd.module.css";
 import Header from "./Header/Header";
 import ProductList from "./ProductList/ProductList"; 
 
 
-export default function SupplierView(props){
+export default function SupplierAcd(props){
     const {parent,supplier}=props;
-    const supplierview=AccordionView({
-        parent,className:css.supplierview,
+    const supplieracd=AccordionView({
+        parent,className:css.supplieracd,
+        headerClassName:css.headercontainer,
         renderHeader:(parent)=>Header({parent,supplier}),
         renderContent:(parent)=>ProductList({parent,supplier}),
+        separate:false,
         onOpen:()=>{
-            const {header}=supplierview;
+            const {header}=supplieracd;
             header.toggleIndicator(true);
         },
         onClose:()=>{
-            const {header}=supplierview;
+            const {header}=supplieracd;
             header.toggleIndicator(false);
         },
     });
 
-    supplierview.beforeEndHTML=`
+    supplieracd.beforeEndHTML=`
     `;
     
 
-    return supplierview;
+    return supplieracd;
 }

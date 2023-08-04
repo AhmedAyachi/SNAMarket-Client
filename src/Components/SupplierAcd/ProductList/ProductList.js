@@ -15,7 +15,7 @@ export default function ProductList(props){
 
     productlist.beforeEndHTML=`
     `;
-    const loadingview=LoadingView({parent:productlist});
+    const loadingview=LoadingView({parent:productlist,className:css.loadingview});
     H.fetchProducts(supplier).then(products=>{
         productlist.addItems(products);
         loadingview.unmount();

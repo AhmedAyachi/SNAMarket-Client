@@ -1,6 +1,6 @@
 import {View,FlatList,TabNavigator, fadeIn} from "cherries";
 import css from "./HomeScreen.module.css";
-import {SupplierView,DropList,SearchField,LoadingView} from "components";
+import {SupplierAcd,SearchField,LoadingView} from "components";
 import {ProductType} from "resources";
 import * as H from "./Hooks";
 
@@ -35,7 +35,7 @@ export default function HomeScreen(props){
                         className:css.flatlist,
                         containerClassName:css.listcontainer,
                         data:type.suppliers,
-                        renderItem:({parent,item})=>SupplierView({parent,supplier:item}),
+                        renderItem:({parent,item})=>SupplierAcd({parent,supplier:item}),
                     });
                     fadeIn(flatlist,500);
                     return flatlist;
