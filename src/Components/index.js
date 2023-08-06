@@ -1,5 +1,6 @@
 
 
+export {default as MapView} from "./MapView/MapView";
 export {default as SupplierAcd} from "./SupplierAcd/SupplierAcd";
 export {default as DropList} from "./DropList/DropList";
 export {default as SearchField} from "./SearchField/SearchField";

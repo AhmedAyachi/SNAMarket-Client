@@ -1,6 +1,6 @@
 import {View,DrawerNavigator} from "cherries";
 import css from "./MainView.module.css";
-import {HomeScreen,LoginScreen} from "screens";
+import {CompanyScreen,HomeScreen,LoginScreen} from "screens";
 
 
 export default function MainView(props){
@@ -15,11 +15,11 @@ export default function MainView(props){
             parent:mainview,
             headerClassName:css.header,
             tintColor:mainColor,
+            initialId:"thecompany",
             routes:statics.routes.map(route=>{
                 route.title=language[route.id];
                 return route;
             }),
-            initialId:"productcatalog",
         });
     }
     else{
@@ -35,7 +35,7 @@ const statics={
         {id:"news"},
         {id:"events"},
         {id:"recipes"},
-        {id:"company"},
+        {id:"thecompany",component:CompanyScreen},
         {id:"commitment"},
     ],
 }

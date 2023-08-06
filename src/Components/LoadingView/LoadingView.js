@@ -14,9 +14,10 @@ export default function LoadingView(props={}){
         <img class="${css.icon}" src="${loading0(mainColor)}"/>
     `;
 
-    loadingview.unmount=()=>{
+    loadingview.unmount=(callback)=>{
         fadeOut(loadingview,()=>{
             loadingview.remove();
+            callback&&callback();
         });
     }
 
