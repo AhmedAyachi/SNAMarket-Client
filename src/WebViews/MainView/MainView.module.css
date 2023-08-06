@@ -1,5 +1,4 @@
 .mainview{
-    background-color:var(--backgroundColor);
     --spacingHorizontal:4em;
 }
 .header{

@@ -13,11 +13,12 @@
     <preference name="android-minSdkVersion" value="26"/>
     <!-- <preference name="android-targetSdkVersion" value=""/> -->
     <!-- <preference name="android-maxSdkVersion" value=""/> -->
-    <preference name="BackgroundColor" value="#ffffff"/>
+    <preference name="BackgroundColor" value="#016c34"/>
     <preference name="StatusBarOverlaysWebView" value="false"/>
     <preference name="StatusBarBackgroundColor" value="#016c34"/>
     <!-- <icon src=""/> -->
     <platform name="android">
+        <icon background="@color/mainColor" foreground="src/Assets/Icon/Foregound.png" density="xxxhdpi"/>
         <edit-config 
             file="app/src/main/AndroidManifest.xml"
             target="/manifest/application/activity[@android:name='MainActivity']"

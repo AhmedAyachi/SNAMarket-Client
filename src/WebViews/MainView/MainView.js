@@ -1,4 +1,4 @@
-import {View,DrawerNavigator} from "cherries";
+import {View,DrawerNavigator,fadeIn} from "cherries";
 import css from "./MainView.module.css";
 import {CompanyScreen,HomeScreen,LoginScreen} from "screens";
 
@@ -15,7 +15,7 @@ export default function MainView(props){
             parent:mainview,
             headerClassName:css.header,
             tintColor:mainColor,
-            initialId:"thecompany",
+            //initialId:"thecompany",
             routes:statics.routes.map(route=>{
                 route.title=language[route.id];
                 return route;
@@ -23,7 +23,7 @@ export default function MainView(props){
         });
     }
     else{
-        LoginScreen({parent:mainview});
+        fadeIn(LoginScreen({parent:mainview}),550);
     }
     
     return mainview;
