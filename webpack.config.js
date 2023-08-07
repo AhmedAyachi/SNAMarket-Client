@@ -110,7 +110,7 @@ const templateContent=`
     <title>Cherries App</title>
     <link rel="stylesheet" type="text/css" href="./Fonts/index.css"/>
 </head>
-<body style="background-color:#016c34">
+<body>
     <script type="text/javascript" src="cordova.js"></script>
 </body>
 </html>

@@ -6,7 +6,7 @@ import {chevron0} from "assets";
 
 export default function CompanyScreen(props){
     const {parent}=props;
-    const companyscreen=View({parent,className:css.companyscreen}),state={
+    const companyscreen=View({parent,tag:"main",className:css.companyscreen}),state={
         infoshown:true,
     };
 

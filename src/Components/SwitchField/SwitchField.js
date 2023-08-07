@@ -1,13 +1,13 @@
-import {View,Switch} from "cherries";
+import {Switch} from "cherries";
 import css from "./SwitchField.module.css";
+import {FieldView} from "components";
 
 
 export default function SwitchField(props){
-    const {parent,label,onChange}=props;
-    const switchfield=View({parent,className:css.switchfield});
+    const {parent,onChange}=props;
+    const switchfield=FieldView({...props,parent,className:css.switchfield});
 
-    switchfield.innateHTML=`
-        <text class="${css.label}">${label||""}</text>
+    switchfield.beforeEndHTML=`
     `;
     Switch({
         parent:switchfield,

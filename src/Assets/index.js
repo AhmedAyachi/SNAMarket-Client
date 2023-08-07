@@ -4,6 +4,8 @@ export {default as chick0} from "./Images/Chick_0.jpg";
 export {default as userlogin0} from "./Images/UserLogin_0.png";
 
 //Svgs:
+export {default as reset0} from "./Svgs/Reset_0";
+export {default as cross0} from "./Svgs/Cross_0";
 export {default as chevron0} from "./Svgs/Chevron_0";
 export {default as cow0} from "./Svgs/Cow_0";
 export {default as chicken0} from "./Svgs/Chicken_0";

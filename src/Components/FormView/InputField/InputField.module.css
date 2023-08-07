@@ -1,0 +1,54 @@
+.inputfield{
+    max-width:100%;
+}
+.container{
+    position:relative;
+    max-width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:nowrap;
+    border:var(--border);
+    border-radius:var(--borderRadius);
+    overflow:hidden;
+}
+.wrapper{
+    max-width:100%;
+    height:100%;
+    flex:1;
+    font-family:var(--mainFont);
+    overflow:hidden;
+}
+.input{
+    width:100%;
+    height:100%;
+    font-family:inherit;
+    font-size:4.8em;
+    text-align:inherit;
+    color:inherit;
+    border-radius:inherit;
+    background-color:transparent;
+    border:none;
+}
+textarea.input{
+    resize:none;
+}
+.input[type=name]{
+    text-transform:capitalize;
+}
+.icon{
+    width:6.4em;
+    margin-left:2em;
+}
+.datetime{
+    position:absolute;
+    width:100%;
+    height:100%;
+    top:0;
+    right:0;
+    opacity:0;
+}
+.datetime::-webkit-calendar-picker-indicator{
+    width:100%;
+    height:100%;
+}

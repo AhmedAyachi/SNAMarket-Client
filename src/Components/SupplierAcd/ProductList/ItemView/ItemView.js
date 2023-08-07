@@ -14,5 +14,14 @@ export default function ItemView(props){
         <text as="span" class="${css.price}">${product.price} ${language.td}</text>
     `;
 
+    itemview.onclick=()=>{
+        WebView.show({
+            id:"servicesite",
+            asModal:true,
+            modalStyle:{height:0.65},
+            message:{name:"order",product},
+        });
+    }
+
     return itemview;
 }

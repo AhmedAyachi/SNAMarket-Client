@@ -1,7 +1,7 @@
 
 
 module.exports=[
-    //{name:"SecondView"},
+    {name:"ServiceSite"},
 ].map((webview,i)=>({
     ...webview,
     id:webview.name.toLowerCase(),

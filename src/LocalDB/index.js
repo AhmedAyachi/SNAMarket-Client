@@ -30,6 +30,7 @@ export const suppliers=[
         name:"product "+(i+1)+(j+1),
         type:producttypes[(i+j)%producttypes.length].id,
         price:5+Math.floor(20*Math.random()),
+        granularities:["0.22mm","0.33mm","0.5mm"],
     })),
 }));
 
@@ -37,3 +38,11 @@ producttypes.forEach(producttype=>{
     const {id}=producttype;
     producttype.suppliers=suppliers.filter(({products})=>products.some(({type})=>type===id));
 });
+
+const orderstatuses=["pending","shipped","cancelled"];
+export const orders=new Array(5).fill().map((_,i)=>({
+    id:"order"+i,
+    date:"07/08/2023",
+    time:"12:15",
+    status:orderstatuses[i%orderstatuses.length],
+}));

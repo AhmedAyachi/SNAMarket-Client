@@ -7,7 +7,7 @@ import * as H from "./Hooks";
 
 export default function HomeScreen(props){
     const {parent}=props;
-    const homescreen=View({parent,className:css.homescreen});
+    const homescreen=View({parent,tag:"main",className:css.homescreen});
 
     homescreen.innateHTML=`
         <header ref="header"></header>

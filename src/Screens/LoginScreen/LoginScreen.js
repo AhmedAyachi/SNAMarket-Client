@@ -1,6 +1,6 @@
 import {View} from "cherries";
 import css from "./LoginScreen.module.css";
-import {ButtonView,SwitchField,InputField} from "components";
+import {ButtonView,SwitchField,TextInput} from "components";
 import {chick0,userlogin0} from "assets";
 import {setUser} from "actions";
 import * as H from "./Hooks";
@@ -9,7 +9,8 @@ import * as H from "./Hooks";
 export default function LoginScreen(props){
     const {parent}=props;
     const loginscreen=View({
-        parent,className:css.loginscreen,
+        parent,tag:"main",
+        className:css.loginscreen,
         style:{backgroundImage:`url(${chick0})`},
     }),state={
         input:{},
@@ -29,7 +30,7 @@ export default function LoginScreen(props){
 
     const {fieldsEl}=loginscreen;
     ["username","password"].forEach(id=>{
-        InputField({
+        TextInput({
             parent:fieldsEl,
             type:id,
             placeholder:language[id],
@@ -40,6 +41,7 @@ export default function LoginScreen(props){
     SwitchField({
         parent:fieldsEl,
         label:language.rememberme,
+        labelStyle:styles.rememberme,
         onChange:(value)=>{input.rememberme=value},
     });
     ButtonView({
@@ -66,4 +68,13 @@ export default function LoginScreen(props){
     }
 
     return loginscreen;
+}
+
+const styles={
+    rememberme:`
+        font-size:3em;
+        font-weight:700;
+        white-space:normal;
+        color:var(--mainColor);
+    `,
 }

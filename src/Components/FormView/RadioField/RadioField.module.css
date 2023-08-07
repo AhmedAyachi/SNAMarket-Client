@@ -1,0 +1,35 @@
+.radiofield{
+    max-width:100%;
+}
+.options{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    overflow:auto hidden;
+}
+.option{
+    flex:1;
+    padding:0.857em;
+    margin:0.4643em;
+    font-family:var(--mainFont);
+    font-weight:400;
+    font-size:3.733em !important;
+    white-space:nowrap;
+    text-align:center;
+    text-transform:capitalize;
+    color:var(--color);
+    border-radius:var(--borderRadius);
+    background-color:transparent;
+    border:var(--border) !important;
+}
+.option:first-child{
+    margin-left:0;
+}
+.option:last-child{
+    margin-right:0;
+}
+.option[active]{
+    color:white;
+    background-color:var(--mainColor);
+    border-color:transparent;
+}

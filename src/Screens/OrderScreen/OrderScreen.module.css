@@ -1,0 +1,25 @@
+.orderscreen{
+    max-width:100%;
+    --paddingHorizontal:5em;
+}
+.orderscreen>header{
+    max-width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:var(--paddingHorizontal);
+}
+.orderscreen>header>img{
+    width:5em;
+    padding:2em;
+    border-radius:50%;
+    background-color:rgba(0,0,0,0.05);
+}
+.form{
+    padding:var(--paddingHorizontal);
+    padding-bottom:0;
+}
+.title{
+    font-size:5em;
+    text-transform:capitalize;
+}

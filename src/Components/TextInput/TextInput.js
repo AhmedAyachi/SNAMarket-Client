@@ -1,13 +1,13 @@
 import {View,capitalize} from "cherries";
-import css from "./InputField.module.css";
+import css from "./TextInput.module.css";
 import {eye0,eyeOff0} from "assets";
 
 
-export default function InputField(props){
+export default function TextInput(props){
     const {parent,type,placeholder,icon=getTypeIcon(type),onIconClick,onChange}=props;
-    const inputfield=View({parent,style:props.style,className:css.inputfield});
+    const textinput=View({parent,style:props.style,className:css.textinput});
 
-    inputfield.innateHTML=`
+    textinput.innateHTML=`
         <div class="${css.wrapper}">
             <input
                 ref="inputEl" 
@@ -23,7 +23,7 @@ export default function InputField(props){
             />
         `:""}
     `;
-    const {inputEl,iconEl}=inputfield;
+    const {inputEl,iconEl}=textinput;
     inputEl.onchange=()=>{
         const value=inputEl.value?.trim();
         onChange&&onChange(value);
@@ -38,7 +38,7 @@ export default function InputField(props){
         }):onIconClick;
     }
 
-    return inputfield;
+    return textinput;
 }
 
 const getTypeIcon=(type)=>{

@@ -3,7 +3,9 @@ import * as localdb from "localdb";
 
 
 function onDeviceReady(){
-    window.language=Object.freeze(localdb.language);
+    const {language}=localdb;
+    document.documentElement.setAttribute("lang",language.$id);
+    window.language=Object.freeze(language);
     if(cordova.platformId==="ios"){
         window.addEventListener("touchstart",()=>{
             const {activeElement}=document;

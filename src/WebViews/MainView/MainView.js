@@ -15,7 +15,7 @@ export default function MainView(props){
             parent:mainview,
             headerClassName:css.header,
             tintColor:mainColor,
-            //initialId:"thecompany",
+            initialId:"orders",
             routes:statics.routes.map(route=>{
                 route.title=language[route.id];
                 return route;
@@ -37,5 +37,6 @@ const statics={
         {id:"recipes"},
         {id:"thecompany",component:CompanyScreen},
         {id:"commitment"},
+        {id:"orders"},
     ],
 }
