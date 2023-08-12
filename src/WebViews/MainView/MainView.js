@@ -15,7 +15,7 @@ export default function MainView(props){
             parent:mainview,
             headerClassName:css.header,
             tintColor:mainColor,
-            initialId:"orders",
+            initialId:"productcatalog",
             routes:statics.routes.map(route=>{
                 route.title=language[route.id];
                 return route;
