@@ -31,7 +31,7 @@
     </platform>
     <platform name="ios">
         <preference name="UseSwiftLanguageVersion" value="5"/>
-        <!-- <icon src="src/Assets/Icon/Icon_20x1.png" width="20"/>
+        <icon src="src/Assets/Icon/Icon_20x1.png" width="20"/>
         <icon src="src/Assets/Icon/Icon_20x2.png" width="40"/>
         <icon src="src/Assets/Icon/Icon_20x3.png" width="60"/>
         <icon src="src/Assets/Icon/Icon_24x2.png" width="48"/>
@@ -39,7 +39,7 @@
         <icon src="src/Assets/Icon/Icon_29x1.png" width="29"/>
         <icon src="src/Assets/Icon/Icon_29x2.png" width="58"/>
         <icon src="src/Assets/Icon/Icon_29x3.png" width="87"/>
-        <icon src="src/Assets/Icon/Icon_40x1.png" width="40"/>
+        <!-- <icon src="src/Assets/Icon/Icon_40x1.png" width="40"/> -->
         <icon src="src/Assets/Icon/Icon_40x2.png" width="80"/>
         <icon src="src/Assets/Icon/Icon_40x3.png" width="120"/>
         <icon src="src/Assets/Icon/Icon_44x2.png" width="88"/>
@@ -47,7 +47,7 @@
         <icon src="src/Assets/Icon/Icon_50x2.png" width="100"/>
         <icon src="src/Assets/Icon/Icon_57x1.png" width="57"/>
         <icon src="src/Assets/Icon/Icon_57x2.png" width="114"/>
-        <icon src="src/Assets/Icon/Icon_60x2.png" width="120"/>
+        <!-- <icon src="src/Assets/Icon/Icon_60x2.png" width="120"/> -->
         <icon src="src/Assets/Icon/Icon_60x3.png" width="180"/>
         <icon src="src/Assets/Icon/Icon_72x1.png" width="72"/>
         <icon src="src/Assets/Icon/Icon_72x2.png" width="144"/>
@@ -55,6 +55,6 @@
         <icon src="src/Assets/Icon/Icon_76x2.png" width="152"/>
         <icon src="src/Assets/Icon/Icon_80.5x2.png" width="167"/>
         <icon src="src/Assets/Icon/Icon_86x2.png" width="172"/>
-        <icon src="src/Assets/Icon/Icon_98x2.png" width="196"/> -->
+        <icon src="src/Assets/Icon/Icon_98x2.png" width="196"/>
     </platform>
 </widget>
