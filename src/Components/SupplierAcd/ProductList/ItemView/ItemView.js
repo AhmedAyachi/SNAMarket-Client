@@ -19,7 +19,7 @@ export default function ItemView(props){
             id:"servicesite",
             asModal:true,
             modalStyle:{height:0.65},
-            message:{name:"order",product},
+            message:{name:"ordering",product},
         });
     }
 

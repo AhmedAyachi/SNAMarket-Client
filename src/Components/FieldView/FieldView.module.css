@@ -1,10 +1,8 @@
 .fieldview{
     max-width:100%;
     overflow:hidden;
-    --color:var(--minorColor);
     --borderRadius:0.25em;
-    --borderColor:var(--accentColor);
-    --border:1px solid var(--borderColor);
+    --border:1px solid var(--accentColor);
 }
 .label{
     flex:1;
@@ -13,6 +11,6 @@
     font-size:4.5em;
     white-space:nowrap;
     text-transform:capitalize;
-    color:var(--color);
+    color:var(--textColor);
     overflow-x:auto;
 }

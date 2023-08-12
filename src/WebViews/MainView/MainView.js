@@ -1,6 +1,6 @@
 import {View,DrawerNavigator,fadeIn} from "cherries";
 import css from "./MainView.module.css";
-import {CompanyScreen,HomeScreen,LoginScreen} from "screens";
+import {HistoryScreen,CompanyScreen,HomeScreen,LoginScreen} from "screens";
 
 
 export default function MainView(props){
@@ -37,6 +37,9 @@ const statics={
         {id:"recipes"},
         {id:"thecompany",component:CompanyScreen},
         {id:"commitment"},
-        {id:"orders"},
+        {
+            id:"orders",
+            component:(props)=>HistoryScreen({...props,type:"order"}),
+        },
     ],
 }

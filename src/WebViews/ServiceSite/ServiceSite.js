@@ -1,6 +1,6 @@
 import {View, parseJSON} from "cherries";
 import css from "./ServiceSite.module.css";
-import {OrderScreen} from "screens";
+import {OrderingScreen} from "screens";
 
 
 export default function ServiceSite(props){
@@ -23,5 +23,5 @@ export default function ServiceSite(props){
 }
 
 const statics={
-    order:OrderScreen,
+    ordering:OrderingScreen,
 }
