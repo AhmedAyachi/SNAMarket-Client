@@ -1,6 +1,6 @@
 import {View,capitalize} from "cherries";
 import css from "./TextInput.module.css";
-import {eye0,eyeOff0} from "assets";
+import {eye0,eyeoff0} from "assets";
 
 
 export default function TextInput(props){
@@ -33,7 +33,7 @@ export default function TextInput(props){
             inputEl.focus();
             const isPassword=inputEl.getAttribute("type")==="password";
             inputEl.type=isPassword?"text":"password";
-            iconEl.src=(isPassword?eyeOff0:eye0)(mainColor);
+            iconEl.src=(isPassword?eyeoff0:eye0)(mainColor);
             onIconClick&&onIconClick(event);
         }):onIconClick;
     }
