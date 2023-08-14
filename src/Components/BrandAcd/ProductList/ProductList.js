@@ -6,7 +6,7 @@ import * as H from "./Hooks";
 
 
 export default function ProductList(props){
-    const {parent,supplier}=props;
+    const {parent,brand}=props;
     const productlist=FlatList({
         parent,className:css.productlist,
         emptymessage:"",
@@ -16,7 +16,7 @@ export default function ProductList(props){
     productlist.beforeEndHTML=`
     `;
     const loadingview=LoadingView({parent:productlist,className:css.loadingview});
-    H.fetchProducts(supplier).then(products=>{
+    H.fetchProducts(brand).then(products=>{
         productlist.addItems(products);
         loadingview.unmount();
     });

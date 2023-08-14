@@ -10,7 +10,7 @@
   "author": "Ahmed Ayachi",
   "license": "ISC",
   "devDependencies": {
-    "cherries-scripts": "github:AhmedAyachi/CherriesScripts",
+    "cherries-scripts": "file:../../../../Libraries/CherriesScripts",
     "cordova-android": "^10.1.2",
     "cordova-browser": "^7.0.0",
     "cordova-ios": "^7.0.0",

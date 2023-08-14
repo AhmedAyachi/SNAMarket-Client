@@ -1,6 +1,6 @@
 import {View,FlatList,TabNavigator, fadeIn} from "cherries";
 import css from "./HomeScreen.module.css";
-import {SupplierAcd,SearchField,LoadingView} from "components";
+import {BrandAcd,SearchField,LoadingView} from "components";
 import {ProductType} from "resources";
 import * as H from "./Hooks";
 
@@ -34,8 +34,8 @@ export default function HomeScreen(props){
                         parent,
                         className:css.flatlist,
                         containerClassName:css.listcontainer,
-                        data:type.suppliers,
-                        renderItem:({parent,item})=>SupplierAcd({parent,supplier:item}),
+                        data:type.brands,
+                        renderItem:({parent,item})=>BrandAcd({parent,brand:item}),
                     });
                     fadeIn(flatlist,500);
                     return flatlist;

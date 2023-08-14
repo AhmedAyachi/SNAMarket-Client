@@ -1,6 +1,6 @@
 
 
-export default class Supplier {
+export default class Brand {
     constructor(props={}){
         Object.assign(this,{
             id:props.id,

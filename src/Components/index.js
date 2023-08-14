@@ -4,7 +4,7 @@ export {default as OrderView} from "./OrderView/OrderView";
 export {default as FormView} from "./FormView/FormView";
 export {default as FieldView} from "./FieldView/FieldView";
 export {default as MapView} from "./MapView/MapView";
-export {default as SupplierAcd} from "./SupplierAcd/SupplierAcd";
+export {default as BrandAcd} from "./BrandAcd/BrandAcd";
 export {default as DropList} from "./DropList/DropList";
 export {default as SearchField} from "./SearchField/SearchField";
 export {default as LoadingView} from "./LoadingView/LoadingView";

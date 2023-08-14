@@ -1,4 +1,4 @@
-import Supplier from "./Supplier";
+import Brand from "./Brand";
 import {cow0,chicken0,rabbit0} from "assets";
 
 
@@ -7,7 +7,7 @@ export default class ProductType {
         Object.assign(this,{
             id:props.id,
             name:props.name,
-            suppliers:props.suppliers?.map($=>new Supplier($)),
+            brands:props.brands?.map($=>new Brand($)),
         });
     }
 

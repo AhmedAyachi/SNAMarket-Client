@@ -13,20 +13,20 @@ export const users=new Array(3).fill().map((_,i)=>({
 
 export const producttypes=["ruminants","poultry","rabbit"].map(id=>({
     id,name:id,
-    suppliers:null,
+    brands:null,
 }));
 
-export const suppliers=[
+export const brands=[
     {id:"dyma",logo:dymalogo},
     {id:"baraka",logo:barakalogo},
     {id:"brima",logo:brimalogo,},
     {id:"siana",logo:sianalogo},
     {id:"sna",logo:snalogo},
     {id:"bedy",logo:bedylogo0},
-].map((supplier,i)=>({
-    ...supplier,
+].map((brand,i)=>({
+    ...brand,
     products:new Array(5).fill().map((_,j)=>({
-        id:supplier.id+"pd"+i+j,
+        id:brand.id+"pd"+i+j,
         name:"product "+(i+1)+(j+1),
         type:producttypes[(i+j)%producttypes.length].id,
         price:5+Math.floor(20*Math.random()),
@@ -36,7 +36,7 @@ export const suppliers=[
 
 producttypes.forEach(producttype=>{
     const {id}=producttype;
-    producttype.suppliers=suppliers.filter(({products})=>products.some(({type})=>type===id));
+    producttype.brands=brands.filter(({products})=>products.some(({type})=>type===id));
 });
 
 const orderstatuses=["pending","shipped","cancelled"];
