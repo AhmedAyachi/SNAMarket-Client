@@ -1,5 +1,6 @@
 
 
+export {default as CartScreen} from "./CartScreen/CartScreen";
 export {default as HistoryScreen} from "./HistoryScreen/HistoryScreen";
 export {default as OrderingScreen} from "./OrderingScreen/OrderingScreen";
 export {default as CompanyScreen} from "./CompanyScreen/CompanyScreen";

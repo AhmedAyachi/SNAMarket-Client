@@ -10,4 +10,8 @@ export default class User extends Person {
             isGuest:!sessionId,
         });
     }
+
+    static Guest={
+        id:"guest",
+    }
 } 

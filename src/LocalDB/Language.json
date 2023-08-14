@@ -10,6 +10,8 @@
     "quantity":"quantité",
     "toorder":"commander",
     "order":"commande",
+    "addtocart":"ajouter au panier",
+    "editcart":"modifier le panier",
     "orders":"commandes",
     "phone":"tel",
     "fax":"fax",

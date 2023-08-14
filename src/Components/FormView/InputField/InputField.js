@@ -6,7 +6,7 @@ import {clock0,calendar0,eyeoff0,eye0} from "assets";
 
 
 export default function InputField(props){
-    const {parent,id=useId("inputfield"),layoutId=0,value,placeholder,type,readonly,multiline,onChange}=props;
+    const {parent,id=useId("inputfield"),layoutId=0,value,min,max,placeholder,type,readonly,multiline,onChange}=props;
     const inputfield=FieldView({
         parent,id,
         at:props.at,
@@ -26,6 +26,8 @@ export default function InputField(props){
                     class="${css.input}"
                     type="${datetime?"text":(type||"text")}" 
                     placeholder="${placeholder||""}"
+                    ${typeof(min)==="number"?`min="${min}"`:""}
+                    ${max?`max="${max}"`:""}
                     ${(readonly||datetime)?"readonly":""} 
                     ${multiline?`spellcheck="false"`:""}
                 ></${multiline?"textarea":"input"}>
@@ -64,14 +66,14 @@ export default function InputField(props){
             revealbtn.src=(hidden?eyeoff0:eye0)(minorColor);
         }
     }
-    if(type==="tel"){
+    /* if(type==="tel"){
         inputfield.onclick=()=>{
             startApp.set({
                 action:"ACTION_DIAL",
                 uri:value,
             }).start();
         }
-    }
+    } */
 
     inputfield.setValue=(value,triggerOnChange=true)=>{
         inputEl.value=sanitizeInput(type,value);

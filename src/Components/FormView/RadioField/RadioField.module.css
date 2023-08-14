@@ -1,5 +1,6 @@
 .radiofield{
     max-width:100%;
+    text-transform:capitalize;
 }
 .options{
     display:flex;
@@ -16,7 +17,7 @@
     font-size:3.733em !important;
     white-space:nowrap;
     text-align:center;
-    text-transform:capitalize;
+    text-transform:inherit;
     color:var(--color);
     border-radius:var(--borderRadius);
     background-color:transparent;

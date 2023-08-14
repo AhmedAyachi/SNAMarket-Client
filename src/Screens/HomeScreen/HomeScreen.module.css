@@ -23,6 +23,7 @@
 }
 .searchfield{
     flex:1;
+    margin-right:5em;
 }
 .tabnavheader{
     background-color:var(--backgroundColor);

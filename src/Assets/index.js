@@ -4,6 +4,7 @@ export {default as chick0} from "./Images/Chick_0.jpg";
 export {default as userlogin0} from "./Images/UserLogin_0.png";
 
 //Svgs:
+export {default as cart0} from "./Svgs/Cart_0";
 export {default as clock0} from "./Svgs/Clock_0";
 export {default as calendar0} from "./Svgs/Calendar_0";
 export {default as reset0} from "./Svgs/Reset_0";

@@ -1,7 +1,8 @@
 import {View} from "cherries";
 import css from "./OrderingScreen.module.css";
 import {FormView} from "components";
-import {reset0,cross0} from "assets";
+import {cart0,reset0,cross0} from "assets";
+import * as H from "./Hooks";
 
 
 export default function OrderingScreen(props){
@@ -21,29 +22,50 @@ export default function OrderingScreen(props){
             />
         </header>
     `;
-    FormView({
-        parent:orderingscreen,
-        className:css.form,
-        fields:[
-            {
-                id:"quantity",
-                label:language.quantity,
-                type:"number",
+    WebView.useStore(({cart})=>{
+        const {items}=cart,{id}=product;
+        let cartitem=items.find(item=>item.product.id===id);
+        FormView({
+            parent:orderingscreen,
+            className:css.form,
+            input:cartitem&&{
+                quantity:cartitem.quantity,
+                granularity:cartitem.granularity,
             },
-            {
-                id:"granularity",
-                label:language.granularity,
-                type:"radio",
-                multiple:false,
-                options:granularities.map(id=>({id,label:id})),
-            }
-        ],
-        submitter:{label:language.toorder},
-        onSubmit:(input)=>{
-            input.granularity=input.granularity?.id;
-            console.log(input);
-        },
+            fields:[
+                {
+                    id:"quantity",
+                    min:1,
+                    label:language.quantity,
+                    type:cordova.platformId==="ios"?"tel":"number",
+                },
+                {
+                    id:"granularity",
+                    label:language.granularity,
+                    type:"radio",
+                    multiple:false,
+                    options:granularities,
+                    className:css.granularityfield,
+                }
+            ],
+            submitter:{
+                icon:cart0,
+                label:language[(cartitem?"edit":"addto")+"cart"],
+            },
+            onSubmit:(input)=>{
+                input.granularity=input.granularity?.id;
+                cartitem=getCartItem(product,input);
+                H.saveCartItem(cartitem,items.indexOf(cartitem)).
+                then(WebView.close).
+                finally(()=>{
+                    alert("item added");
+                });
+                console.log(input);
+                
+            },
+        });
     });
+    
 
     const {closebtn}=orderingscreen;
     closebtn.onclick=()=>{
@@ -54,4 +76,15 @@ export default function OrderingScreen(props){
     console.log(product);
 
     return orderingscreen;
+}
+
+const getCartItem=(product,input)=>{
+    return {
+        quantity:input.quantity,
+        granularity:input.granularity,
+        product:{
+            id:product.id,
+            name:product.name,
+        },
+    }
 }

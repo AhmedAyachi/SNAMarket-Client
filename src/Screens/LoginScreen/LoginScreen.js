@@ -2,6 +2,7 @@ import {View} from "cherries";
 import css from "./LoginScreen.module.css";
 import {ButtonView,SwitchField,TextInput} from "components";
 import {chick0,userlogin0} from "assets";
+import {User} from "resources";
 import {setUser} from "actions";
 import * as H from "./Hooks";
 
@@ -62,7 +63,7 @@ export default function LoginScreen(props){
     });
 
     loginscreen.passbtn.onclick=()=>{
-        setUser({},()=>{
+        setUser(User.Guest,()=>{
             location.reload();
         });
     }

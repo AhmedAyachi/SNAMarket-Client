@@ -1,7 +1,8 @@
-import {View,FlatList,TabNavigator, fadeIn} from "cherries";
+import {View,FlatList,TabNavigator,fadeIn} from "cherries";
 import css from "./HomeScreen.module.css";
-import {BrandAcd,SearchField,LoadingView} from "components";
+import {ActionSetView,BrandAcd,SearchField,LoadingView} from "components";
 import {ProductType} from "resources";
+import {cart0} from "assets";
 import * as H from "./Hooks";
 
 
@@ -16,6 +17,16 @@ export default function HomeScreen(props){
         parent:homescreen.header,
         className:css.searchfield,
         placeholder:language.finditem,
+        noicon:true,
+    });
+    ActionSetView({
+        parent:homescreen.header,
+        actions:[{
+            id:"cart",icon:cart0,
+            onTrigger:()=>{
+                console.log("clicked");
+            },
+        }],
     });
     
     const loadingview=LoadingView();

@@ -23,3 +23,6 @@
     font-size:5em;
     text-transform:capitalize;
 }
+.granularityfield{
+    text-transform:lowercase;
+}

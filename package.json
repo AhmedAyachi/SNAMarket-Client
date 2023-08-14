@@ -5,7 +5,8 @@
   "scripts": {
     "start": "cherries-scripts start",
     "test": "cherries-scripts test",
-    "build": "cherries-scripts build"
+    "build": "cherries-scripts build",
+    "devbuild":"cherries-scripts build --env=dev"
   },
   "author": "Ahmed Ayachi",
   "license": "ISC",

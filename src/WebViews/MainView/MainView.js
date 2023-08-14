@@ -4,13 +4,13 @@ import {HistoryScreen,CompanyScreen,HomeScreen,LoginScreen} from "screens";
 
 
 export default function MainView(props){
-    const {parent,store}=props,{user}=store;
+    const {parent,store}=props,{userId}=store;
     const mainview=View({parent,id:"webview",className:css.mainview});
 
     mainview.innateHTML=`
     `;
 
-    if(user){
+    if(userId){
         DrawerNavigator({
             parent:mainview,
             headerClassName:css.header,
