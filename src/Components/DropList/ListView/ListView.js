@@ -1,4 +1,4 @@
-import {FlatList} from "cherries";
+import {FlatList} from "corella";
 import css from "./ListView.module.css";
 import OptionView from "./OptionView/OptionView";
 

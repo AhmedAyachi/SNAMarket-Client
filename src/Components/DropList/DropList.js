@@ -1,4 +1,4 @@
-import {View,fadeIn,fadeOut} from "cherries";
+import {View,fadeIn,fadeOut} from "corella";
 import css from "./DropList.module.css";
 import ValueView from "./ValueView/ValueView";
 import ListView from "./ListView/ListView";

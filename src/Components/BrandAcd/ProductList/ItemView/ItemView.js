@@ -1,4 +1,4 @@
-import {View} from "cherries";
+import {View} from "corella";
 import css from "./ItemView.module.css";
 
 

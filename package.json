@@ -1,39 +1,33 @@
 {
-  "name": "snamarket",
-  "version": "1.0.0",
-  "description": "SNA Market App",
+  "name": "appname",
+  "version": "0.0.1",
+  "description": "App description",
   "scripts": {
-    "start": "cherries-scripts start",
-    "test": "cherries-scripts test",
-    "build": "cherries-scripts build",
-    "devbuild":"cherries-scripts build --env=dev"
+    "start": "corella-scripts start",
+    "build": "corella-scripts build",
+    "extract": "corella-scripts extract"
   },
-  "author": "Ahmed Ayachi",
-  "license": "ISC",
   "devDependencies": {
-    "cherries-scripts": "file:../../../../Libraries/CherriesScripts",
-    "cordova-android": "^10.1.2",
     "cordova-browser": "^7.0.0",
-    "cordova-ios": "^7.0.0",
     "cordova-plugin-appminimize": "^1.0.1",
     "cordova-plugin-clipboard": "^1.0.0",
     "cordova-plugin-ionic-keyboard": "^2.2.0",
-    "cordova-plugin-statusbar": "^2.4.3",
-    "cordova-plugin-swift-support": "github:AhmedAyachi/cordova-plugin-swift-support",
-    "cordova-plugin-webview": "github:AhmedAyachi/cordova-plugin-webview"
+    "cordova-plugin-statusbar": "^3.0.0",
+    "corella-plugin-webview": "^0.0.0",
+    "corella-scripts": "^0.0.1"
+  },
+  "dependencies": {
+    "corella": "^0.0.1"
   },
   "cordova": {
     "plugins": {
-      "cordova-plugin-statusbar": {},
       "cordova-plugin-appminimize": {},
-      "cordova-plugin-webview": {}
+      "cordova-plugin-ionic-keyboard": {},
+      "corella-plugin-webview": {},
+      "cordova-plugin-statusbar": {}
     },
     "platforms": [
-      "browser",
-      "android"
+      "browser"
     ]
-  },
-  "dependencies": {
-    "cherries": "github:AhmedAyachi/Cherries"
   }
 }

@@ -1,4 +1,4 @@
-import {View} from "cherries";
+import {View} from "corella";
 import css from "./LoginScreen.module.css";
 import {ButtonView,SwitchField,TextInput} from "components";
 import {chick0,userlogin0} from "assets";

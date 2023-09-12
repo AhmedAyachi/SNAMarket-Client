@@ -1,4 +1,4 @@
-import {View,capitalize} from "cherries";
+import {View,capitalize} from "corella";
 import css from "./TextInput.module.css";
 import {eye0,eyeoff0} from "assets";
 

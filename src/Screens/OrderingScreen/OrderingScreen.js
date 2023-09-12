@@ -1,4 +1,4 @@
-import {View} from "cherries";
+import {View} from "corella";
 import css from "./OrderingScreen.module.css";
 import {FormView} from "components";
 import {cart0,reset0,cross0} from "assets";

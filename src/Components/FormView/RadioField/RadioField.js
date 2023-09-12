@@ -1,4 +1,4 @@
-import {useId,map,CherryMap} from "cherries";
+import {useId,map,FooMap} from "corella";
 import css from "./RadioField.module.css";
 import {FieldView} from "components";
 
@@ -9,7 +9,7 @@ export default function RadioField(props){
         parent,id,at,label,
         className:`${css.radiofield} ${props.className||""}`
     }),state={
-        checkmap:new CherryMap(),
+        checkmap:new FooMap(),
     },{checkmap}=state;
 
     radiofield.beforeEndHTML=`

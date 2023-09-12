@@ -1,4 +1,4 @@
-import {useId,View} from "cherries";
+import {useId,View} from "corella";
 import css from "./ButtonView.module.css";
 
 

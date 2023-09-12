@@ -1,4 +1,4 @@
-import {View,fadeOut} from "cherries";
+import {View,fadeOut} from "corella";
 import css from "./FormView.module.css";
 import RadioField from "./RadioField/RadioField";
 import InputField from "./InputField/InputField";

@@ -1,4 +1,4 @@
-import {View} from "cherries";
+import {View} from "corella";
 import css from "./OrderView.module.css";
 import {Order} from "resources";
 

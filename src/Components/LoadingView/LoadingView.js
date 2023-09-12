@@ -1,4 +1,4 @@
-import {View,fadeOut} from "cherries";
+import {View,fadeOut} from "corella";
 import css from "./LoadingView.module.css";
 import {loading0} from "assets";
 

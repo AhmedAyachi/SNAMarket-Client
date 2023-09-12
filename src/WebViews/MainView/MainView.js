@@ -1,4 +1,4 @@
-import {View,DrawerNavigator,fadeIn} from "cherries";
+import {View,DrawerNavigator,fadeIn} from "corella";
 import css from "./MainView.module.css";
 import {HistoryScreen,CompanyScreen,HomeScreen,LoginScreen} from "screens";
 

@@ -1,4 +1,4 @@
-import {Switch} from "cherries";
+import {Switch} from "corella";
 import css from "./SwitchField.module.css";
 import {FieldView} from "components";
 

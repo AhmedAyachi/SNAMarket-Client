@@ -1,4 +1,4 @@
-import {View, parseJSON} from "cherries";
+import {View, parseJSON} from "corella";
 import css from "./ServiceSite.module.css";
 import {CartScreen,OrderingScreen} from "screens";
 

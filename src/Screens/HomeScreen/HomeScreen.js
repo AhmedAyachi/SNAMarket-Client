@@ -1,4 +1,4 @@
-import {View,FlatList,TabNavigator,fadeIn} from "cherries";
+import {View,FlatList,TabNavigator,fadeIn} from "corella";
 import css from "./HomeScreen.module.css";
 import {ActionSetView,BrandAcd,SearchField,LoadingView} from "components";
 import {ProductType} from "resources";

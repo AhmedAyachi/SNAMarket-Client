@@ -1,4 +1,4 @@
-import {View,map} from "cherries";
+import {View,map} from "corella";
 import css from "./CompanyScreen.module.css";
 import {MapView} from "components";
 import {chevron0} from "assets";

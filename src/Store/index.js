@@ -1,4 +1,4 @@
-import {parseJSON} from "cherries";
+import {parseJSON} from "corella";
 
 
 export const store={
