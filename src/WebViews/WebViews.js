@@ -2,6 +2,11 @@
 
 module.exports=[
     {name:"ServiceSite"},
+    {
+        name:"BottomSheet",
+        asModal:true,
+        modalStyle:{height:0.65},
+    },
 ].map((webview,i)=>({
     ...webview,
     id:webview.name.toLowerCase(),

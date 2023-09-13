@@ -56,12 +56,10 @@ export default function OrderingScreen(props){
                 input.granularity=input.granularity?.id;
                 cartitem=getCartItem(product,input);
                 H.saveCartItem(cartitem,items.indexOf(cartitem)).
-                then(WebView.close).
-                finally(()=>{
-                    alert("item added");
+                then(()=>{
+                    WebView.close();
                 });
                 console.log(input);
-                
             },
         });
     });

@@ -1,7 +1,7 @@
 {
-  "name": "appname",
+  "name": "snamarket-client",
   "version": "0.0.1",
-  "description": "App description",
+  "description": "SNAMarket client app",
   "scripts": {
     "start": "corella-scripts start",
     "build": "corella-scripts build",
@@ -10,9 +10,8 @@
   "devDependencies": {
     "cordova-browser": "^7.0.0",
     "cordova-plugin-appminimize": "^1.0.1",
-    "cordova-plugin-clipboard": "^1.0.0",
     "cordova-plugin-ionic-keyboard": "^2.2.0",
-    "cordova-plugin-statusbar": "^3.0.0",
+    "cordova-plugin-statusbar": "^2.4.3",
     "corella-plugin-webview": "^0.0.0",
     "corella-scripts": "^0.0.1"
   },
@@ -21,10 +20,10 @@
   },
   "cordova": {
     "plugins": {
+      "cordova-plugin-statusbar": {},
       "cordova-plugin-appminimize": {},
       "cordova-plugin-ionic-keyboard": {},
-      "corella-plugin-webview": {},
-      "cordova-plugin-statusbar": {}
+      "corella-plugin-webview": {}
     },
     "platforms": [
       "browser"

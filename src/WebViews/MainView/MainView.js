@@ -1,11 +1,11 @@
-import {View,DrawerNavigator,fadeIn} from "corella";
+import {NativeView,DrawerNavigator,fadeIn} from "corella";
 import css from "./MainView.module.css";
 import {HistoryScreen,CompanyScreen,HomeScreen,LoginScreen} from "screens";
 
 
 export default function MainView(props){
     const {parent,store}=props,{userId}=store;
-    const mainview=View({parent,id:"webview",className:css.mainview});
+    const mainview=NativeView({parent,id:"webview",className:css.mainview});
 
     mainview.innateHTML=`
     `;

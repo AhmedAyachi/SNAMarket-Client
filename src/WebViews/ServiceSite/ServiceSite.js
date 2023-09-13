@@ -1,11 +1,11 @@
-import {View, parseJSON} from "corella";
+import {NativeView,parseJSON} from "corella";
 import css from "./ServiceSite.module.css";
-import {CartScreen,OrderingScreen} from "screens";
+import {CartScreen} from "screens";
 
 
 export default function ServiceSite(props){
     const {parent}=props;
-    const servicesite=View({parent,id:"webview",className:css.servicesite});
+    const servicesite=NativeView({parent,id:"webview",className:css.servicesite});
 
     servicesite.innateHTML=`
     `;
@@ -24,5 +24,4 @@ export default function ServiceSite(props){
 
 const statics={
     cart:CartScreen,
-    ordering:OrderingScreen,
 }

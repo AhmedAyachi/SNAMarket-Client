@@ -3,7 +3,7 @@ import css from "./ItemView.module.css";
 
 
 export default function ItemView(props){
-    const {parent,product}=props;
+    const {parent,product,onCartChange}=props;
     const itemview=View({
         parent,
         className:`button ${css.itemview}`,
@@ -16,10 +16,12 @@ export default function ItemView(props){
 
     itemview.onclick=()=>{
         WebView.show({
-            id:"servicesite",
-            asModal:true,
-            modalStyle:{height:0.65},
-            message:{name:"ordering",product},
+            id:"bottomsheet",
+            message:{contentId:"ordering",product},
+            onClose:({store})=>{
+                const {cart}=store;
+                onCartChange&&onCartChange(cart);
+            },
         });
     }
 

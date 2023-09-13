@@ -6,11 +6,11 @@ import * as H from "./Hooks";
 
 
 export default function ProductList(props){
-    const {parent,brand}=props;
+    const {parent,brand,onCartChange}=props;
     const productlist=FlatList({
         parent,className:css.productlist,
         emptymessage:"",
-        renderItem:({parent,item})=>ItemView({parent,product:item}),
+        renderItem:({parent,item})=>ItemView({parent,product:item,onCartChange}),
     });
 
     productlist.beforeEndHTML=`

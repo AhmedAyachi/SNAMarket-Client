@@ -1,6 +1,6 @@
 import {View,FlatList,TabNavigator,fadeIn} from "corella";
 import css from "./HomeScreen.module.css";
-import {ActionSetView,BrandAcd,SearchField,LoadingView} from "components";
+import {ActionSetView,BrandAcd,SearchField,LoadingView,TextBadge} from "components";
 import {ProductType} from "resources";
 import {cart0} from "assets";
 import * as H from "./Hooks";
@@ -8,7 +8,10 @@ import * as H from "./Hooks";
 
 export default function HomeScreen(props){
     const {parent}=props;
-    const homescreen=View({parent,tag:"main",className:css.homescreen});
+    const homescreen=View({parent,tag:"main",className:css.homescreen}),state={
+        cartEl:null,
+        cartbadgeEl:null,
+    };
 
     homescreen.innateHTML=`
         <header ref="header"></header>
@@ -23,6 +26,7 @@ export default function HomeScreen(props){
         parent:homescreen.header,
         actions:[{
             id:"cart",icon:cart0,
+            onReady:({element})=>{state.cartEl=element},
             onTrigger:()=>{
                 console.log("clicked");
             },
@@ -46,7 +50,18 @@ export default function HomeScreen(props){
                         className:css.flatlist,
                         containerClassName:css.listcontainer,
                         data:type.brands,
-                        renderItem:({parent,item})=>BrandAcd({parent,brand:item}),
+                        renderItem:({parent,item})=>BrandAcd({
+                            parent,brand:item,
+                            onCartChange:(cart)=>{
+                                const {length}=cart.items,{cartbadgeEl}=state;
+                                cartbadgeEl&&cartbadgeEl.remove();
+                                state.cartbadgeEl=length&&TextBadge({
+                                    parent:state.cartEl,
+                                    className:css.cartbadge,
+                                    text:length,
+                                });
+                            },
+                        }),
                     });
                     fadeIn(flatlist,500);
                     return flatlist;

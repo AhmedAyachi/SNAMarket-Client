@@ -1,5 +1,6 @@
 
 
+export {default as TextBadge} from "./TextBadge/TextBadge";
 export {default as ActionSetView} from "./ActionSetView/ActionSetView";
 export {default as OrderView} from "./OrderView/OrderView";
 export {default as FormView} from "./FormView/FormView";
