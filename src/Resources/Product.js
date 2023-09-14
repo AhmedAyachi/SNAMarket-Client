@@ -6,11 +6,8 @@ export default class Product {
             id:props.id,
             name:props.name,
             image:props.image,
-            price:props.price,
-            granularities:props.granularities?.map(item=>({
-                id:item.id,
-                label:item.label,
-            })),
+            kgprice:props.kgprice,
+            granularities:props.granularities,
         });
     }
 }

@@ -29,12 +29,8 @@ export const brands=[
         id:brand.id+"pd"+i+j,
         name:"product "+(i+1)+(j+1),
         type:producttypes[(i+j)%producttypes.length].id,
-        price:5+Math.floor(20*Math.random()),
-        granularities:[
-            {id:"low",label:"0.22 mm"},
-            {id:"medium",label:"0.33 mm"},
-            {id:"high",label:"0.5 mm"},
-        ],
+        kgprice:5+Math.floor(20*Math.random()),
+        granularities:["0.22mm","0.33mm","0.5mm"],
     })),
 }));
 

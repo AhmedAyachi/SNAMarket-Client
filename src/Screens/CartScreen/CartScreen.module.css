@@ -6,7 +6,7 @@
     justify-content:flex-start;
     align-items:stretch;
     overflow:hidden auto;
-    --paddingHorizontal:10em;
+    --paddingHorizontal:6.333em;
 }
 .header{
     --paddingHorizontal:inherit !important;
@@ -14,4 +14,6 @@
 .cartview{
     max-width:100%;
     flex:1;
+    padding:0 var(--paddingHorizontal);
+    padding-bottom:5em;
 }

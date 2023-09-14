@@ -8,10 +8,9 @@
     align-items:center;
 }
 .quantityfield{
-    flex:3;
+    width:65%;
 }
 .unitselector{
-    flex:2;
     text-transform:uppercase;
     text-align:right;
 }

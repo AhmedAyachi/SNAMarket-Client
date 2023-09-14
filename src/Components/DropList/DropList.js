@@ -50,7 +50,7 @@ export default function DropList(props){
             onChange&&onChange(option);
         }
     }
-    droplist.setOption(options[0].id);
+    droplist.setOption(props.value||options[0].id);
     
 
     return droplist;

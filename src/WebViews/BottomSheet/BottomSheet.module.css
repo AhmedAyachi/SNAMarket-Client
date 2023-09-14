@@ -6,7 +6,7 @@
     justify-content:flex-start;
     align-items:stretch;
     overflow:hidden auto;
-    --paddingHorizontal:10em;
+    --paddingHorizontal:6.333em;
 }
 .header{
     --paddingHorizontal:inherit !important;

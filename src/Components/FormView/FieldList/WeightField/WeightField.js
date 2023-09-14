@@ -7,7 +7,7 @@ import InputField from "../InputField/InputField";
 export default function WeightField(props){
     const {parent,label,unitIndicatorColor,onChange}=props;
     const weightfield=FieldView({parent,label,className:css.weightfield}),state={
-        value:{quantity:1,unit:statics.units[0]},
+        value:getValue(props.value),
     },{value}=state;
 
     weightfield.beforeEndHTML=`
@@ -26,6 +26,7 @@ export default function WeightField(props){
     DropList({
         parent:weightfield.container,
         className:css.unitselector,
+        value:value.unit,
         options:statics.units.map(id=>({id})),
         indicatorColor:unitIndicatorColor||"black",
         onChange:(option)=>{
@@ -40,3 +41,8 @@ export default function WeightField(props){
 const statics={
     units:["kg","ton"],
 }
+
+const getValue=(value)=>({
+    quantity:value?.quantity||1,
+    unit:(value&&statics.units.find(unit=>value.unit===unit))||statics.units[0],
+});

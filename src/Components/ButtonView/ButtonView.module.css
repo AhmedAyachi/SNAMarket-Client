@@ -2,9 +2,8 @@
     position:relative;
     max-width:100%;
     display:flex;
-    justify-content:center;
     align-items:center;
-    padding:4em;
+    padding:6em;
     font-size:1em;
     font-weight:700;
     border:none;
@@ -15,9 +14,9 @@
     margin-right:2em;
 }
 .buttonview>label{
-    font-family:var(--majorFont);
+    font-family:var(--mainFont);
     font-weight:inherit;
-    font-size:3.733em;
+    font-size:4em;
     text-transform:uppercase;
     white-space:nowrap;
     color:white;

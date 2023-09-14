@@ -1,0 +1,42 @@
+.cartitemview{
+    max-width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+.counter{
+    width:35em;
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+    padding:4em 2em;
+    /* column-gap:4em; */
+    border-radius:3em;
+    background-color:rgba(0,0,0,0.05);
+}
+.counter>img{
+    width:5em;
+}
+.name{
+    font-family:var(--mainFont);
+    font-weight:700;
+    font-size:4em;
+    text-transform:capitalize;
+    letter-spacing:0.1em;
+    margin-bottom:0.5em;
+}
+.price{
+    font-family:var(--mainFont);
+    font-weight:400;
+    font-size:3em;
+    text-transform:uppercase;
+    letter-spacing:0.1em;
+    color:var(--mainColor);
+}
+.count{
+    font-weight:700;
+    font-size:5em;
+    text-align:center;
+    color:var(--textColor);
+    width:2em;
+}
