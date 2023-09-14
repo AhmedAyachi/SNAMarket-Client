@@ -17,7 +17,11 @@ export default function ItemView(props){
     itemview.onclick=()=>{
         WebView.show({
             id:"bottomsheet",
-            message:{contentId:"ordering",product},
+            message:{
+                title:product.name,
+                contentId:"productorder",
+                product,
+            },
             onClose:({store})=>{
                 const {cart}=store;
                 onCartChange&&onCartChange(cart);

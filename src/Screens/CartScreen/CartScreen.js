@@ -1,5 +1,6 @@
 import {View} from "corella";
 import css from "./CartScreen.module.css";
+import {CartView,HeaderView} from "components";
 
 
 export default function CartScreen(props){
@@ -8,6 +9,18 @@ export default function CartScreen(props){
 
     cartscreen.innateHTML=`
     `;
+    HeaderView({
+        parent:cartscreen,
+        className:css.header,
+        title:language.cart,
+    });
+    WebView.useStore(({cart})=>{
+        CartView({
+            parent:cartscreen,
+            className:css.cartview,
+            cart,
+        });
+    });
     
     return cartscreen;
 }

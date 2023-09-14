@@ -28,7 +28,10 @@ export default function HomeScreen(props){
             id:"cart",icon:cart0,
             onReady:({element})=>{state.cartEl=element},
             onTrigger:()=>{
-                console.log("clicked");
+                WebView.show({
+                    id:"servicesite",
+                    message:{name:"cart"},
+                });
             },
         }],
     });

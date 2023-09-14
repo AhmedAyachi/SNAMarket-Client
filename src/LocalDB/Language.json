@@ -3,6 +3,7 @@
     "$name":"français",
     "td":"dt",
     "submit":"soumettre",
+    "cart":"panier",
     "granularity":"granularité",
     "orderpending":"commande en attente",
     "ordershipped":"commande expédiée",

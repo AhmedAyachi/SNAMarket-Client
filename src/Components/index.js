@@ -1,5 +1,8 @@
 
 
+export {default as CartView} from "./CartView/CartView";
+export {default as ProductOrderForm} from "./ProductOrderForm/ProductOrderForm";
+export {default as HeaderView} from "./HeaderView/HeaderView";
 export {default as TextBadge} from "./TextBadge/TextBadge";
 export {default as ActionSetView} from "./ActionSetView/ActionSetView";
 export {default as OrderView} from "./OrderView/OrderView";

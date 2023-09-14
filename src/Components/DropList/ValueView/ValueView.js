@@ -4,7 +4,7 @@ import {chevron0} from "assets";
 
 
 export default function ValueView(props){
-    const {parent,value,iconColor,labelHidden}=props,{icon}=value;
+    const {parent,value,iconColor,indicatorColor,labelHidden}=props,{icon}=value;
     const valueview=View({parent,className:css.valueview});
 
     valueview.innateHTML=`
@@ -19,7 +19,7 @@ export default function ValueView(props){
                 />
             `:""}
         </div>
-        <img src="${chevron0(backgroundColor)}"/>
+        <img src="${chevron0(indicatorColor||backgroundColor)}"/>
     `;
 
     valueview.onclick=()=>{parent.toggle()};

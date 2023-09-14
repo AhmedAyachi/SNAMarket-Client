@@ -3,13 +3,11 @@ import css from "./OptionView.module.css";
 
 
 export default function OptionView(props){
-    const {parent,option,onPick}=props,{label,icon}=option;
+    const {parent,option,onPick}=props,{id,label,icon}=option;
     const optionview=View({parent,className:css.optionview});
 
     optionview.innateHTML=`
-        ${label?`
-            <text class="${css.label}">${label}</text>
-        `:""}
+        <text class="${css.label}">${label||id}</text>
         ${icon?`
             <img 
                 class="${css.icon}" 

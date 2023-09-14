@@ -5,8 +5,8 @@ import ListView from "./ListView/ListView";
 
 
 export default function DropList(props){
-    const {parent,options,iconColor="black",labelHidden,onChange}=props;
-    const droplist=View({parent,className:css.droplist}),state={
+    const {parent,options,iconColor="black",indicatorColor,labelHidden,onChange}=props;
+    const droplist=View({parent,className:`${css.droplist} ${props.className||""}`}),state={
         option:null,
         listshown:false,
         valueview:null,
@@ -45,7 +45,7 @@ export default function DropList(props){
             valueview&&valueview.remove();
             state.valueview=ValueView({
                 parent:droplist,value:option,
-                labelHidden,iconColor,
+                labelHidden,iconColor,indicatorColor,
             });
             onChange&&onChange(option);
         }

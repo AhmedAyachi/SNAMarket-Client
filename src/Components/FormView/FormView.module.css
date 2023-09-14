@@ -4,21 +4,9 @@
     display:flex;
     overflow:visible;
 }
-.fields{
-    max-width:100%;
-    flex:1;
-}
-.fields>*{
-    margin-top:3.733em;
-}
-.fields>*:first-child{
-    margin-top:0;
-}
 .submitbtn{
-    width:fit-content;
+    max-width:100%;
     padding:3.2em 4em !important;
     margin-top:5.6em;
-    margin-left:3.2em;
-    align-self:flex-end;
     flex-shrink:0;
 }

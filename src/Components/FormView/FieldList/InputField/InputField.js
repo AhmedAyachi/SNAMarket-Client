@@ -24,7 +24,7 @@ export default function InputField(props){
                 <${multiline?"textarea":"input"}
                     ref="inputEl"
                     class="${css.input}"
-                    type="${datetime?"text":(type||"text")}" 
+                    type="${datetime?"text":getInputType(type)}" 
                     placeholder="${placeholder||""}"
                     ${typeof(min)==="number"?`min="${min}"`:""}
                     ${max?`max="${max}"`:""}
@@ -130,3 +130,7 @@ const getIcon=(type)=>{
     return shape&&shape(minorColor)
 }
 
+const getInputType=(type)=>{
+    if(type==="number") return cordova.platformId==="ios"?"tel":"number";
+    else return type||"text";
+}

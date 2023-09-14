@@ -1,0 +1,17 @@
+.weightfield{
+    max-width:100%;
+    overflow:visible !important;
+}
+.container{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+.quantityfield{
+    flex:3;
+}
+.unitselector{
+    flex:2;
+    text-transform:uppercase;
+    text-align:right;
+}

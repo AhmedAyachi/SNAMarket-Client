@@ -1,13 +1,13 @@
-import {useId,View} from "corella";
+import {View} from "corella";
 import css from "./ButtonView.module.css";
 
 
 export default function ButtonView(props){
-    const {parent,id=useId("buttonview"),styleId,label,icon,onClick}=props;
+    const {parent,styleId,label,icon,onClick}=props;
     const buttonview=View({
-        parent,id,
+        parent,tag:"button",
         style:`${styles.buttonview(styleId)};${props.style||""}`,
-        className:`button ${css.buttonview} ${props.className||""}`
+        className:`${css.buttonview} ${props.className||""}`,
     });
     
     buttonview.innateHTML=`

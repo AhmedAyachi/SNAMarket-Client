@@ -15,7 +15,9 @@
     align-items:center;
 }
 .label{
+    width:100%;
     font-size:5em;
+    text-align:inherit;
 }
 .icon{
     width:5em;

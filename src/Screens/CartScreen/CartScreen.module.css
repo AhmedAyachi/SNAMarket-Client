@@ -1,5 +1,17 @@
 .cartscreen{
     max-width:100%;
     height:100%;
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-start;
+    align-items:stretch;
     overflow:hidden auto;
+    --paddingHorizontal:10em;
+}
+.header{
+    --paddingHorizontal:inherit !important;
+}
+.cartview{
+    max-width:100%;
+    flex:1;
 }
