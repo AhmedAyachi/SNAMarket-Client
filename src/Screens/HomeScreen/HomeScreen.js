@@ -70,6 +70,9 @@ export default function HomeScreen(props){
         console.log(producttypes);
         loadingview.unmount();
     });
+    WebView.useStore(({cart})=>{
+        homescreen.updateCartBadge(cart.items?.length);
+    });
 
     homescreen.updateCartBadge=(number)=>{
         const {cartbadgeEl}=state;

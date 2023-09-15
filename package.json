@@ -15,9 +15,6 @@
     "corella-plugin-webview": "^0.0.0",
     "corella-scripts": "^0.0.1"
   },
-  "dependencies": {
-    "corella": "^0.0.1"
-  },
   "cordova": {
     "plugins": {
       "cordova-plugin-statusbar": {},
@@ -28,5 +25,8 @@
     "platforms": [
       "browser"
     ]
+  },
+  "dependencies": {
+    "corella": "^0.0.3"
   }
 }

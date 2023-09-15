@@ -1,4 +1,4 @@
-import {View} from "corella";
+import {View,usePressGesture} from "corella";
 import css from "./CartItemView.module.css";
 import {minus0,plus0,trash0} from "assets";
 
@@ -22,18 +22,29 @@ export default function CartItemView(props){
         </div>
     `;
 
-    cartitemview.minusbtn.onclick=()=>{
-        if(cartitem.quantity>1){
-            cartitem.quantity-=1;
+    usePressGesture({
+        element:cartitemview.minusbtn,
+        timestamp:350,
+        onPressing:(event)=>{
+            if((cartitem.quantity>1)){
+                cartitem.quantity-=1;
+                cartitemview.countEl.innerText=cartitem.quantity;
+            }
+            else{
+                event.cancel();
+            }
+        },
+        onEnd:()=>{onChangeQuantity&&onChangeQuantity(cartitem)},
+    });
+    usePressGesture({
+        element:cartitemview.plusbtn,
+        timestamp:350,
+        onPressing:()=>{
+            cartitem.quantity+=1;
             cartitemview.countEl.innerText=cartitem.quantity;
-            onChangeQuantity&&onChangeQuantity(cartitem);
-        }
-    }
-    cartitemview.plusbtn.onclick=()=>{
-        cartitem.quantity+=1;
-        cartitemview.countEl.innerText=cartitem.quantity;
-        onChangeQuantity&&onChangeQuantity(cartitem);
-    }
+        },
+        onEnd:()=>{onChangeQuantity&&onChangeQuantity(cartitem)},
+    });
 
     cartitemview.removebtn.onclick=()=>{
         cartitemview.remove();

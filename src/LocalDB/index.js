@@ -36,7 +36,7 @@ export const brands=[
 
 producttypes.forEach(producttype=>{
     const {id}=producttype;
-    producttype.brands=brands.filter(({products})=>products.some(({type})=>type===id));
+    producttype.brands=brands.filter(({products})=>products.some(({type})=>type===id)).sort(()=>Math.random()-0.5);
 });
 
 const orderstatuses=["pending","shipped","cancelled"];
@@ -46,3 +46,11 @@ export const orders=new Array(5).fill().map((_,i)=>({
     time:"12:15",
     status:orderstatuses[i%orderstatuses.length],
 }));
+
+export const cart={
+    items:brands.flatMap(({products})=>products.slice(0,2).map(({granularities,id,name,kgprice},i)=>({
+        quantity:1+Math.floor(Math.random()*10),
+        granularity:granularities[i%granularities.length],
+        product:{id,name,kgprice},
+    }))),
+}

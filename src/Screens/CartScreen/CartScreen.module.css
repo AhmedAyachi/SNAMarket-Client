@@ -5,7 +5,7 @@
     flex-direction:column;
     justify-content:flex-start;
     align-items:stretch;
-    overflow:hidden auto;
+    overflow:hidden;
     --paddingHorizontal:6.333em;
 }
 .header{
@@ -13,7 +13,7 @@
 }
 .cartview{
     max-width:100%;
-    flex:1;
+    flex:1 1 0;
     padding:0 var(--paddingHorizontal);
     padding-bottom:5em;
 }

@@ -7,8 +7,9 @@
 }
 .items{
     max-width:100%;
-    flex:1;
+    flex:1 1 0;
+    overflow:hidden auto;
 }
 .items>*{
-    margin-bottom:10em;
+    margin-bottom:7em;
 }
