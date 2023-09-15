@@ -31,6 +31,10 @@ export default function HomeScreen(props){
                 WebView.show({
                     id:"servicesite",
                     message:{name:"cart"},
+                    onClose:({store})=>{
+                        const {cart}=store;
+                        homescreen.updateCartBadge(cart.items?.length);
+                    },
                 });
             },
         }],
@@ -55,15 +59,7 @@ export default function HomeScreen(props){
                         data:type.brands,
                         renderItem:({parent,item})=>BrandAcd({
                             parent,brand:item,
-                            onCartChange:(cart)=>{
-                                const {length}=cart.items,{cartbadgeEl}=state;
-                                cartbadgeEl&&cartbadgeEl.remove();
-                                state.cartbadgeEl=length&&TextBadge({
-                                    parent:state.cartEl,
-                                    className:css.cartbadge,
-                                    text:length,
-                                });
-                            },
+                            onCartChange:(cart)=>{homescreen.updateCartBadge(cart.items?.length)},
                         }),
                     });
                     fadeIn(flatlist,500);
@@ -74,6 +70,16 @@ export default function HomeScreen(props){
         console.log(producttypes);
         loadingview.unmount();
     });
+
+    homescreen.updateCartBadge=(number)=>{
+        const {cartbadgeEl}=state;
+        cartbadgeEl&&cartbadgeEl.remove();
+        state.cartbadgeEl=number&&TextBadge({
+            parent:state.cartEl,
+            className:css.cartbadge,
+            text:number,
+        });
+    }
 
     return homescreen;
 }

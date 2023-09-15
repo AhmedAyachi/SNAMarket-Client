@@ -14,10 +14,16 @@ export default function CartView(props){
     items?.forEach(cartitem=>{
         CartItemView({
             parent:cartview.itemsEl,cartitem,
-            onChangeQuantity:()=>{cartview.updateAmount()},
+            onChangeQuantity:()=>{
+                WebView.setStore(`cart.items[${items.indexOf(cartitem)}]`,cartitem,()=>{
+                    cartview.updateAmount();
+                });
+            },
             onRemove:()=>{
                 removeItem(items,cartitem);
-                cartview.updateAmount();
+                WebView.setStore("cart.items",items,()=>{
+                    cartview.updateAmount();
+                });
             },
         });
     });
