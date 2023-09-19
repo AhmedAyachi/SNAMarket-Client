@@ -20,7 +20,7 @@ export default function CartItemView(props){
                 <span class="${css.count}" ref="countEl">${quantity}</span>
                 <img ref="plusbtn" src="${plus0(textColor,3)}"/>
             </div>
-            <img ref="removebtn" src="${trash0(mainColor)}"/>
+            <img ref="removebtn" src="${trash0(majorColor)}"/>
         </div>
     `;
 

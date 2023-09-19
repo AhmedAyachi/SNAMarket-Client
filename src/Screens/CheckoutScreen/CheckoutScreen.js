@@ -18,12 +18,19 @@ export default function CheckoutScreen(props){
     });
     const loadingview=LoadingView();
     H.sendOrderRequest().then(order=>{
-        OrderSheet({parent:checkoutscreen.mainEl,order});
+        OrderSheet({
+            parent:checkoutscreen.mainEl,
+            className:css.ordersheet,order,
+        });
         const confirmbtn=ButtonView({
             parent:checkoutscreen.mainEl,
             label:language.confirm,
             onClick:()=>{
-                const loadingview=LoadingView({parent:confirmbtn,style:{backgroundColor:mainColor}});
+                const loadingview=LoadingView({
+                    parent:confirmbtn,
+                    color:minorColor,
+                    style:{backgroundColor:mainColor},
+                });
                 H.sendConfirmRequest().then(()=>{
                     
                 }).

@@ -3,10 +3,12 @@
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding:4em;
-    border-radius:2.133em;
-    background-color:var(--minorColor);
-    box-shadow:0px 2px 7px 0px rgba(0,0,0,0.1);
+    padding:3em 0;
+    border-top:0.35em solid var(--accentColor);
+}
+.orderitemview:first-of-type{
+    padding-top:0;
+    border-top:none;
 }
 .name{
     font-family:var(--mainFont);
@@ -16,7 +18,11 @@
     color:var(--textColor);
 }
 .sideinfo{
-    text-align:right;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:flex-end;
+    row-gap:2em;
 }
 .sideinfo>*{
     font-family:var(--mainFont);

@@ -3,7 +3,7 @@ import * as localdb from "localdb";
 
 export const sendConfirmRequest=()=>new Promise(resolve=>{
     if(isDevEnv){
-        setTimeout(resolve,300);
+        setTimeout(resolve,1000);
     }
     else{
         resolve();

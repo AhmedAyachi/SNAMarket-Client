@@ -16,7 +16,13 @@
     flex:1;
     display:flex;
     flex-direction:column;
-    justify-content:space-around;
+    justify-content:flex-start;
     align-items:stretch;
+    row-gap:var(--paddingHorizontal);
     padding:0 var(--paddingHorizontal);
+    padding-bottom:var(--paddingHorizontal);
+}
+.ordersheet{
+    flex:1;
+    margin:0 var(--paddingHorizontal);
 }
