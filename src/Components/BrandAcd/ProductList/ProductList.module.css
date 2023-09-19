@@ -5,7 +5,6 @@
     max-height:80em;
     background-color:white;
 }
-.loadingview[class]{
-    font-size:0.75em;
-    background-color:white;
+.loadingview{
+    background-color:inherit !important;
 }

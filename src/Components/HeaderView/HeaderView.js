@@ -6,7 +6,8 @@ import {chevron0} from "assets";
 export default function HeaderView(props){
     const {parent,title,backIcon=chevron0}=props;
     const headerview=View({
-        parent,at:props.at||"start",
+        parent,id:"header",
+        at:props.at||"start",
         className:`${css.headerview} ${props.className||""}`,
     });
 

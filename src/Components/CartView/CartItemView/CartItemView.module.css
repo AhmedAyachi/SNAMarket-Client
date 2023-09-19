@@ -4,13 +4,22 @@
     justify-content:space-between;
     align-items:center;
 }
+.col0{
+    font-size:1em;
+}
+.col1{
+    width:fit-content;
+    display:flex;
+    justify-content:flex-start;
+    align-items:center;
+    column-gap:4em;
+}
 .counter{
-    width:35em;
+    width:25em;
     display:flex;
     justify-content:space-around;
     align-items:center;
     padding:4em 2em;
-    /* column-gap:4em; */
     border-radius:3em;
     background-color:rgba(0,0,0,0.05);
 }

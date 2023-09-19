@@ -1,0 +1,22 @@
+.checkoutscreen{
+    max-width:100%;
+    height:100%;
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-start;
+    align-items:stretch;
+    overflow:hidden auto;
+    --paddingHorizontal:6.333em;
+}
+.header{
+    --paddingHorizontal:inherit !important;
+}
+.main{
+    max-width:100%;
+    flex:1;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-around;
+    align-items:stretch;
+    padding:0 var(--paddingHorizontal);
+}

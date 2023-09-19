@@ -1,10 +1,10 @@
 
 
-export {default as Order} from "./Order";
-export {default as Product} from "./Product";
-export {default as ProductType} from "./ProductType";
-export {default as User} from "./User";
 export {default as Person} from "./Person";
+export {default as User} from "./User";
+export {default as ProductType} from "./ProductType";
+export {default as Product} from "./Product";
+export * from "./Order";
 
 export const getAdjustedTime=(time)=>{
     let formatted;

@@ -10,6 +10,7 @@ module.exports=[
 ].map((webview,i)=>({
     ...webview,
     id:webview.name.toLowerCase(),
+    statusBarColor:globalThis.backgroundColor,
     backgroundColor:globalThis.backgroundColor,
     file:`index${i+1}.html`,
 }));

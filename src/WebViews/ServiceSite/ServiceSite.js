@@ -1,6 +1,6 @@
 import {NativeView,parseJSON} from "corella";
 import css from "./ServiceSite.module.css";
-import {CartScreen} from "screens";
+import {CheckoutScreen,CartScreen} from "screens";
 
 
 export default function ServiceSite(props){
@@ -23,5 +23,6 @@ export default function ServiceSite(props){
 }
 
 const statics={
+    checkout:CheckoutScreen,
     cart:CartScreen,
 }

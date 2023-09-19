@@ -32,12 +32,18 @@ export default function CartView(props){
         label:language.toorder,
         sublabel:" ",
     });
+    orderbtn.onclick=()=>{
+        WebView.show({
+            id:"servicesite",
+            message:{name:"checkout"},
+        });
+    }
 
 
     cartview.updateAmount=()=>{
         const price=items.reduce((sum,{quantity,product})=>sum+quantity*product.kgprice,0);
         orderbtn.setSublabel(price+" "+language.td);
-    }
+    };
     cartview.updateAmount();
 
     return cartview;

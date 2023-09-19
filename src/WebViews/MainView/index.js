@@ -6,7 +6,7 @@ import WebViews from "../WebViews";
 
 function onDeviceReady(){
     StatusBar.styleLightContent();
-    StatusBar.backgroundColorByHexString("#016c34");
+    StatusBar.backgroundColorByHexString(mainColor);
     StatusBar.show();
     WebView.defineWebViews(WebViews);
     WebView.initiateStore(store,()=>{

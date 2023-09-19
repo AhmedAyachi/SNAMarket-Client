@@ -3,6 +3,7 @@ import ServiceSite from "./ServiceSite";
 
 
 function onDeviceReady(){
+    StatusBar.styleDefault();
     ServiceSite({parent:document.body});
 };
 

@@ -39,18 +39,27 @@ producttypes.forEach(producttype=>{
     producttype.brands=brands.filter(({products})=>products.some(({type})=>type===id)).sort(()=>Math.random()-0.5);
 });
 
+export const cart={
+    items:brands.flatMap(({products},i)=>{
+        const {granularities,id,name,kgprice}=products[0];
+        return ({
+            quantity:1+Math.floor(Math.random()*10),
+            granularity:granularities[i%granularities.length],
+            product:{id,name,kgprice},
+        });
+    }),
+}
+
 const orderstatuses=["pending","shipped","cancelled"];
 export const orders=new Array(5).fill().map((_,i)=>({
     id:"order"+i,
     date:"07/08/2023",
     time:"12:15",
+    items:cart.items.slice(0,5).map(({product,quantity,granularity})=>({
+        id:product.id,
+        name:product.name,
+        quantity,granularity,
+    })),
+    amount:123*(i+1),
     status:orderstatuses[i%orderstatuses.length],
 }));
-
-export const cart={
-    items:brands.flatMap(({products})=>products.slice(0,2).map(({granularities,id,name,kgprice},i)=>({
-        quantity:1+Math.floor(Math.random()*10),
-        granularity:granularities[i%granularities.length],
-        product:{id,name,kgprice},
-    }))),
-}

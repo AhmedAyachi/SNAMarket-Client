@@ -4,6 +4,7 @@ export {default as chick0} from "./Images/Chick_0.jpg";
 export {default as userlogin0} from "./Images/UserLogin_0.png";
 
 //Svgs:
+export {default as check0} from "./Svgs/Check_0";
 export {default as trash0} from "./Svgs/Trash_0";
 export {default as plus0} from "./Svgs/Plus_0";
 export {default as minus0} from "./Svgs/Minus_0";
@@ -12,6 +13,7 @@ export {default as clock0} from "./Svgs/Clock_0";
 export {default as calendar0} from "./Svgs/Calendar_0";
 export {default as reset0} from "./Svgs/Reset_0";
 export {default as cross0} from "./Svgs/Cross_0";
+export {default as cross1} from "./Svgs/Cross_1";
 export {default as chevron0} from "./Svgs/Chevron_0";
 export {default as cow0} from "./Svgs/Cow_0";
 export {default as chicken0} from "./Svgs/Chicken_0";

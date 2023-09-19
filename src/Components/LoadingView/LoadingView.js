@@ -4,14 +4,18 @@ import {loading0} from "assets";
 
 
 export default function LoadingView(props={}){
-    const {parent=document.getElementById("webview")}=props;
+    const {parent=document.getElementById("webview"),color}=props;
     const loadingview=View({
         ...props,parent,
         className:`${css.loadingview} ${props.className||""}`,
     });
 
     loadingview.innateHTML=`
-        <img class="${css.icon}" src="${loading0(mainColor)}"/>
+        <img 
+            class="${css.icon}" 
+            style="${loadingview.clientWidth>loadingview.clientHeight?"height":"width"}:40%"
+            src="${loading0(color)}"
+        />
     `;
 
     loadingview.unmount=(callback)=>{

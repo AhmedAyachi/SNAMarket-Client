@@ -1,0 +1,27 @@
+.orderitemview{
+    max-width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:4em;
+    border-radius:2.133em;
+    background-color:var(--minorColor);
+    box-shadow:0px 2px 7px 0px rgba(0,0,0,0.1);
+}
+.name{
+    font-family:var(--mainFont);
+    font-weight:700;
+    font-size:5em;
+    text-transform:capitalize;
+    color:var(--textColor);
+}
+.sideinfo{
+    text-align:right;
+}
+.sideinfo>*{
+    font-family:var(--mainFont);
+    font-weight:400;
+    font-size:4em;
+    text-transform:capitalize;
+    color:var(--mainColor);
+}

@@ -32,14 +32,11 @@ export default function MainView(props){
 const statics={
     routes:[
         {id:"productcatalog",component:HomeScreen},
-        {id:"news"},
-        {id:"events"},
-        {id:"recipes"},
         {id:"thecompany",component:CompanyScreen},
-        {id:"commitment"},
         {
             id:"orders",
             component:(props)=>HistoryScreen({...props,type:"order"}),
         },
+        {id:"complaints"},
     ],
 }
