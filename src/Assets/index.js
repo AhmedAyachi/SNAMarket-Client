@@ -1,5 +1,7 @@
 
 //Images:
+export {default as success0} from "./Images/Success_0.png";
+export {default as fail0} from "./Images/Fail_0.png";
 export {default as chick0} from "./Images/Chick_0.jpg";
 export {default as userlogin0} from "./Images/UserLogin_0.png";
 

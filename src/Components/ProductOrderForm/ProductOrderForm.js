@@ -18,10 +18,22 @@ export default function ProductOrderForm(props){
                 placeholder:language.kilograms,
             },
             {
+                id:"unit",
+                type:"radio",
+                label:language.unit,
+                multiple:false,
+                clearable:false,
+                options:[
+                    {id:"t",label:language.ton},
+                    {id:"kg",label:language.kilogram},
+                ],
+            },
+            {
                 id:"granularity",
                 label:language.granularity,
                 type:"radio",
                 multiple:false,
+                clearable:false,
                 options:granularities.map((id,i)=>({
                     id:"g"+i,
                     ref:id,
@@ -35,6 +47,7 @@ export default function ProductOrderForm(props){
         ],
         onSubmit:(input)=>{
             input.granularity=input.granularity?.ref;
+            input.unit=input.unit.id;
             const cartitem=getInputCartItem(product,input);
             console.log(input);
             H.saveCartItem(cartitem).
@@ -52,6 +65,7 @@ export default function ProductOrderForm(props){
         const cartitem=items.find(item=>item.product.id===id);
         cartitem&&productorderform.setInput({
             quantity:cartitem.quantity,
+            unit:cartitem.unit,
             granularity:"g"+granularities.indexOf(cartitem.granularity),
         });
         productorderform.setSubmitter({
@@ -68,6 +82,7 @@ export default function ProductOrderForm(props){
 const getInputCartItem=(product,input)=>{
     return {
         quantity:input.quantity,
+        unit:input.unit,
         granularity:input.granularity,
         product:{
             id:product.id,

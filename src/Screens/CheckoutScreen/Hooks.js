@@ -3,7 +3,7 @@ import * as localdb from "localdb";
 
 export const sendConfirmRequest=()=>new Promise(resolve=>{
     if(isDevEnv){
-        setTimeout(resolve,1000);
+        setTimeout(()=>{resolve(Math.random()>0.5)},1000);
     }
     else{
         resolve();
@@ -13,7 +13,10 @@ export const sendConfirmRequest=()=>new Promise(resolve=>{
 export const sendOrderRequest=()=>new Promise(async (resolve)=>{
     if(isDevEnv){
         setTimeout(()=>{
-            resolve(localdb.orders[0]);
+            const order=localdb.orders[0];
+            delete order.id;
+            delete order.amount;
+            resolve(order);
         },500);
     }
     else{

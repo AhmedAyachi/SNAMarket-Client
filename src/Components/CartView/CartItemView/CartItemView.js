@@ -4,20 +4,20 @@ import {minus0,plus0,trash0} from "assets";
 
 
 export default function CartItemView(props){
-    const {parent,cartitem,onChangeQuantity,onRemove}=props,{product,quantity,granularity}=cartitem;
+    const {parent,cartitem,onChangeQuantity,onRemove}=props;
     const cartitemview=View({parent,className:css.cartitemview});
 
     cartitemview.innateHTML=`
         <div class="${css.col0}">
-            <text class="${css.name}">${product.name}</text>
+            <text class="${css.name}">${cartitem.product.name}</text>
             <text class="${css.price}">
-                ${product.kgprice} ${language.td}/kg - ${granularity}
+                ${cartitem.granularity} - ${language[cartitem.unit==="t"?"ton":"kilogram"]}
             </text>
         </div>
         <div class="${css.col1}">
             <div class="${css.counter}">
                 <img ref="minusbtn" src="${minus0(textColor,3)}"/>
-                <span class="${css.count}" ref="countEl">${quantity}</span>
+                <span class="${css.count}" ref="countEl">${cartitem.quantity}</span>
                 <img ref="plusbtn" src="${plus0(textColor,3)}"/>
             </div>
             <img ref="removebtn" src="${trash0(majorColor)}"/>

@@ -2,6 +2,7 @@ import {bedylogo0,barakalogo,brimalogo,dymalogo,sianalogo,snalogo} from "./Image
 
 
 export {default as language} from "./Language.json";
+const units=["kg","t"];
 
 export const users=new Array(3).fill().map((_,i)=>({
     id:"user"+i,
@@ -29,7 +30,6 @@ export const brands=[
         id:brand.id+"pd"+i+j,
         name:"product "+(i+1)+(j+1),
         type:producttypes[(i+j)%producttypes.length].id,
-        kgprice:5+Math.floor(20*Math.random()),
         granularities:["0.22mm","0.33mm","0.5mm"],
     })),
 }));
@@ -41,11 +41,12 @@ producttypes.forEach(producttype=>{
 
 export const cart={
     items:brands.flatMap(({products},i)=>{
-        const {granularities,id,name,kgprice}=products[0];
+        const {granularities,id,name}=products[0];
         return ({
             quantity:1+Math.floor(Math.random()*10),
+            unit:units[i%units.length],
             granularity:granularities[i%granularities.length],
-            product:{id,name,kgprice},
+            product:{id,name},
         });
     }),
 }
@@ -55,10 +56,11 @@ export const orders=new Array(5).fill().map((_,i)=>({
     id:"order"+i,
     date:"07/08/2023",
     time:"12:15",
-    items:cart.items.slice(0,5).map(({product,quantity,granularity})=>({
+    items:cart.items.slice(0,5).map(({product,quantity,granularity},i)=>({
         id:product.id,
         name:product.name,
         quantity,granularity,
+        unit:units[i%units.length],
     })),
     amount:123*(i+1),
     status:orderstatuses[i%orderstatuses.length],

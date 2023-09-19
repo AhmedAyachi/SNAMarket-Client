@@ -4,7 +4,7 @@ import {chevron0} from "assets";
 
 
 export default function HeaderView(props){
-    const {parent,title,backIcon=chevron0}=props;
+    const {parent,title,backIcon=chevron0,message}=props;
     const headerview=View({
         parent,id:"header",
         at:props.at||"start",
@@ -20,7 +20,7 @@ export default function HeaderView(props){
         <text as="span" class="${css.title}">${title||""}</text>
     `;
 
-    headerview.backbtn.onclick=()=>{WebView.close()};
+    headerview.backbtn.onclick=()=>{WebView.close(message)};
 
     return headerview;
 }

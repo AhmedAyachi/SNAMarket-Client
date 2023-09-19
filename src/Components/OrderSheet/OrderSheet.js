@@ -9,10 +9,12 @@ export default function OrderSheet(props){
 
     ordersheet.innateHTML=`
         <div class="${css.items}" ref="itemsEl"></div>
-        <p class="${css.amount}">
-            <span>${language.amount}</span>
-            <text as="span">${amount} ${language.td}</text>
-        </p>
+        ${amount?`
+            <p class="${css.amount}">
+                <span>${language.amount}</span>
+                <text as="span">${amount} ${language.td}</text>
+            </p>
+        `:""}
     `;
     items.forEach(item=>{
         OrderItemView({parent:ordersheet.itemsEl,item});

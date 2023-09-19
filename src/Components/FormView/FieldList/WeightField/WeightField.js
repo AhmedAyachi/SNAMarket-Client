@@ -39,7 +39,7 @@ export default function WeightField(props){
 }
 
 const statics={
-    units:["kg","ton"],
+    units:["kg","t"],
 }
 
 const getValue=(value)=>({

@@ -9,7 +9,7 @@ export default function OrderItemView(props){
     orderitemview.innateHTML=`
         <text class="${css.name}">${item.name||""}</text>
         <div class="${css.sideinfo}">
-            <text>${item.quantity} kg</text>
+            <text>${item.quantity} ${item.unit}</text>
             <text>${item.granularity}</text>
         </div>
     `;

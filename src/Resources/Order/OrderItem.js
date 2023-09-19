@@ -6,6 +6,7 @@ export default class OrderItem {
             id:props.id,
             name:props.name,
             quantity:props.quantity,
+            unit:props.unit,
             granularity:props.granularity,
         });
     }
