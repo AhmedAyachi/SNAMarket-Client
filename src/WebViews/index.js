@@ -7,9 +7,9 @@ function onDeviceReady(){
     document.documentElement.setAttribute("lang",language.$id);
     window.language=Object.freeze(language);
     if(cordova.platformId==="ios"){
-        window.addEventListener("touchstart",()=>{
+        window.addEventListener("touchend",()=>{
             const {activeElement}=document;
-            if((activeElement===document.body)){
+            if((activeElement!==document.body)){
                 Keyboard&&Keyboard.isVisible&&Keyboard.hide();
                 activeElement.click();
             }
@@ -27,7 +27,7 @@ document.addEventListener("deviceready",onDeviceReady,false);
     [
         "mainFont","majorFont","minorFont",
         "mainColor","majorColor","minorColor",
-        "textColor","accentColor","backgroundColor",
+        "accentColor","textColor","backgroundColor",
     ].forEach(name=>{
         Object.defineProperty(window,name,{
             value:style.getPropertyValue(`--${name}`),

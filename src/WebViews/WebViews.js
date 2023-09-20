@@ -5,7 +5,7 @@ module.exports=[
     {
         name:"BottomSheet",
         asModal:true,
-        modalStyle:{height:0.65},
+        modalStyle:{height:0.7},
     },
 ].map((webview,i)=>({
     ...webview,

@@ -42,6 +42,7 @@ export default function CheckoutScreen(props){
                             mainEl.style.justifyContent="center";
                             OrderFeedbackView({
                                 parent:mainEl,successful,
+                                className:css.feedback,
                                 onSubmit:(event)=>{
                                     if(successful){WebView.close()}
                                     else{

@@ -9,12 +9,6 @@
     max-width:100%;
     flex:1;
 }
-/* .items>*{
-    margin-top:2em;
-}
-.items>*:first-child{
-    margin-top:0;
-} */
 .amount{
     max-width:100%;
     display:flex;
