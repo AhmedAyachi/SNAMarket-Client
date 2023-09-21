@@ -14,15 +14,15 @@
     "cordova-plugin-appminimize": "^1.0.1",
     "cordova-plugin-ionic-keyboard": "^2.2.0",
     "cordova-plugin-statusbar": "^3.0.0",
-    "corella-plugin-webview": "^0.0.0",
+    "corella-plugin-webview": "^0.0.1",
     "corella-scripts": "^0.0.1"
   },
   "cordova": {
     "plugins": {
       "cordova-plugin-appminimize": {},
       "cordova-plugin-ionic-keyboard": {},
-      "corella-plugin-webview": {},
-      "cordova-plugin-statusbar": {}
+      "cordova-plugin-statusbar": {},
+      "corella-plugin-webview": {}
     },
     "platforms": [
       "android",
