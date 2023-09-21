@@ -1,6 +1,7 @@
-import {View} from "corella";
+import {View,getMonths} from "corella";
 import css from "./OrderView.module.css";
 import {Order} from "resources";
+import {check1,cross0,clock0} from "assets";
 
 
 export default function OrderView(props){
@@ -10,17 +11,47 @@ export default function OrderView(props){
     },{statusColor}=state;
 
     orderview.innateHTML=`
-        <div class="${css.col0}">
-            <h3 class="${css.title}"></h3>
-            <p class="${css.datetime}">${order.date} - ${order.time}</p>
-        </div>
-        <div class="${css.col1}">
-            <span class="${css.status}" style="color:${statusColor};">
+        <h3 class="${css.title}">${order.id}</h3>
+        <p class="${css.datetime}">${getDateLabel(order.date)} - ${getTimeLabel(order.time)}</p>
+        <div class="${css.status}">
+            <span style="color:${statusColor};">
                 ${language["order"+status]?.replace(language.order,"")}
             </span>
-            <span class="${css.badge}" style="background-color:${statusColor}"></span>
+            <img src="${getStatusIcon(status)(statusColor,3)}"/>
         </div>
     `;
 
     return orderview;
+}
+
+const statics={
+    months:getMonths(),
+}
+
+const getDateLabel=(date)=>{
+    const dateObj=new Date(date.split(/\/|-/g).reverse().join("-"));
+    const monthname=statics.months[dateObj.getMonth()].name;
+    const day=dateObj.getDate();
+    return monthname+" "+day+", "+dateObj.getFullYear();
+}
+
+const getTimeLabel=(time)=>{
+    let [hour,minutes]=time.split(":").map(str=>parseInt(str)),unit;
+    if(hour>12){
+        unit="PM";
+        hour-=12;
+    }
+    else{
+        unit="AM";
+    }
+    return hour+":"+minutes+" "+unit;
+}
+
+const getStatusIcon=(status)=>{
+    switch(status){
+        case "shipped": return check1;
+        case "cancelled": return cross0;
+        case "pending": return clock0;
+        default: return ()=>"";
+    }
 }

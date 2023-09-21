@@ -6,6 +6,7 @@ export default class Product {
             id:props.id,
             name:props.name,
             image:props.image,
+            description:props.description,
             granularities:props.granularities,
         });
     }

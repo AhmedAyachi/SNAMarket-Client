@@ -4,7 +4,7 @@ export default class Order {
     constructor(props={}){
         Object.assign(this,{
             id:props.id,
-            date:props.id,
+            date:props.date,
             time:props.time,
             status:props.status,
         });
