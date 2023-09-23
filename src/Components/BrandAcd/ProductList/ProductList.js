@@ -17,8 +17,13 @@ export default function ProductList(props){
     `;
     const loadingview=LoadingView({parent:productlist,className:css.loadingview});
     H.fetchProducts(brand).then(products=>{
-        productlist.addItems(products);
-        loadingview.unmount();
+        productlist.addItems(products); 
+    }).
+    finally(()=>{
+        setTimeout(()=>{
+            productlist.style.height="fit-content";
+            loadingview.unmount();
+        },1000);
     });
 
     return productlist;

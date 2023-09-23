@@ -31,6 +31,6 @@
     ]
   },
   "dependencies": {
-    "corella": "^0.0.3"
+    "corella": "file:../../../../Libraries/Corella"
   }
 }

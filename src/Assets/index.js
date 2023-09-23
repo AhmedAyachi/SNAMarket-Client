@@ -7,6 +7,7 @@ export {default as userlogin0} from "./Images/UserLogin_0.png";
 
 //Svgs:
 export {default as check0} from "./Svgs/Check_0";
+export {default as check1} from "./Svgs/Check_1";
 export {default as trash0} from "./Svgs/Trash_0";
 export {default as plus0} from "./Svgs/Plus_0";
 export {default as minus0} from "./Svgs/Minus_0";

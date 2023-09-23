@@ -10,8 +10,8 @@ export default function ItemView(props){
     });
 
     itemview.innateHTML=`
-        <text as="span" class="${css.name}">${product.name||""}</text>
-        <!--<text as="span" class="${css.price}">${product.kgprice} ${language.td}/KG</text>-->
+        <text as="h3" class="${css.name}">${product.name||""}</text>
+        <text class="${css.description}">${product.description||""}</text>
     `;
 
     itemview.onclick=()=>{

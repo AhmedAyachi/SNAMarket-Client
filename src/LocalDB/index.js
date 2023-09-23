@@ -26,12 +26,15 @@ export const brands=[
     {id:"bedy",logo:bedylogo0},
 ].map((brand,i)=>({
     ...brand,
-    products:new Array(5).fill().map((_,j)=>({
-        id:brand.id+"pd"+i+j,
-        name:"product "+(i+1)+(j+1),
-        type:producttypes[(i+j)%producttypes.length].id,
-        granularities:["0.22mm","0.33mm","0.5mm"],
-    })),
+    products:new Array(5).fill().map((_,j)=>{
+        const name="product "+(i+1)+(j+1);
+        return {
+            id:brand.id+"pd"+i+j,name,
+            description:name+" description",
+            type:producttypes[(i+j)%producttypes.length].id,
+            granularities:["0.22mm","0.33mm","0.5mm"],
+        };
+    }),
 }));
 
 producttypes.forEach(producttype=>{

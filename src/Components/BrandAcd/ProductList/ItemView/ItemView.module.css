@@ -1,16 +1,18 @@
 .itemview{
     max-width:100%;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
     padding:2em 4em;
 }
 .name{
     font-size:5em;
     font-weight:400;
+    text-transform:capitalize;
 }
-.price{
-    font-size:5em;
+.description{
+    font-size:4em;
+    color:var(--accentColor);
+    margin-top:0.25em;
+}
+.description::first-letter{
     text-transform:uppercase;
 }
 
