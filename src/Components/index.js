@@ -1,5 +1,6 @@
 
 
+export {default as ComplaintView} from "./ComplaintView/ComplaintView";
 export {default as OrderFeedbackView} from "./OrderFeedbackView/OrderFeedbackView";
 export {default as OrderSheet} from "./OrderSheet/OrderSheet";
 export {default as CartView} from "./CartView/CartView";

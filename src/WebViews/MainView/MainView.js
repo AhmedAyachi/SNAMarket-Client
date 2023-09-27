@@ -37,6 +37,9 @@ const statics={
             id:"orders",
             component:(props)=>HistoryScreen({...props,type:"order"}),
         },
-        {id:"complaints"},
+        {
+            id:"complaints",
+            component:(props)=>HistoryScreen({...props,type:"complaint"}),
+        },
     ],
 }

@@ -4,6 +4,7 @@ export {default as Person} from "./Person";
 export {default as User} from "./User";
 export {default as ProductType} from "./ProductType";
 export {default as Product} from "./Product";
+export {default as Complaint} from "./Complaint";
 export * from "./Order";
 
 export const getAdjustedTime=(time)=>{

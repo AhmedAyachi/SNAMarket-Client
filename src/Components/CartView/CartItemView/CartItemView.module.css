@@ -1,8 +1,10 @@
 .cartitemview{
+    position:relative;
     max-width:100%;
     display:flex;
     justify-content:space-between;
     align-items:center;
+    overflow:visible;
 }
 .col0{
     font-size:1em;
@@ -49,3 +51,4 @@
     color:var(--textColor);
     width:2em;
 }
+

@@ -1,6 +1,6 @@
 import {View,FlatList} from "corella";
 import css from "./HistoryScreen.module.css";
-import {OrderView,LoadingView} from "components";
+import {ComplaintView,OrderView,LoadingView} from "components";
 import * as H from "./Hooks";
 
 
@@ -29,6 +29,10 @@ export default function HistoryScreen(props){
 }
 
 const statics={
+    complaint:{
+        fetchData:H.fetchComplaints,
+        component:({parent,item})=>ComplaintView({parent,complaint:item}),
+    },
     order:{
         fetchData:H.fetchOrders,
         component:({parent,item})=>OrderView({parent,order:item}),

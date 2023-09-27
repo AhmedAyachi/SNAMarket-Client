@@ -12,12 +12,14 @@ export default function OrderView(props){
 
     orderview.innateHTML=`
         <h3 class="${css.title}">${order.id}</h3>
-        <p class="${css.datetime}">${getDateLabel(order.date)} - ${getTimeLabel(order.time)}</p>
-        <div class="${css.status}">
-            <span style="color:${statusColor};">
-                ${language["order"+status]?.replace(language.order,"")}
-            </span>
-            <img src="${getStatusIcon(status)(statusColor,3)}"/>
+        <div class="${css.info}">
+            <p class="${css.datetime}">${getDateLabel(order.date)} - ${getTimeLabel(order.time)}</p>
+            <div class="${css.status}">
+                <span style="color:${statusColor};">
+                    ${language["order"+status]?.replace(language.order,"")}
+                </span>
+                <img src="${getStatusIcon(status)(statusColor,3)}"/>
+            </div>
         </div>
     `;
 

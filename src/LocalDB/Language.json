@@ -1,6 +1,11 @@
 {
     "$id":"fr",
     "$name":"français",
+    "cancel":"annuler",
+    "delivery":"livraison",
+    "customerservice":"service client",
+    "product":"produit",
+    "removefromcart":"retirer du panier",
     "somethingwentwrong":"quelque chose s'est mal passée",
     "pleasetryagaintoconfirmyourorder":"veuillez réessayer pour confirmer votre commande",
     "youcantrackyourorderintheorderssection":"vous pouvez suivre votre commande dans la rubrique commandes",

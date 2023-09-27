@@ -87,7 +87,7 @@ const getInputCartItem=(product,input)=>{
         product:{
             id:product.id,
             name:product.name,
-            kgprice:product.kgprice,
+            granularities:product.granularities,
         },
     }
 }

@@ -49,7 +49,7 @@ export const cart={
             quantity:1+Math.floor(Math.random()*10),
             unit:units[i%units.length],
             granularity:granularities[i%granularities.length],
-            product:{id,name},
+            product:{id,name,granularities},
         });
     }),
 }
@@ -67,4 +67,12 @@ export const orders=new Array(5).fill().map((_,i)=>({
     })),
     amount:123*(i+1),
     status:orderstatuses[i%orderstatuses.length],
+}));
+
+export const complaints=new Array(5).fill().map((_,i)=>({
+    id:"complaint"+i,
+    subject:["product","customerService","delivery"][i%3],
+    date:"10/7/2022",
+    time:"9:18",
+    body:"Donec vulputate nunc libero, id dignissim tellus fermentum quis. Vestibulum viverra ac leo no",
 }));
