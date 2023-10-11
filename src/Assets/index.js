@@ -6,6 +6,7 @@ export {default as chick0} from "./Images/Chick_0.jpg";
 export {default as userlogin0} from "./Images/UserLogin_0.png";
 
 //Svgs:
+export {default as cog0} from "./Svgs/Cog_0";
 export {default as truck0} from "./Svgs/Truck_0";
 export {default as packages0} from "./Svgs/Packages_0";
 export {default as customerService0} from "./Svgs/CustomerService_0";

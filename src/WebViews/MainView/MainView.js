@@ -1,6 +1,7 @@
-import {NativeView,DrawerNavigator,fadeIn} from "corella";
+import {NativeView,fadeIn} from "corella";
 import css from "./MainView.module.css";
 import {HistoryScreen,CompanyScreen,HomeScreen,LoginScreen} from "screens";
+import {HomeNavigator} from "components";
 
 
 export default function MainView(props){
@@ -11,15 +12,10 @@ export default function MainView(props){
     `;
 
     if(userId){
-        DrawerNavigator({
+        HomeNavigator({
             parent:mainview,
-            headerClassName:css.header,
-            tintColor:mainColor,
             initialId:"productcatalog",
-            routes:statics.routes.map(route=>{
-                route.title=language[route.id];
-                return route;
-            }),
+            routes:statics.routes,
         });
     }
     else{

@@ -1,5 +1,6 @@
 
 
+export {default as HomeNavigator} from "./HomeNavigator/HomeNavigator";
 export {default as ComplaintView} from "./ComplaintView/ComplaintView";
 export {default as OrderFeedbackView} from "./OrderFeedbackView/OrderFeedbackView";
 export {default as OrderSheet} from "./OrderSheet/OrderSheet";

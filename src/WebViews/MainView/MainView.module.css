@@ -1,10 +1,3 @@
 .mainview{
-    --spacingHorizontal:4em;
-}
-.header{
-    padding:var(--spacingHorizontal) !important;
-    background-color:var(--mainColor);
-}
-.header>*{
-    filter:invert(1);
+    max-width:100%;
 }

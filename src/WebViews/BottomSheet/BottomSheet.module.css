@@ -14,6 +14,13 @@
 .main{
     max-width:100%;
     flex:1;
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-start;
     padding-left:var(--paddingHorizontal);
     padding-right:var(--paddingHorizontal);
+    padding-bottom:var(--paddingHorizontal);
+}
+.main>*:first-child{
+    flex:1 1 0;
 }
