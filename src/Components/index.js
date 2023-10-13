@@ -1,5 +1,6 @@
 
 
+export {default as SettingView} from "./SettingView/SettingView";
 export {default as HomeNavigator} from "./HomeNavigator/HomeNavigator";
 export {default as ComplaintView} from "./ComplaintView/ComplaintView";
 export {default as OrderFeedbackView} from "./OrderFeedbackView/OrderFeedbackView";
@@ -11,6 +12,7 @@ export {default as TextBadge} from "./TextBadge/TextBadge";
 export {default as ActionSetView} from "./ActionSetView/ActionSetView";
 export {default as OrderView} from "./OrderView/OrderView";
 export {default as FormView} from "./FormView/FormView";
+export {default as InputField} from "./InputField/InputField";
 export {default as FieldView} from "./FieldView/FieldView";
 export {default as MapView} from "./MapView/MapView";
 export {default as BrandAcd} from "./BrandAcd/BrandAcd";

@@ -1,11 +1,14 @@
 
 //Images:
+export {default as iconbag0} from "./Images/IconBag_0.png";
 export {default as success0} from "./Images/Success_0.png";
 export {default as fail0} from "./Images/Fail_0.png";
-export {default as chick0} from "./Images/Chick_0.jpg";
-export {default as userlogin0} from "./Images/UserLogin_0.png";
+export {default as loginillustration0} from "./Images/LoginIllustration_0.png";
 
 //Svgs:
+export {default as appicon0} from "./Svgs/AppIcon_0";
+export {default as pencil0} from "./Svgs/Pencil_0";
+export {default as exit0} from "./Svgs/Exit_0";
 export {default as cog0} from "./Svgs/Cog_0";
 export {default as truck0} from "./Svgs/Truck_0";
 export {default as packages0} from "./Svgs/Packages_0";

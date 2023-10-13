@@ -1,7 +1,7 @@
 .fieldview{
     max-width:100%;
     overflow:hidden;
-    --borderRadius:0.25em;
+    --borderRadius:2em;
     --border:1px solid var(--accentColor);
 }
 .label{

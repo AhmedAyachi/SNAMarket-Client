@@ -1,4 +1,4 @@
-import {View} from "corella";
+import {View, parseJSON} from "corella";
 import css from "./HomeHeader.module.css";
 import {cog0} from "assets";
 
@@ -19,7 +19,14 @@ export default function HomeHeader(props){
 
     homeheader.showbtn.onclick=()=>{parent.showDrawer()};
     homeheader.settingbtn.onclick=()=>{
-        
+        WebView.show({
+            id:"bottomsheet",
+            message:{contentId:"settings"},
+            onClose:({message})=>{
+                const data=message&&parseJSON(message);
+                data?.reload&&location.reload();
+            },
+        });
     }
 
     return homeheader;

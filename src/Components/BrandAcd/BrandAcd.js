@@ -9,8 +9,8 @@ export default function BrandAcd(props){
     const brandacd=AccordionView({
         parent,className:css.brandacd,
         headerClassName:css.headercontainer,
-        renderHeader:(parent)=>Header({parent,brand}),
-        renderContent:(parent)=>ProductList({parent,brand,onCartChange}),
+        renderHeader:({parent})=>Header({parent,brand}),
+        renderContent:({parent})=>ProductList({parent,brand,onCartChange}),
         separate:false,
         onOpen:()=>{
             const {header}=brandacd;

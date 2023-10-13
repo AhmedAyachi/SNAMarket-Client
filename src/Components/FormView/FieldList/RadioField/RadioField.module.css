@@ -10,15 +10,9 @@
 }
 .option{
     flex:1;
-    padding:0.857em;
-    margin:0.4643em;
-    font-family:var(--mainFont);
-    font-weight:400;
-    font-size:3.733em !important;
-    white-space:nowrap;
-    text-align:center;
-    text-transform:inherit;
-    color:var(--color);
+    font-size:1em !important;
+    padding:3.2em;
+    margin:1.733em;
     border-radius:var(--borderRadius);
     background-color:transparent;
     border:var(--border) !important;
@@ -28,6 +22,15 @@
 }
 .option:last-child{
     margin-right:0;
+}
+.option>label{
+    font-family:var(--mainFont);
+    font-weight:400;
+    font-size:3.733em;
+    white-space:nowrap;
+    text-align:center;
+    text-transform:inherit;
+    color:var(--color);
 }
 .option[active]{
     color:white;

@@ -1,4 +1,4 @@
-import {sanitize,useId} from "corella";
+import {sanitize} from "corella";
 import css from "./InputField.module.css";
 import {FieldView} from "components";
 import {getAdjustedDate} from "resources";
@@ -6,12 +6,12 @@ import {clock0,calendar0,eyeoff0,eye0} from "assets";
 
 
 export default function InputField(props){
-    const {parent,id=useId("inputfield"),layoutId=0,value,min,max,placeholder,type,readonly,multiline,onChange}=props;
+    const {parent,layoutId=0,value,min,max,placeholder,type,readonly,multiline,onChange}=props;
     const inputfield=FieldView({
-        parent,id,
-        at:props.at,
+        parent,at:props.at,
         className:`${css.inputfield} ${props.className||""}`,
         label:props.label,
+        labelStyle:props.labelStyle,
     }),state={
         datetime:["date","time"].includes(type),
         icon:props.icon||getIcon(type),
@@ -63,7 +63,7 @@ export default function InputField(props){
         revealbtn.onclick=()=>{
             const hidden=inputEl.type==="password";
             inputEl.type=hidden?"text":"password";
-            revealbtn.src=(hidden?eyeoff0:eye0)(minorColor);
+            revealbtn.src=(hidden?eyeoff0:eye0)(mainColor);
         }
     }
     /* if(type==="tel"){
@@ -127,7 +127,7 @@ const getIcon=(type)=>{
             default: return null;
         }
     })();
-    return shape&&shape(minorColor)
+    return shape&&shape(mainColor);
 }
 
 const getInputType=(type)=>{

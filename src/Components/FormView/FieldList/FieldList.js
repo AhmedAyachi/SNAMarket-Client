@@ -1,8 +1,8 @@
 import {View} from "corella";
 import css from "./FieldList.module.css";
 import RadioField from "./RadioField/RadioField";
-import InputField from "./InputField/InputField";
 import WeightField from "./WeightField/WeightField";
+import {InputField} from "components";
 
 
 export default function FieldList(props){

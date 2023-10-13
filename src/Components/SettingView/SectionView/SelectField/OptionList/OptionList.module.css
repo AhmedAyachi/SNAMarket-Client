@@ -1,0 +1,21 @@
+.optionlist{
+    max-width:100%;
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-start;
+    align-items:stretch;
+    padding:0em var(--paddingHorizontal);
+    margin-top:2em;
+    border-radius:var(--borderRadius);
+    background-color:rgba(0,0,0,0.03);
+}
+.option{
+    max-width:100%;
+    font-size:4em;
+    padding:1em 0;
+    text-transform:capitalize;
+    border-top:0.05em solid rgba(0,0,0,0.2);
+}
+.option:first-of-type{
+    border-top:none;
+}

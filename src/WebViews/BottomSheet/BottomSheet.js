@@ -1,11 +1,11 @@
 import {NativeView} from "corella";
 import css from "./BottomSheet.module.css";
-import {ProductOrderForm,HeaderView} from "components";
+import {SettingView,ProductOrderForm,HeaderView} from "components";
 import {cross0} from "assets";
 
 
 export default function BottomSheet(props){
-    const {parent,data}=props;
+    const {parent,data}=props,{contentId}=data;
     const bottomsheet=NativeView({parent,className:css.bottomsheet});
 
     bottomsheet.innateHTML=`
@@ -14,15 +14,16 @@ export default function BottomSheet(props){
     HeaderView({
         parent:bottomsheet,
         className:css.header,
-        title:data.title,
+        title:data.title||language[contentId],
         backIcon:cross0,
     });
-    const component=statics[data.contentId];
+    const component=statics[contentId];
     component&&component({...data,parent:bottomsheet.mainEl});
 
     return bottomsheet;
 }
 
 const statics={
+    settings:SettingView,
     productorder:ProductOrderForm,
 }

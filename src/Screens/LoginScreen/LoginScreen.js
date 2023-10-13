@@ -1,7 +1,7 @@
 import {View} from "corella";
 import css from "./LoginScreen.module.css";
-import {ButtonView,SwitchField,TextInput} from "components";
-import {chick0,userlogin0} from "assets";
+import {InputField,ButtonView} from "components";
+import {appicon0,loginillustration0} from "assets";
 import {User} from "resources";
 import {setUser} from "actions";
 import * as H from "./Hooks";
@@ -9,47 +9,39 @@ import * as H from "./Hooks";
 
 export default function LoginScreen(props){
     const {parent}=props;
-    const loginscreen=View({
-        parent,tag:"main",
-        className:css.loginscreen,
-        style:{backgroundImage:`url(${chick0})`},
-    }),state={
+    const loginscreen=View({parent,tag:"main",className:css.loginscreen}),state={
         input:{},
     },{input}=state;
 
     loginscreen.innateHTML=`
-        <div class="${css.container}">
-            <img class="${css.image}" src="${userlogin0}"/>
-            <div ref="fieldsEl" class="${css.fields}"></div>
-            <button class="${css.passbtn}" ref="passbtn">${language.pass} \></button>
+        <div class="${css.row0}" style="background-image:url(${loginillustration0})">
+            <div class="${css.greeting}">
+                <img class="${css.appicon}" src="${appicon0(minorColor)}"/>
+                <p class="${css.welomemsg}">${language.welcometo} SNAMarket</p>
+            </div>
         </div>
-        <p class="${css.pwdbymsg}">
-            <span>${language.poweredby}</span> 
-            Ahmed Ayachi v1.0.0
-        </p>
+        <div class="${css.row1}" ref="row1">
+            <div class="${css.loginsection}" ref="loginsection"></div>
+            <div class="${css.other}">
+                <span ref="signupbtn">${language.signup}</span>
+                <span ref="passbtn">${language.pass}</span>
+            </div>
+        </div>
     `;
 
-    const {fieldsEl}=loginscreen;
-    ["username","password"].forEach(id=>{
-        TextInput({
-            parent:fieldsEl,
-            type:id,
-            placeholder:language[id],
-            style:"color:var(--mainColor)",
+    const {loginsection}=loginscreen;
+    ["email","password"].forEach(id=>{
+        InputField({
+            parent:loginsection,
+            type:id,label:language[id]||id,
+            labelStyle:"color:var(--mainColor)",
+            style:"border-color:var(--mainColor)",
             onChange:(value)=>{input[id]=value},
         });
     });
-    SwitchField({
-        parent:fieldsEl,
-        label:language.rememberme,
-        labelStyle:styles.rememberme,
-        onChange:(value)=>{input.rememberme=value},
-    });
     ButtonView({
-        parent:fieldsEl,
-        styleId:1,
+        parent:loginsection,
         label:language.login,
-        style:"margin:auto",
         onClick:()=>{
             console.log(input);
             H.sendLoginRequest(input).

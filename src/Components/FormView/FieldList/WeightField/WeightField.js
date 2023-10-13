@@ -1,7 +1,6 @@
-import {View} from "corella";
+import {} from "corella";
 import css from "./WeightField.module.css";
-import {DropList,FieldView} from "components";
-import InputField from "../InputField/InputField";
+import {InputField,DropList,FieldView} from "components";
 
 
 export default function WeightField(props){

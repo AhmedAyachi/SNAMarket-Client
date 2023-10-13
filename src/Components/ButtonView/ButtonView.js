@@ -5,7 +5,7 @@ import css from "./ButtonView.module.css";
 export default function ButtonView(props){
     const {parent,styleId,label,sublabel,icon,onClick}=props;
     const buttonview=View({
-        parent,tag:"button",
+        parent,at:props.at,tag:"button",
         style:`${styles.buttonview(styleId,sublabel)};${props.style||""}`,
         className:`${css.buttonview} ${props.className||""}`,
     });

@@ -15,7 +15,9 @@ export default function RadioField(props){
     radiofield.beforeEndHTML=`
         <div class="${css.options}">
             ${map(options,({id,label})=>`
-                <button id="${id}" class="${css.option}">${label||id||"--"}</button>
+                <button id="${id}" class="${css.option}">
+                    <label>${label||id||"--"}</label>
+                </button>
             `)}
         </div>
     `;

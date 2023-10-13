@@ -1,0 +1,32 @@
+.fieldview{
+    max-width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:var(--paddingVertical) var(--paddingHorizontal);
+    border-radius:var(--borderRadius);
+    background-color:rgba(0,0,0,0.03);
+}
+.label{
+    flex:1;
+    font-size:5em;
+    font-weight:400;
+    text-transform:lowercase;
+}
+.label::first-letter{
+    text-transform:uppercase;
+}
+.sideinfo{
+    display:flex;
+    justify-content:flex-end;
+    align-items:center;
+    opacity:0.85;
+}
+.value{
+    font-size:3.5em;
+    color:var(--textColor);
+}
+.icon{
+    width:4.5em;
+    margin-left:2em;
+}

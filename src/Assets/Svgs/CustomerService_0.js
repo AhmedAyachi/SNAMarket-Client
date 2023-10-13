@@ -1,3 +1,5 @@
+
+
 export default (color="black",weight=0)=>`data:image/svg+xml;base64,${btoa(`
 <svg width="64px" height="64px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="${color}" stroke="${color}">
     <g id="SVGRepo_bgCarrier" stroke-width="${weight}"></g>
