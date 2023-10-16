@@ -1,4 +1,4 @@
-import {View} from "corella";
+import {View} from "vritra";
 import css from "./SettingView.module.css";
 import GeneralSection from "./GeneralSection/GeneralSection";
 

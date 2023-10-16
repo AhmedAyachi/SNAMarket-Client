@@ -1,4 +1,4 @@
-import {View,usePressGesture} from "corella";
+import {View,usePressGesture} from "vritra";
 import css from "./CartItemView.module.css";
 import ConfirmationView from "./ConfirmationView/ConfirmationView";
 import {minus0,plus0,trash0} from "assets";

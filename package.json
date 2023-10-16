@@ -3,10 +3,10 @@
   "version": "0.0.1",
   "description": "SNAMarket client app",
   "scripts": {
-    "start": "corella-scripts start",
-    "build": "corella-scripts build",
-    "watch": "corella-scripts watch",
-    "extract": "corella-scripts extract"
+    "start": "vritra-scripts start",
+    "build": "vritra-scripts build",
+    "watch": "vritra-scripts watch",
+    "extract": "vritra-scripts extract"
   },
   "devDependencies": {
     "cordova-android": "^10.1.2",
@@ -15,15 +15,15 @@
     "cordova-plugin-appminimize": "^1.0.1",
     "cordova-plugin-ionic-keyboard": "^2.2.0",
     "cordova-plugin-statusbar": "^3.0.0",
-    "corella-plugin-webview": "^0.0.2",
-    "corella-scripts": "^0.0.3"
+    "vritra-plugin-webview": "^0.0.1",
+    "vritra-scripts": "^0.0.1"
   },
   "cordova": {
     "plugins": {
       "cordova-plugin-appminimize": {},
       "cordova-plugin-ionic-keyboard": {},
       "cordova-plugin-statusbar": {},
-      "corella-plugin-webview": {}
+      "vritra-plugin-webview": {}
     },
     "platforms": [
       "browser",
@@ -32,6 +32,6 @@
     ]
   },
   "dependencies": {
-    "corella": "file:../../../../Libraries/Corella"
+    "vritra": "file:../../../../Libraries/Vritra"
   }
 }

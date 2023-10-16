@@ -1,4 +1,4 @@
-import {View} from "corella";
+import {View} from "vritra";
 import css from "./ComplaintView.module.css";
 import {Complaint} from "resources";
 

@@ -1,4 +1,4 @@
-import {useId,map,FooMap} from "corella";
+import {useId,map,FooMap} from "vritra";
 import css from "./RadioField.module.css";
 import {FieldView} from "components";
 

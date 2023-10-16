@@ -1,4 +1,4 @@
-import {View} from "corella";
+import {View} from "vritra";
 import css from "./MapView.module.css";
 import {LoadingView} from "components";
 

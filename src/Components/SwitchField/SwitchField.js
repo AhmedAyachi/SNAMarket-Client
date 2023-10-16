@@ -1,4 +1,4 @@
-import {Switch} from "corella";
+import {Switch} from "vritra";
 import css from "./SwitchField.module.css";
 import {FieldView} from "components";
 

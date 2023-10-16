@@ -1,4 +1,4 @@
-import {View,map} from "corella";
+import {View,map} from "vritra";
 import css from "./OrderFeedbackView.module.css";
 import {success0,fail0} from "assets";
 

@@ -1,4 +1,4 @@
-import {View} from "corella";
+import {View} from "vritra";
 import css from "./SearchField.module.css";
 import {magnifier0} from "assets";
 

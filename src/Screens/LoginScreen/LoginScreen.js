@@ -1,4 +1,4 @@
-import {View} from "corella";
+import {View} from "vritra";
 import css from "./LoginScreen.module.css";
 import {InputField,ButtonView} from "components";
 import {appicon0,loginillustration0} from "assets";

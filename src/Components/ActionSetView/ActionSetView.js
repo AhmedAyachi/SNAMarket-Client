@@ -1,4 +1,4 @@
-import {ActionSetView as Cherry} from "corella";
+import {ActionSetView as Cherry} from "vritra";
 import css from "./ActionSetView.module.css";
 
 

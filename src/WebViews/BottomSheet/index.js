@@ -1,4 +1,4 @@
-import {parseJSON} from "corella";
+import {parseJSON} from "vritra";
 import "../index";
 import BottomSheet from "./BottomSheet";
 

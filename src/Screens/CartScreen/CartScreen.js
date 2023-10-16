@@ -1,4 +1,4 @@
-import {View} from "corella";
+import {View} from "vritra";
 import css from "./CartScreen.module.css";
 import {CartView,HeaderView} from "components";
 

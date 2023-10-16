@@ -1,4 +1,4 @@
-import {View} from "corella";
+import {View} from "vritra";
 import css from "./FieldList.module.css";
 import RadioField from "./RadioField/RadioField";
 import WeightField from "./WeightField/WeightField";

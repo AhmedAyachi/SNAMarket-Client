@@ -1,4 +1,4 @@
-import {View} from "corella";
+import {View} from "vritra";
 import css from "./HeaderView.module.css";
 import {chevron0} from "assets";
 

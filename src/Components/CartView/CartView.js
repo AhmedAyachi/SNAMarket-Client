@@ -1,4 +1,4 @@
-import {View,parseJSON,removeItem} from "corella";
+import {View,parseJSON,removeItem} from "vritra";
 import css from "./CartView.module.css";
 import CartItemView from "./CartItemView/CartItemView";
 import {ButtonView} from "components";

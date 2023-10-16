@@ -1,4 +1,4 @@
-import {View,capitalize} from "corella";
+import {View,capitalize} from "vritra";
 import css from "./TextInput.module.css";
 import {eye0,eyeoff0} from "assets";
 

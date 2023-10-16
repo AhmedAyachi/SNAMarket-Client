@@ -1,4 +1,4 @@
-import {View,getMonths} from "corella";
+import {View,getMonths} from "vritra";
 import css from "./OrderView.module.css";
 import {Order} from "resources";
 import {check1,cross0,clock0} from "assets";

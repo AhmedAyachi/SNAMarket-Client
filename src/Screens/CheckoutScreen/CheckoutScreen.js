@@ -1,4 +1,4 @@
-import {View,fadeIn,fadeOut} from "corella";
+import {View,fadeIn,fadeOut} from "vritra";
 import css from "./CheckoutScreen.module.css";
 import {OrderFeedbackView,ButtonView,OrderSheet,LoadingView,HeaderView} from "components";
 import * as H from "./Hooks";

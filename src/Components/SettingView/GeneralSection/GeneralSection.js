@@ -1,4 +1,4 @@
-import {} from "corella";
+import {} from "vritra";
 import css from "./GeneralSection.module.css";
 import SectionView from "../SectionView/SectionView";
 import {exit0} from "assets";
@@ -25,7 +25,7 @@ export default function GeneralSection(props){
                 icon:exit0(majorColor),
                 onClick:()=>{
                     H.sendLogoutRequest().then(()=>{
-                        WebView.close({reload:true});
+                        WebView.close({userId:null});
                     });
                 },
             },

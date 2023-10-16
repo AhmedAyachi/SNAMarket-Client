@@ -1,4 +1,4 @@
-import {View,FlatList,TabNavigator,fadeIn} from "corella";
+import {View,FlatList,TabNavigator,fadeIn} from "vritra";
 import css from "./HomeScreen.module.css";
 import {ActionSetView,BrandAcd,SearchField,LoadingView,TextBadge} from "components";
 import {ProductType} from "resources";

@@ -1,4 +1,4 @@
-import {NativeView,parseJSON} from "corella";
+import {NativeView,parseJSON} from "vritra";
 import css from "./ServiceSite.module.css";
 import {CheckoutScreen,CartScreen} from "screens";
 

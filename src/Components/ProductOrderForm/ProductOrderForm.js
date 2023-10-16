@@ -1,4 +1,4 @@
-import {fadeIn} from "corella";
+import {fadeIn} from "vritra";
 import css from "./ProductOrderForm.module.css";
 import {FormView} from "components";
 import {cart0} from "assets";

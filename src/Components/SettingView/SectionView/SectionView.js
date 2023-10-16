@@ -1,4 +1,4 @@
-import {View} from "corella";
+import {View} from "vritra";
 import css from "./SectionView.module.css";
 import FieldView from "./FieldView/FieldView";
 import SelectField from "./SelectField/SelectField";

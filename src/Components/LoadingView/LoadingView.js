@@ -1,4 +1,4 @@
-import {View,fadeOut} from "corella";
+import {View,fadeOut} from "vritra";
 import css from "./LoadingView.module.css";
 import {loading0} from "assets";
 

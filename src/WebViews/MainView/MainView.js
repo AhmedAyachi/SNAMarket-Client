@@ -1,4 +1,4 @@
-import {NativeView,fadeIn} from "corella";
+import {NativeView,fadeIn} from "vritra";
 import css from "./MainView.module.css";
 import {HistoryScreen,CompanyScreen,HomeScreen,LoginScreen} from "screens";
 import {HomeNavigator} from "components";

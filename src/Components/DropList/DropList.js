@@ -1,4 +1,4 @@
-import {View,fadeIn,fadeOut} from "corella";
+import {View,fadeIn,fadeOut} from "vritra";
 import css from "./DropList.module.css";
 import ValueView from "./ValueView/ValueView";
 import ListView from "./ListView/ListView";

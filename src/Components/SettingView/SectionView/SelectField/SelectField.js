@@ -1,4 +1,4 @@
-import {AccordionView} from "corella";
+import {AccordionView} from "vritra";
 import css from "./SelectField.module.css";
 import FieldView from "../FieldView/FieldView";
 import OptionList from "./OptionList/OptionList";

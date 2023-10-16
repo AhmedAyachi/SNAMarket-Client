@@ -1,4 +1,4 @@
-import {View, parseJSON} from "corella";
+import {View, parseJSON} from "vritra";
 import css from "./HomeHeader.module.css";
 import {cog0} from "assets";
 
@@ -24,7 +24,17 @@ export default function HomeHeader(props){
             message:{contentId:"settings"},
             onClose:({message})=>{
                 const data=message&&parseJSON(message);
-                data?.reload&&location.reload();
+                if(data){
+                    let reload;
+                    ["userId","langId"].forEach(key=>{
+                        if(key in data){
+                            reload=true;
+                            const value=data[key];
+                            value===null?localStorage.removeItem(key):localStorage.setItem(key,value);
+                        }
+                    });
+                    reload&&location.reload();
+                }
             },
         });
     }

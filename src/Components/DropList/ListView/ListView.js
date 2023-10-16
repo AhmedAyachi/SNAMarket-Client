@@ -1,4 +1,4 @@
-import {FlatList} from "corella";
+import {FlatList} from "vritra";
 import css from "./ListView.module.css";
 import OptionView from "./OptionView/OptionView";
 

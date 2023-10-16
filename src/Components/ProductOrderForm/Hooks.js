@@ -1,4 +1,4 @@
-import {findItem} from "corella";
+import {findItem} from "vritra";
 
 
 export const saveCartItem=(cartitem)=>new Promise(resolve=>{

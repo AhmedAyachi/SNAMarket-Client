@@ -1,4 +1,4 @@
-import {NativeView} from "corella";
+import {NativeView} from "vritra";
 import css from "./BottomSheet.module.css";
 import {SettingView,ProductOrderForm,HeaderView} from "components";
 import {cross0} from "assets";
@@ -11,6 +11,7 @@ export default function BottomSheet(props){
     bottomsheet.innateHTML=`
         <main class="${css.main}" ref="mainEl"></main>
     `;
+    
     HeaderView({
         parent:bottomsheet,
         className:css.header,

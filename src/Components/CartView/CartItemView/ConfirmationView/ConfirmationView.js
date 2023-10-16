@@ -1,4 +1,4 @@
-import {View,fadeIn,fadeOut,map} from "corella";
+import {View,fadeIn,fadeOut,map} from "vritra";
 import css from "./ConfirmationView.module.css";
 import {cross0,check1} from "assets";
 

@@ -1,4 +1,4 @@
-import {FlatList} from "corella";
+import {FlatList} from "vritra";
 import css from "./ProductList.module.css";
 import ItemView from "./ItemView/ItemView";
 import {LoadingView} from "components";

@@ -1,4 +1,4 @@
-import {View} from "corella";
+import {View} from "vritra";
 import css from "./OrderSheet.module.css";
 import OrderItemView from "./OrderItemView/OrderItemView";
 

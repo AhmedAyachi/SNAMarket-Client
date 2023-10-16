@@ -1,4 +1,4 @@
-import {sanitize} from "corella";
+import {sanitize} from "vritra";
 import css from "./InputField.module.css";
 import {FieldView} from "components";
 import {getAdjustedDate} from "resources";

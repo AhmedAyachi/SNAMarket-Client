@@ -1,4 +1,4 @@
-import {} from "corella";
+import {} from "vritra";
 import css from "./WeightField.module.css";
 import {InputField,DropList,FieldView} from "components";
 

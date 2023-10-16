@@ -1,4 +1,4 @@
-import {DrawerNavigator} from "corella";
+import {DrawerNavigator} from "vritra";
 import css from "./HomeNavigator.module.css";
 import HomeHeader from "./HomeHeader/HomeHeader";
 

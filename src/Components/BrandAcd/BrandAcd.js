@@ -1,4 +1,4 @@
-import {AccordionView} from "corella";
+import {AccordionView} from "vritra";
 import css from "./BrandAcd.module.css";
 import Header from "./Header/Header";
 import ProductList from "./ProductList/ProductList"; 

@@ -1,4 +1,4 @@
-import {View,fadeOut} from "corella";
+import {View,fadeOut} from "vritra";
 import css from "./FormView.module.css";
 import FieldList from "./FieldList/FieldList";
 import {ButtonView} from "components";
