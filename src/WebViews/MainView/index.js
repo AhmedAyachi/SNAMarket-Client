@@ -16,5 +16,5 @@ function onDeviceReady(){
 
 document.addEventListener("deviceready",onDeviceReady,false);
 document.addEventListener("backbutton",()=>{
-    location.hash?history.back():window.plugins.appMinimize.minimize();
+    location.hash?history.back():WebView.close();
 },false);

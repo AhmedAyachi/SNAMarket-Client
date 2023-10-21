@@ -1,9 +1,10 @@
-import {parseJSON} from "vritra";
+import {} from "vritra";
+import {getCookies} from "resources";
 import * as localdb from "localdb";
 
 
+const userId=getCookies().get("userId");
 export const store={
-    langId:localStorage.getItem("langId")||"english",
-    userId:localStorage.getItem("userId"),
-    cart:isProdEnv?{items:[]}:localdb.cart,
+    user:userId&&{id:userId},
+    cart:isDevEnv?localdb.cart:{items:[]},
 };

@@ -5,12 +5,12 @@ import ProductList from "./ProductList/ProductList";
 
 
 export default function BrandAcd(props){
-    const {parent,brand,onCartChange}=props;
+    const {parent,brand,type,onCartChange}=props;
     const brandacd=AccordionView({
         parent,className:css.brandacd,
         headerClassName:css.headercontainer,
         renderHeader:({parent})=>Header({parent,brand}),
-        renderContent:({parent})=>ProductList({parent,brand,onCartChange}),
+        renderContent:({parent})=>ProductList({parent,brand,type,onCartChange}),
         separate:false,
         onOpen:()=>{
             const {header}=brandacd;

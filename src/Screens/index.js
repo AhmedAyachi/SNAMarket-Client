@@ -1,5 +1,6 @@
 
 
+export {default as SignupScreen} from "./SignupScreen/SignupScreen";
 export {default as CheckoutScreen} from "./CheckoutScreen/CheckoutScreen";
 export {default as CartScreen} from "./CartScreen/CartScreen";
 export {default as HistoryScreen} from "./HistoryScreen/HistoryScreen";

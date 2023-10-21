@@ -1,11 +1,11 @@
 import {NativeView,parseJSON} from "vritra";
 import css from "./ServiceSite.module.css";
-import {CheckoutScreen,CartScreen} from "screens";
+import {SignupScreen,CheckoutScreen,CartScreen} from "screens";
 
 
 export default function ServiceSite(props){
     const {parent}=props;
-    const servicesite=NativeView({parent,id:"webview",className:css.servicesite});
+    const servicesite=window.webview=NativeView({parent,id:"webview",className:css.servicesite});
 
     servicesite.innateHTML=`
     `;
@@ -23,6 +23,7 @@ export default function ServiceSite(props){
 }
 
 const statics={
+    signup:SignupScreen,
     checkout:CheckoutScreen,
     cart:CartScreen,
 }

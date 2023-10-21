@@ -6,7 +6,7 @@ import * as H from "./Hooks";
 
 
 export default function ProductList(props){
-    const {parent,brand,onCartChange}=props;
+    const {parent,brand,type,onCartChange}=props;
     const productlist=FlatList({
         parent,className:css.productlist,
         emptymessage:"",
@@ -16,7 +16,7 @@ export default function ProductList(props){
     productlist.beforeEndHTML=`
     `;
     const loadingview=LoadingView({parent:productlist,className:css.loadingview});
-    H.fetchProducts(brand).then(products=>{
+    H.fetchProducts(brand,type).then(products=>{
         productlist.addItems(products); 
     }).
     finally(()=>{

@@ -1,4 +1,4 @@
-import {ProductType} from "resources";
+import {ProductType,sendRequest} from "resources";
 import * as localdb from "localdb";
 
 
@@ -9,7 +9,7 @@ export const fetchProductTypes=()=>new Promise(resolve=>{
         },300);
     }
     else{
-        resolve([]);
+        resolve(sendRequest("/producttypes"));
     }
 }).
 then(data=>data?.map($=>new ProductType($)));

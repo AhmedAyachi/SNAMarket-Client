@@ -6,7 +6,6 @@ export default class User extends Person {
         const {sessionId}=props;
         Object.assign(this,{
             sessionId:props.sessionId,
-            username:props.username,
             isGuest:!sessionId,
         });
     }

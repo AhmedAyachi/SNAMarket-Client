@@ -6,6 +6,7 @@
 .container{
     padding:0 var(--spacingHorizontal);
     padding-top:var(--spacingHorizontal);
+    text-align:center;
 }
 .container>*{
     margin-bottom:4em;

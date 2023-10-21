@@ -3,7 +3,7 @@
 export default class OrderItem {
     constructor(props={}){
         Object.assign(this,{
-            id:props.id,
+            ref:props.ref,
             name:props.name,
             quantity:props.quantity,
             unit:props.unit,

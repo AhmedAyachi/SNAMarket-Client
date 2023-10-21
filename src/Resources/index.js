@@ -5,7 +5,10 @@ export {default as User} from "./User";
 export {default as ProductType} from "./ProductType";
 export {default as Product} from "./Product";
 export {default as Complaint} from "./Complaint";
+export {default as LazyData} from "./LazyData";
 export * from "./Order";
+export * from "./Hooks/index";
+
 
 export const getAdjustedTime=(time)=>{
     let formatted;

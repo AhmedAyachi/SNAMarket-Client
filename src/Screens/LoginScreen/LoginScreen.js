@@ -54,6 +54,13 @@ export default function LoginScreen(props){
         },
     });
 
+    loginscreen.signupbtn.onclick=()=>{
+        WebView.show({
+            id:"servicesite",
+            message:{name:"signup"},
+        });
+    }
+
     loginscreen.passbtn.onclick=()=>{
         setUser(User.Guest,()=>{
             location.reload();

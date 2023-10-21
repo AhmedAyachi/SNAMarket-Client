@@ -1,6 +1,6 @@
 import {View,fadeOut} from "vritra";
 import css from "./LoadingView.module.css";
-import {loading0} from "assets";
+import {Loader} from "components";
 
 
 export default function LoadingView(props={}){
@@ -11,12 +11,8 @@ export default function LoadingView(props={}){
     });
 
     loadingview.innateHTML=`
-        <img 
-            class="${css.icon}" 
-            style="${loadingview.clientWidth>loadingview.clientHeight?"height":"width"}:40%"
-            src="${loading0(color)}"
-        />
     `;
+    Loader({parent:loadingview,color});
 
     loadingview.unmount=(callback)=>{
         fadeOut(loadingview,()=>{

@@ -5,7 +5,7 @@ import {ButtonView} from "components";
 
 
 export default function FormView(props){
-    const {parent,fields,readonly,submitter=true,inputChecker,onSubmit}=props,multiple=(fields?.length>1);
+    const {parent,fields,readonly,submitter=true,errormsg,inputChecker,onSubmit}=props,multiple=(fields?.length>1);
     const formview=View({
         parent,className:`${css.formview} ${props.className||""}`,
         style:styles.formview(multiple),
@@ -30,12 +30,11 @@ export default function FormView(props){
             className:css.submitbtn,
             onClick:()=>{
                 const input=formview.getInput();
-                console.log(input);
                 if(inputChecker?inputChecker(input):hasDecentInput(fields,input)){
                     onSubmit&&onSubmit(formview.getInput());
                 }
                 else{
-                    alert("wrong input");
+                    Notifier.toast(errormsg||language.pleasefillallrequiredfields);
                 }
             },
         });

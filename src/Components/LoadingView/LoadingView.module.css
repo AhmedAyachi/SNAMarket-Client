@@ -8,8 +8,3 @@
     inset:0;margin:auto;
     background-color:var(--backgroundColor);
 }
-.icon{
-    max-width:15em;
-    max-height:15em;
-    object-fit:contain;
-}

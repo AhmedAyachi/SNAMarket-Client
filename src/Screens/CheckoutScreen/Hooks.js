@@ -1,26 +1,19 @@
+import {Order,sendRequest} from "resources";
+import {Query} from "graphqlutils";
 import * as localdb from "localdb";
 
 
-export const sendConfirmRequest=()=>new Promise(resolve=>{
+export const sendOrderRequest=(items)=>new Promise(async (resolve)=>{
     if(isDevEnv){
-        setTimeout(()=>{resolve(Math.random()>0.5)},1000);
+        setTimeout(()=>{resolve(localdb.orders[0])},1000);
     }
     else{
-        resolve();
+        resolve(sendRequest("/graphql",{body:`mutation {
+            placeOrder(items:${Query.parse(items)}){
+                id,date,time,
+            }
+        }`}).
+        then(({data})=>data.placeOrder));
     }
-});
-
-export const sendOrderRequest=()=>new Promise(async (resolve)=>{
-    if(isDevEnv){
-        setTimeout(()=>{
-            const order=localdb.orders[0];
-            delete order.id;
-            delete order.amount;
-            resolve(order);
-        },500);
-    }
-    else{
-        //const {cart}=await new Promise(WebView.useStore);
-        resolve({});
-    }
-});
+}).
+then(data=>data&&new Order(data));

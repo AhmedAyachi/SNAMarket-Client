@@ -7,7 +7,7 @@
     overflow:visible;
 }
 .col0{
-    font-size:1em;
+    flex:1;
 }
 .col1{
     width:fit-content;
@@ -17,7 +17,7 @@
     column-gap:4em;
 }
 .counter{
-    width:25em;
+    width:30em;
     display:flex;
     justify-content:space-around;
     align-items:center;

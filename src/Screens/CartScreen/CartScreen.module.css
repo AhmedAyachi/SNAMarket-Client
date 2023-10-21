@@ -11,9 +11,17 @@
 .header{
     --paddingHorizontal:inherit !important;
 }
+.cartscreen>main{
+    max-width:100%;
+    flex:1 1 0;
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-start;
+    align-items:stretch;
+    padding:0 var(--paddingHorizontal);
+    padding-bottom:5em;
+}
 .cartview{
     max-width:100%;
     flex:1 1 0;
-    padding:0 var(--paddingHorizontal);
-    padding-bottom:5em;
 }

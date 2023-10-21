@@ -1,9 +1,10 @@
 import "./index.css";
-import * as localdb from "localdb";
+import {fetchLanguage} from "resources";
 
 
-function onDeviceReady(){
-    const {language}=localdb;
+
+async function onDeviceReady(){
+    const language=await fetchLanguage();
     document.documentElement.setAttribute("lang",language.$id);
     window.language=Object.freeze(language);
     if(cordova.platformId==="ios"){

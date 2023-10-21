@@ -1,12 +1,15 @@
-
+import {User,sendRequest} from "resources";
+import {setUser} from "actions";
 
 export const sendLogoutRequest=()=>new Promise(async (resolve)=>{
-    const userId=localStorage.getItem("userId");
-    if(userId!=="guest"){
-
+    const {user}=await new Promise(WebView.useStore);
+    if(isDevEnv||(user.id===User.Guest.id)){
+        resolve();
     }
-    resolve(userId);
+    else{
+        resolve(sendRequest("/logout",{
+            method:"POST",
+        }));
+    }
 }).
-then(()=>{
-    localStorage.removeItem("userId");
-});
+then(()=>new Promise(resolve=>{setUser(null,resolve)}));

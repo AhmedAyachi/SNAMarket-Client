@@ -14,7 +14,7 @@ export default function ItemView(props){
         <text class="${css.description}">${product.description||""}</text>
     `;
 
-    itemview.onclick=()=>{
+    itemview.onclick=onCartChange&&(()=>{
         WebView.show({
             id:"bottomsheet",
             message:{
@@ -24,10 +24,10 @@ export default function ItemView(props){
             },
             onClose:({store})=>{
                 const {cart}=store;
-                onCartChange&&onCartChange(cart);
+                onCartChange(cart);
             },
         });
-    }
+    });
 
     return itemview;
 }

@@ -12,18 +12,20 @@
     "cordova-android": "^10.1.2",
     "cordova-browser": "^7.0.0",
     "cordova-ios": "^7.0.1",
-    "cordova-plugin-appminimize": "^1.0.1",
+    "cordova-plugin-device": "^2.1.0",
     "cordova-plugin-ionic-keyboard": "^2.2.0",
     "cordova-plugin-statusbar": "^3.0.0",
+    "vritra-plugin-notifier": "^0.0.1",
     "vritra-plugin-webview": "^0.0.1",
     "vritra-scripts": "^0.0.1"
   },
   "cordova": {
     "plugins": {
-      "cordova-plugin-appminimize": {},
       "cordova-plugin-ionic-keyboard": {},
       "cordova-plugin-statusbar": {},
-      "vritra-plugin-webview": {}
+      "vritra-plugin-webview": {},
+      "vritra-plugin-notifier": {},
+      "cordova-plugin-device": {}
     },
     "platforms": [
       "browser",
@@ -32,6 +34,7 @@
     ]
   },
   "dependencies": {
+    "graphqlutils": "file:../../../../Libraries/GraphQLUtils/graphqlutils-0.0.1.tgz",
     "vritra": "file:../../../../Libraries/Vritra"
   }
 }

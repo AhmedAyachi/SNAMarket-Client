@@ -1,6 +1,7 @@
-import {View} from "vritra";
+import {View,parseJSON} from "vritra";
 import css from "./CartScreen.module.css";
-import {CartView,HeaderView} from "components";
+import {ButtonView,CartView,HeaderView} from "components";
+import * as H from "./Hooks";
 
 
 export default function CartScreen(props){
@@ -8,6 +9,7 @@ export default function CartScreen(props){
     const cartscreen=View({parent,tag:"main",className:css.cartscreen});
 
     cartscreen.innateHTML=`
+        <main ref="mainEl"></main>
     `;
     HeaderView({
         parent:cartscreen,
@@ -16,9 +18,30 @@ export default function CartScreen(props){
     });
     WebView.useStore(({cart})=>{
         CartView({
-            parent:cartscreen,
+            parent:cartscreen.mainEl,cart,
             className:css.cartview,
-            cart,
+        });
+        const orderbtn=ButtonView({
+            parent:cartscreen.mainEl,
+            label:language.toorder,
+            onClick:()=>{
+                orderbtn.load(true);
+                H.sendCheckRequest().then(orderitems=>{
+                    WebView.show({
+                        id:"servicesite",
+                        message:{name:"checkout",orderitems},
+                        onClose:({message})=>{
+                            const successful=parseJSON(message);
+                            if(successful){
+                                WebView.setStore("cart",{items:[]});
+                                WebView.close();
+                            }
+                        },
+                    });
+                }).finally(()=>{
+                    orderbtn.load(false);
+                });
+            },
         });
     });
     

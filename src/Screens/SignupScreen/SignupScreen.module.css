@@ -1,0 +1,20 @@
+.signupscreen{
+    max-width:100%;
+    height:100%;
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-start;
+    align-items:stretch;
+    overflow:hidden auto;
+    --paddingHorizontal:5.333em
+}
+.header{
+    max-width:100%;
+    --paddingHorizontal:inherit !important;
+}
+.form{
+    max-width:100%;
+    flex:1;
+    padding:0 var(--paddingHorizontal);
+    padding-bottom:var(--paddingHorizontal);
+}

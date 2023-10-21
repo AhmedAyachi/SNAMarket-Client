@@ -1,6 +1,12 @@
 {
     "$id":"fr",
     "$name":"français",
+    "name":"nom",
+    "invalidcart":"panier invalid",
+    "emptycart":"panier vide",
+    "sessionexpired":"session expirée",
+    "pleasefillallrequiredfields":"veuillez remplir tous les champs obligatoires",
+    "birthdate":"date de naissance",
     "welcometo":"bienvenue à",
     "cancel":"annuler",
     "settings":"paramétres",

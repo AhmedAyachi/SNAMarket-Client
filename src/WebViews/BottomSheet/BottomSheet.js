@@ -6,7 +6,7 @@ import {cross0} from "assets";
 
 export default function BottomSheet(props){
     const {parent,data}=props,{contentId}=data;
-    const bottomsheet=NativeView({parent,className:css.bottomsheet});
+    const bottomsheet=window.webview=NativeView({parent,className:css.bottomsheet});
 
     bottomsheet.innateHTML=`
         <main class="${css.main}" ref="mainEl"></main>

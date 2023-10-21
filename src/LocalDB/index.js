@@ -7,7 +7,7 @@ const units=["kg","t"];
 export const users=new Array(3).fill().map((_,i)=>({
     id:"user"+i,
     name:"user "+i,
-    username:"user"+i,
+    email:"user"+i+"@gmail.com",
     password:"1234",
     sessionId:"session"+i,
 }));

@@ -1,4 +1,3 @@
-import {getIpAddress} from "./index";
 
 
 export default class Person {

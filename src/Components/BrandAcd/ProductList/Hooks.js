@@ -1,8 +1,8 @@
-import {Product} from "resources";
+import {Product,sendRequest} from "resources";
 import * as localdb from "localdb";
 
 
-export const fetchProducts=(brand)=>new Promise(resolve=>{
+export const fetchProducts=(brand,type)=>new Promise(resolve=>{
     const {id}=brand;
     if(isDevEnv){
         setTimeout(()=>{
@@ -11,7 +11,10 @@ export const fetchProducts=(brand)=>new Promise(resolve=>{
         },1000);
     }
     else{
-        resolve([]);
+        resolve(sendRequest("/products",{
+            method:"POST",
+            body:{brandId:id,type},
+        }));
     }
 }).
 then(data=>data&&data?.map($=>new Product($)));

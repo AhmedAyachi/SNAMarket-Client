@@ -1,17 +1,18 @@
 import {View,FlatList,TabNavigator,fadeIn} from "vritra";
 import css from "./HomeScreen.module.css";
 import {ActionSetView,BrandAcd,SearchField,LoadingView,TextBadge} from "components";
-import {ProductType} from "resources";
+import {ProductType,User} from "resources";
 import {cart0} from "assets";
 import * as H from "./Hooks";
 
 
 export default function HomeScreen(props){
-    const {parent}=props;
+    const {parent,user}=props;
     const homescreen=View({parent,tag:"main",className:css.homescreen}),state={
         cartEl:null,
         cartbadgeEl:null,
-    };
+        loggedIn:user.id!==User.Guest.id,
+    },{loggedIn}=state;
 
     homescreen.innateHTML=`
         <header ref="header"></header>
@@ -22,20 +23,20 @@ export default function HomeScreen(props){
         placeholder:language.finditem,
         noicon:true,
     });
-    ActionSetView({
+    loggedIn&&ActionSetView({
         parent:homescreen.header,
         actions:[{
             id:"cart",icon:cart0,
             onReady:({element})=>{state.cartEl=element},
             onTrigger:()=>{
-                WebView.show({
+                state.cartbadgeEl?WebView.show({
                     id:"servicesite",
                     message:{name:"cart"},
                     onClose:({store})=>{
                         const {cart}=store;
                         homescreen.updateCartBadge(cart.items?.length);
                     },
-                });
+                }):Notifier.toast({text:language.emptycart});
             },
         }],
     });
@@ -59,7 +60,8 @@ export default function HomeScreen(props){
                         data:type.brands,
                         renderItem:({parent,item})=>BrandAcd({
                             parent,brand:item,
-                            onCartChange:(cart)=>{homescreen.updateCartBadge(cart.items?.length)},
+                            type:type.id,
+                            onCartChange:loggedIn&&((cart)=>{homescreen.updateCartBadge(cart.items?.length)}),
                         }),
                     });
                     fadeIn(flatlist,500);

@@ -8,9 +8,10 @@
 .title{
     font-family:var(--mainFont);
     font-weight:600;
-    font-size:5em;
+    font-size:4em;
     letter-spacing:0.1em;
     text-transform:capitalize;
+    text-align:left;
     color:var(--textColor);
 }
 .info{

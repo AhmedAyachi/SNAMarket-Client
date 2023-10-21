@@ -4,12 +4,8 @@
     flex-direction:column;
     justify-content:flex-start;
     align-items:stretch;
-}
-.items{
-    max-width:100%;
-    flex:1 1 0;
     overflow:hidden auto;
 }
-.items>*{
+.cartview>*{
     margin-bottom:7em;
 }
