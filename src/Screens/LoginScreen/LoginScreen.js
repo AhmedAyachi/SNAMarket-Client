@@ -56,8 +56,8 @@ export default function LoginScreen(props){
 
     loginscreen.signupbtn.onclick=()=>{
         WebView.show({
-            id:"servicesite",
-            message:{name:"signup"},
+            id:"formsite",
+            message:{type:"signup"},
         });
     }
 

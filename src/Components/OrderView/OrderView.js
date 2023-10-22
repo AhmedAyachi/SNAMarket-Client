@@ -23,6 +23,13 @@ export default function OrderView(props){
         </div>
     `;
 
+    orderview.onclick=()=>{
+        WebView.show({
+            id:"bottomsheet",
+            message:{contentId:"order",orderId:order.id},
+        });
+    }
+
     return orderview;
 }
 

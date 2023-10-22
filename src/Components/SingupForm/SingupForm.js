@@ -1,22 +1,14 @@
-import {View} from "vritra";
-import css from "./SignupScreen.module.css";
-import {FormView,HeaderView} from "components";
+import {} from "vritra";
+import css from "./SingupForm.module.css";
+import {FormView} from "components";
+import * as H from "./Hooks";
 
 
-export default function SignupScreen(props){
+export default function SingupForm(props){
     const {parent}=props;
-    const signupscreen=View({parent,className:css.signupscreen});
-
-    signupscreen.innateHTML=`
-    `;
-    HeaderView({
-        parent:signupscreen,
-        className:css.header,
-        title:language.signup,
-    });
-    FormView({
-        parent:signupscreen,
-        className:css.form,
+    const singupform=FormView({
+        parent:parent,
+        className:css.singupform,
         fields:[
             {id:"name",label:language.name},
             {id:"email",label:"email"},
@@ -37,11 +29,15 @@ export default function SignupScreen(props){
             },
         ],
         onSubmit:(input)=>{
-            console.log(IP_ADDRESS);
             input.countryId="tn";
-            console.log(input);
+            H.sendSignupRequest(input).then(()=>{
+
+            });
         },
     });
 
-    return signupscreen;
+    singupform.beforeEndHTML=`
+    `;
+
+    return singupform;
 }

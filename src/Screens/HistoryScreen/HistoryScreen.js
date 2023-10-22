@@ -1,8 +1,9 @@
 import {View,FlatList} from "vritra";
 import css from "./HistoryScreen.module.css";
-import {ComplaintView,OrderView,Loader} from "components";
+import {SearchHeader,ComplaintView,OrderView,Loader} from "components";
 import {LazyData} from "resources";
 import * as H from "./Hooks";
+import {plus0} from "assets";
 
 
 
@@ -15,7 +16,18 @@ export default function HistoryScreen(props){
 
     historyscreen.innateHTML=`
     `;
-
+    SearchHeader({
+        parent:historyscreen,
+        placeholder:language["find"+type],
+        actions:(type==="complaint")&&[
+            {ref:"complain",icon:plus0},
+        ],
+        onSearch:(query)=>{
+            query?fetchData({query}).then(orders=>{
+                flatlist.showItems(orders||[]);
+            }):flatlist.showItems();
+        },
+    });
     
     const flatlist=FlatList({
         parent:historyscreen,
@@ -25,10 +37,10 @@ export default function HistoryScreen(props){
         renderItem:component,
         EmptyComponent:"",
         onReachEnd:({container})=>{
-            const nextpageindex=data.pageindex+1;
-            if(nextpageindex<data.pagecount){
+            const pageindex=data.pageindex+1;
+            if(pageindex<data.pagecount){
                 const loader=Loader({parent:container});
-                fetchData(nextpageindex).then(lazydata=>{
+                fetchData({pageindex}).then(lazydata=>{
                     console.log(`${type} history:`,lazydata);
                     const {items}=lazydata;
                     data.pageindex=lazydata.pageindex;

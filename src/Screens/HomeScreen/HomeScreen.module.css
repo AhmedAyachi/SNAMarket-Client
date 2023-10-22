@@ -8,14 +8,14 @@
     background-color:var(--backgroundColor);
     overflow:auto hidden;
 }
-.homescreen>header{
+/* .homescreen>header{
     max-width:100%;
     display:flex;
     justify-content:space-between;
     align-items:center;
     padding:var(--spacingHorizontal);
     background-color:var(--mainColor);
-}
+} */
 .tabnavigaotr{
     max-width:100%;
     flex:1;

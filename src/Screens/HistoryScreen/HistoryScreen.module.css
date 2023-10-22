@@ -3,6 +3,10 @@
     height:100%;
     overflow:hidden auto;
 }
+.historyscreen>header{
+    padding: var(--spacingHorizontal); 
+    background-color:var(--mainColor);
+}
 .container{
     padding:0 var(--spacingHorizontal);
     padding-top:var(--spacingHorizontal);
@@ -10,4 +14,7 @@
 }
 .container>*{
     margin-bottom:4em;
+}
+.action{
+    width:3em;
 }

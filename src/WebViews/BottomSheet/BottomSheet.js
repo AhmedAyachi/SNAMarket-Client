@@ -1,12 +1,15 @@
 import {NativeView} from "vritra";
 import css from "./BottomSheet.module.css";
-import {SettingView,ProductOrderForm,HeaderView} from "components";
+import {SettingView,ProductOrderForm,HeaderView,OrderSheet,LoadingView} from "components";
 import {cross0} from "assets";
+import * as H from "./Hooks";
 
 
 export default function BottomSheet(props){
     const {parent,data}=props,{contentId}=data;
-    const bottomsheet=window.webview=NativeView({parent,className:css.bottomsheet});
+    const bottomsheet=window.webview=NativeView({parent,className:css.bottomsheet}),state={
+        ...statics[contentId],
+    },{component,actions}=state;
 
     bottomsheet.innateHTML=`
         <main class="${css.main}" ref="mainEl"></main>
@@ -16,15 +19,27 @@ export default function BottomSheet(props){
         parent:bottomsheet,
         className:css.header,
         title:data.title||language[contentId],
+        actions:typeof(actions)==="function"?actions(data):actions,
         backIcon:cross0,
     });
-    const component=statics[contentId];
     component&&component({...data,parent:bottomsheet.mainEl});
 
     return bottomsheet;
 }
 
 const statics={
-    settings:SettingView,
-    productorder:ProductOrderForm,
+    order:{
+        component:(props)=>{
+            const loadingview=LoadingView();
+            H.fetchDetailedOrder(props.orderId).then(order=>{
+                console.log("order",order);
+                props.order=order;
+                OrderSheet(props);
+            }).
+            finally(loadingview.unmount);
+        },
+        actions:({orderId})=>[{ref:"complain",orderId}],
+    },
+    settings:{component:SettingView},
+    productorder:{component:ProductOrderForm},
 }

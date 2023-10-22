@@ -1,10 +1,10 @@
 import {View, parseJSON} from "vritra";
 import css from "./HomeHeader.module.css";
-import {cog0} from "assets";
+import {loop0,cog0} from "assets";
 
 
 export default function HomeHeader(props){
-    const {parent,defaultIcon,route}=props;
+    const {parent,defaultIcon,route}=props,{refreshable=true}=route;
     const homeheader=View({parent,tag:"header",className:css.homeheader});
 
     homeheader.innateHTML=`
@@ -13,7 +13,8 @@ export default function HomeHeader(props){
             <text class="${css.title}">${route.title}</text>
         </div>
         <div class="${css.col1}">
-            <img ref="settingbtn" class="${css.settingbtn}" src="${cog0(minorColor)}"/>
+            ${refreshable?`<img ref="refreshbtn" src="${loop0(minorColor)}"/>`:""}
+            <img ref="settingbtn" src="${cog0(minorColor)}"/>
         </div>
     `;
 
@@ -37,6 +38,11 @@ export default function HomeHeader(props){
                 }
             },
         });
+    }
+
+    const {refreshbtn}=homeheader;
+    if(refreshbtn){
+        refreshbtn.onclick=()=>{route.render()};
     }
 
     return homeheader;

@@ -6,6 +6,8 @@ export {default as fail0} from "./Images/Fail_0.png";
 export {default as loginillustration0} from "./Images/LoginIllustration_0.png";
 
 //Svgs:
+export {default as speechballoon0} from "./Svgs/SpeechBalloon_0";
+export {default as loop0} from "./Svgs/Loop_0";
 export {default as appicon0} from "./Svgs/AppIcon_0";
 export {default as pencil0} from "./Svgs/Pencil_0";
 export {default as exit0} from "./Svgs/Exit_0";

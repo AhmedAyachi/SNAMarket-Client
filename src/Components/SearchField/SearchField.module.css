@@ -20,7 +20,6 @@
 .field>input::placeholder{
     color:inherit;
     opacity:0.5;
-    text-transform:capitalize;
 }
 .searchbtn{
     width:7em;

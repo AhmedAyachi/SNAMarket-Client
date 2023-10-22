@@ -1,6 +1,6 @@
 import {View,FlatList,TabNavigator,fadeIn} from "vritra";
 import css from "./HomeScreen.module.css";
-import {ActionSetView,BrandAcd,SearchField,LoadingView,TextBadge} from "components";
+import {BrandAcd,SearchHeader,LoadingView,TextBadge} from "components";
 import {ProductType,User} from "resources";
 import {cart0} from "assets";
 import * as H from "./Hooks";
@@ -15,17 +15,10 @@ export default function HomeScreen(props){
     },{loggedIn}=state;
 
     homescreen.innateHTML=`
-        <header ref="header"></header>
     `;
-    SearchField({
-        parent:homescreen.header,
-        className:css.searchfield,
-        placeholder:language.finditem,
-        noicon:true,
-    });
-    loggedIn&&ActionSetView({
-        parent:homescreen.header,
-        actions:[{
+    SearchHeader({
+        parent:homescreen,
+        actions:loggedIn&&[{
             id:"cart",icon:cart0,
             onReady:({element})=>{state.cartEl=element},
             onTrigger:()=>{

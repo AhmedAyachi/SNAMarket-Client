@@ -1,7 +1,7 @@
 import {View} from "vritra";
 import css from "./FieldList.module.css";
 import RadioField from "./RadioField/RadioField";
-import WeightField from "./WeightField/WeightField";
+import DropListField from "./DropListField/DropListField";
 import {InputField} from "components";
 
 
@@ -17,11 +17,11 @@ export default function FieldList(props){
         const {id,type,label}=field;
         const component=id&&((type&&statics[type])||statics.input);
         field.element=component&&component({
-            ...field,id:undefined,
+            readonly,...field,id:undefined,
             parent:fieldlist,
             type:field.unit||field.type,
             label:label||((label!==false)&&id),
-            value:input[id],readonly,
+            value:input[id],
             onChange:(value)=>{
                 input[id]=value;
                 const {onChange}=field;
@@ -36,7 +36,7 @@ export default function FieldList(props){
 }
 
 const statics={
-    weight:WeightField,
+    droplist:DropListField,
     radio:(props)=>{
         const {options,value,multiple}=props;
         value&&options.forEach(option=>{

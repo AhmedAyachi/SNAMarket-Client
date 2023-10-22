@@ -19,6 +19,9 @@
     align-items:center;
     column-gap:4em;
 }
+.col1>*{
+    width:7em;
+}
 .showbtn{
     width:6em;
 }
@@ -26,7 +29,4 @@
     font-size:5em;
     text-transform:capitalize;
     color:var(--minorColor);
-}
-.settingbtn{
-    width:7em;
 }

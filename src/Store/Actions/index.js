@@ -31,7 +31,7 @@ export const setUser=(data,callback)=>{
         else{cookies.set("userId",data.id)};
         const sessionId=cookies.get("sessionId");
         if(sessionId){data.sessionId=sessionId}
-        else{cookies.set("sessionId",data.id)}
+        else{cookies.set("sessionId",data.sessionId)}
         WebView.setStore("user",new User(data),({user})=>{
             callback&&callback(user);
         });

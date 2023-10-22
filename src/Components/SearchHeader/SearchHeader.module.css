@@ -1,0 +1,12 @@
+.searchheader{
+    max-width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:var(--spacingHorizontal);
+    column-gap:4em;
+    background-color:var(--mainColor);
+}
+.searchheader>*:first-child{
+    flex:1;
+}

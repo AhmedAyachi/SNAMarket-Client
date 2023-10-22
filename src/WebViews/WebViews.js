@@ -1,6 +1,7 @@
 
 
 module.exports=[
+    {name:"FormSite"},
     {name:"ServiceSite"},
     {
         name:"BottomSheet",

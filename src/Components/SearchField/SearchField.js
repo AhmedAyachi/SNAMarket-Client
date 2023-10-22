@@ -1,10 +1,10 @@
-import {View} from "vritra";
+import {View,capitalize} from "vritra";
 import css from "./SearchField.module.css";
 import {magnifier0} from "assets";
 
 
 export default function SearchField(props){
-    const {parent,tintColor=backgroundColor,noicon,onSearch}=props;
+    const {parent,tintColor=backgroundColor,noicon,onChange}=props;
     const searchfield=View({
         parent,style:{color:tintColor},
         className:`${css.searchfield} ${props.className||""}`,
@@ -15,21 +15,21 @@ export default function SearchField(props){
             <input
                 ref="inputEl"
                 type="text"
-                placeholder="${props.placeholder}"
+                placeholder="${capitalize(props.placeholder||language.finditem,1)}"
             />
         </div>
         ${noicon?"":`<img 
-            class="${css.searchbtn} button" 
+            class="button ${css.searchbtn}" 
             ref="searchbtn" 
             src="${magnifier0(tintColor)}"
         />`}
     `;
     const {inputEl,searchbtn}=searchfield;
     if(searchbtn){
-        searchbtn.onclick=()=>{
-            const value=inputEl.value?.trim();
-            onSearch&&onSearch(value);
-        }
+        searchbtn.onclick=onChange&&(()=>onChange(inputEl.value?.trim()));
+    }
+    else{
+        inputEl.onchange=onChange&&(()=>onChange(inputEl.value?.trim()));
     }
 
     searchfield.setValue=(value)=>{

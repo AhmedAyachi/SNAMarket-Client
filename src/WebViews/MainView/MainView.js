@@ -41,8 +41,16 @@ export default async function MainView(props){
 
 const statics={
     routes:[
-        {id:"productcatalog",component:HomeScreen},
-        {id:"thecompany",component:CompanyScreen},
+        {
+            id:"productcatalog",
+            component:HomeScreen,
+            refreshable:false,
+        },
+        {
+            id:"thecompany",
+            component:CompanyScreen,
+            refreshable:false,
+        },
         {
             id:"orders",
             component:(props)=>HistoryScreen({...props,type:"order"}),
