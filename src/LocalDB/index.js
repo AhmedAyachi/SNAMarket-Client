@@ -4,6 +4,11 @@ import {bedylogo0,barakalogo,brimalogo,dymalogo,sianalogo,snalogo} from "./Image
 export {default as language} from "./Language.json";
 const units=["kg","t"];
 
+export const langs=[
+    {id:"en",name:"english"},
+    {id:"fr",name:"français"},
+];
+
 export const users=new Array(3).fill().map((_,i)=>({
     id:"user"+i,
     name:"user "+i,

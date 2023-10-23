@@ -1,5 +1,7 @@
 
 
+export {default as ProductView} from "./ProductView/ProductView";
+export {default as CatalogNavigator} from "./CatalogNavigator/CatalogNavigator";
 export {default as ComplaintForm} from "./ComplaintForm/ComplaintForm";
 export {default as SingupForm} from "./SingupForm/SingupForm";
 export {default as SearchHeader} from "./SearchHeader/SearchHeader";

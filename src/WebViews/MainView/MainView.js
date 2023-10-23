@@ -7,21 +7,21 @@ import * as H from "./Hooks";
 
 
 export default async function MainView(props){
-    const {parent,store}=props,{user}=store;
+    const {parent,store}=props;
     const mainview=window.webview=NativeView({parent,id:"webview",className:css.mainview});
 
     mainview.innateHTML=`
     `;
 
     await fetchLanguage();
-    if(user){
-        const userdata=await H.fetchCurrentUser(user.id);
-        userdata?HomeNavigator({
+    if(store.user){
+        const user=await H.fetchCurrentUser(store.user.id);
+        user?HomeNavigator({
             parent:mainview,
             initialId:"productcatalog",
-            routes:statics.routes.map(route=>({
+            routes:statics.routes.filter(({loginRequired})=>!(loginRequired&&user.isGuest)).map(route=>({
                 ...route,
-                component:({parent})=>route.component({parent,user:userdata}),
+                component:({parent})=>route.component({parent,user}),
             })),
         }):AlertView({
             message:language.sessionexpired,
@@ -54,10 +54,12 @@ const statics={
         {
             id:"orders",
             component:(props)=>HistoryScreen({...props,type:"order"}),
+            loginRequired:true,
         },
         {
             id:"complaints",
             component:(props)=>HistoryScreen({...props,type:"complaint"}),
+            loginRequired:true,
         },
     ],
 }

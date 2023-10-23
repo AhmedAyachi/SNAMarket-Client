@@ -18,7 +18,7 @@ export default function OptionList(props){
         optionEl.onclick=onPick&&(()=>{
             const selectfield=optionlist.parentNode.parentNode;
             selectfield.toggle();
-            onPick(option);
+            onPick({option,element:optionEl});
         });
     });
 

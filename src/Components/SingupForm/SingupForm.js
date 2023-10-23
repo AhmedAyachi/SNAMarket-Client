@@ -1,6 +1,6 @@
 import {} from "vritra";
 import css from "./SingupForm.module.css";
-import {FormView} from "components";
+import {FormView, LoadingView} from "components";
 import * as H from "./Hooks";
 
 
@@ -30,9 +30,15 @@ export default function SingupForm(props){
         ],
         onSubmit:(input)=>{
             input.countryId="tn";
+            const loadingview=LoadingView();
             H.sendSignupRequest(input).then(()=>{
-
-            });
+                Notifier.toast({text:language.registrationsuccessful});
+                WebView.close();
+            }).
+            catch(()=>{
+                Notifier.toast({text:language.registrationfailed});
+            }).
+            finally(loadingview.unmount);
         },
     });
 

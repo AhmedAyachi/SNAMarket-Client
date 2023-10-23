@@ -5,7 +5,7 @@ export default class Product {
         Object.assign(this,{
             id:props.id,
             name:props.name,
-            image:props.image,
+            type:props.type,
             description:props.description,
             granularities:props.granularities,
         });

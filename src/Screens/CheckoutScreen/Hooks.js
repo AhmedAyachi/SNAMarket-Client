@@ -9,7 +9,7 @@ export const sendOrderRequest=(items)=>new Promise(async (resolve)=>{
     }
     else{
         resolve(sendRequest("/graphql",{body:`mutation {
-            placeOrder(items:${Query.parse(items)}){
+            placeOrder(items:${Query.stringify(items)}){
                 id,date,time,
             }
         }`}).

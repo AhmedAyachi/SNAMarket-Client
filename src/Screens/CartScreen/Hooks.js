@@ -14,7 +14,7 @@ export const sendCheckRequest=()=>new Promise(async (resolve)=>{
     else{
         const {cart}=await new Promise(WebView.useStore);
         resolve(sendRequest("/graphql",{body:`{
-            isValidCart(items:${Query.parse(cart.items.map(item=>({
+            isValidCart(items:${Query.stringify(cart.items.map(item=>({
                 ...item,product:undefined,
                 ref:item.product.id,
             })))}){

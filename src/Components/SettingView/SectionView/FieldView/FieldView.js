@@ -15,7 +15,10 @@ export default function FieldView(props){
         </div>
     `;
 
-    fieldview.onclick=onClick;
+    fieldview.onclick=onClick&&((event)=>{
+        event.stopPropagation();
+        onClick(fieldview);
+    });
 
     return fieldview;
 }

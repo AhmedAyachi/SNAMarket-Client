@@ -1,7 +1,6 @@
 import {FlatList} from "vritra";
 import css from "./ProductList.module.css";
-import ItemView from "./ItemView/ItemView";
-import {LoadingView} from "components";
+import {ProductView,LoadingView} from "components";
 import * as H from "./Hooks";
 
 
@@ -10,7 +9,7 @@ export default function ProductList(props){
     const productlist=FlatList({
         parent,className:css.productlist,
         emptymessage:"",
-        renderItem:({parent,item})=>ItemView({parent,product:item,onCartChange}),
+        renderItem:({parent,item})=>ProductView({parent,product:item,onCartChange}),
     });
 
     productlist.beforeEndHTML=`

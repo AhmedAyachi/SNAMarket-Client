@@ -16,9 +16,8 @@ export default (langId=localStorage.getItem("langId"))=>new Promise(async (resol
                 }));
             }
         }).
-        then(async (language)=>{
-            await new Promise(resolve=>{setLanguage(language,resolve)});
-            return language;
-        }));
+        then(async (language)=>new Promise(resolve=>{
+            setLanguage(language,resolve);
+        })));
     }
 });

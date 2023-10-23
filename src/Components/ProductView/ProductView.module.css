@@ -1,6 +1,16 @@
-.itemview{
+.productview{
     max-width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
     padding:2em 4em;
+}
+.info{
+    flex:1;
+}
+.icon{
+    width:6.5em;
+    margin-left:2.5em;
 }
 .name{
     font-size:5em;
@@ -18,7 +28,7 @@
 
 
 @media(hover:none){
-    .itemview:active{
+    .productview:active{
         background-color:rgba(0,0,0,0.05);
     }
 }

@@ -1,7 +1,7 @@
-import {View,FlatList,TabNavigator,fadeIn} from "vritra";
+import {View} from "vritra";
 import css from "./HomeScreen.module.css";
-import {BrandAcd,SearchHeader,LoadingView,TextBadge} from "components";
-import {ProductType,User} from "resources";
+import {CatalogNavigator,SearchHeader,LoadingView,TextBadge} from "components";
+import {User} from "resources";
 import {cart0} from "assets";
 import * as H from "./Hooks";
 
@@ -11,6 +11,7 @@ export default function HomeScreen(props){
     const homescreen=View({parent,tag:"main",className:css.homescreen}),state={
         cartEl:null,
         cartbadgeEl:null,
+        navigator:null,
         loggedIn:user.id!==User.Guest.id,
     },{loggedIn}=state;
 
@@ -32,35 +33,22 @@ export default function HomeScreen(props){
                 }):Notifier.toast({text:language.emptycart});
             },
         }],
+        onSearch:(query)=>{
+            const {navigator}=state;
+            query?H.fetchProducts({query}).then(products=>{
+                console.log(products);
+                navigator.showProducts(products);
+            }):navigator.showProducts();
+        },
     });
     
     const loadingview=LoadingView();
     H.fetchProductTypes().then(producttypes=>{
-        TabNavigator({
+        state.navigator=CatalogNavigator({
             parent:homescreen,
-            className:css.tabnavigaotr,
-            headerClassName:css.tabnavheader,
-            tintColor:mainColor,
-            tabs:producttypes?.map(type=>({
-                id:type.id,
-                //label:language[type.name],
-                icon:ProductType.icon[type.id],
-                renderContent:({parent})=>{
-                    const flatlist=FlatList({
-                        parent,
-                        className:css.flatlist,
-                        containerClassName:css.listcontainer,
-                        data:type.brands,
-                        renderItem:({parent,item})=>BrandAcd({
-                            parent,brand:item,
-                            type:type.id,
-                            onCartChange:loggedIn&&((cart)=>{homescreen.updateCartBadge(cart.items?.length)}),
-                        }),
-                    });
-                    fadeIn(flatlist,500);
-                    return flatlist;
-                },
-            })),
+            className:css.navigator,
+            producttypes,
+            onCartChange:loggedIn&&((cart)=>{homescreen.updateCartBadge(cart.items?.length)}),
         });
         console.log(producttypes);
         loadingview.unmount();

@@ -2,8 +2,8 @@ import {getCookies,User,Person} from "resources";
 
 
 export const setLanguage=(language,callback)=>{
-    localStorage.setItem("langId",language.$id);
-    WebView.setStore("language",language,callback);
+    localStorage.setItem("langId",language._code);
+    WebView.setStore("language",language,callback&&(store=>{callback(store.language)}));
 }
 
 export const setUserProperty=(key,value,callback)=>{

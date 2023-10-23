@@ -8,7 +8,7 @@ export const sendComplaint=(input)=>new Promise(resolve=>{
     }
     else{
         resolve(sendRequest("/graphql",{body:`mutation{
-            fileComplaint(${Query.parse(input).slice(1,-1)}){
+            fileComplaint(${Query.stringify(input).slice(1,-1)}){
                 id,
             }
         }`}).then(({data})=>data.fileComplaint));

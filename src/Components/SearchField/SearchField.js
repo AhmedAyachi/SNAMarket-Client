@@ -1,4 +1,4 @@
-import {View,capitalize} from "vritra";
+import {View,capitalize,useSwipeGesture} from "vritra";
 import css from "./SearchField.module.css";
 import {magnifier0} from "assets";
 
@@ -31,9 +31,19 @@ export default function SearchField(props){
     else{
         inputEl.onchange=onChange&&(()=>onChange(inputEl.value?.trim()));
     }
+    onChange&&useSwipeGesture({
+        element:searchfield,
+        onSwipe:({direction})=>{
+            if(direction==="left"){
+                inputEl.value="";
+                onChange("");
+            };
+        },
+    });
 
-    searchfield.setValue=(value)=>{
+    searchfield.setValue=(value,triggerOnChange=true)=>{
         inputEl.value=value;
+        triggerOnChange&&onChange&&onChange(inputEl.value);
     }
 
     return searchfield;

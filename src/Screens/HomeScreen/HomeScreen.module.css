@@ -8,37 +8,8 @@
     background-color:var(--backgroundColor);
     overflow:auto hidden;
 }
-/* .homescreen>header{
-    max-width:100%;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:var(--spacingHorizontal);
-    background-color:var(--mainColor);
-} */
-.tabnavigaotr{
-    max-width:100%;
+.navigator{
     flex:1;
-    overflow:hidden;
-}
-.searchfield{
-    flex:1;
-    margin-right:5em;
-}
-.tabnavheader{
-    background-color:var(--backgroundColor);
-}
-.flatlist{
-    height:100%;
-}
-.listcontainer{
-    padding:0 var(--spacingHorizontal);
-}
-.listcontainer>*{
-    margin-bottom:2.667em;
-}
-.listcontainer>*:first-child{
-    margin-top:5.333em;
 }
 .cartbadge{
     position:absolute;
