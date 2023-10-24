@@ -23,9 +23,9 @@
     "plugins": {
       "cordova-plugin-ionic-keyboard": {},
       "cordova-plugin-statusbar": {},
-      "vritra-plugin-webview": {},
       "vritra-plugin-notifier": {},
-      "cordova-plugin-device": {}
+      "cordova-plugin-device": {},
+      "vritra-plugin-webview": {}
     },
     "platforms": [
       "browser",

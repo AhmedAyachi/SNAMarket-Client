@@ -21,4 +21,6 @@ export const sendLogoutRequest=()=>new Promise(async (resolve)=>{
         resolve(sendRequest("/logout",{method:"POST"}));
     }
 }).
-then(()=>new Promise(resolve=>{setUser(null,resolve)}));
+then(()=>new Promise(resolve=>{
+    setUser(null,resolve);
+}));

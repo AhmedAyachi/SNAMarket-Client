@@ -2,7 +2,7 @@ import {NativeView,fadeIn} from "vritra";
 import css from "./MainView.module.css";
 import {HistoryScreen,CompanyScreen,HomeScreen,LoginScreen} from "screens";
 import {AlertView,HomeNavigator} from "components";
-import {fetchLanguage} from "resources";
+import {getCookies,fetchLanguage} from "resources";
 import * as H from "./Hooks";
 
 

@@ -1,12 +1,9 @@
 import "./index.css";
-import {fetchLanguage} from "resources";
+import {setLanguage} from "resources";
 
 
-
-async function onDeviceReady(){
-    const language=await fetchLanguage();
-    document.documentElement.setAttribute("lang",language.$id);
-    window.language=Object.freeze(language);
+function onDeviceReady(){
+    setLanguage();
     if(cordova.platformId==="ios"){
         window.addEventListener("touchend",()=>{
             const {activeElement}=document;

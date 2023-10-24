@@ -3,7 +3,7 @@ import css from "./AlertView.module.css";
 
 
 export default function AlertView(props){
-    const {parent=window.webview,message,avoidable}=props;
+    const {parent=window.webview,message,avoidable=false}=props;
     const alertview=PopupView({
         ...props,avoidable,parent,
         className:`${css.alertview} ${props.className}`,
@@ -47,11 +47,6 @@ export default function AlertView(props){
 }
 
 const getDefaultActions=(alertview,{onConfirm})=>[
-    {
-        id:"cancel",
-        label:language.cancel,
-        onTrigger:()=>{alertview.unmount()},
-    },
     {
         id:"confirm",
         label:language.confirm,

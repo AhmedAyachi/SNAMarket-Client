@@ -1,4 +1,5 @@
 import {sendRequest} from "cordova-vritra";
+import {getCookies} from "resources";
 
 
 export default (endpoint,options)=>{
@@ -9,9 +10,14 @@ export default (endpoint,options)=>{
         timeout:isProdEnv?3000:10000,
         headers:{
             ...headers,
+            "Accept":"*/*",
+            "Access-Control-Allow-Origin":"*",
             "Content-Type":"application/json",
         },
-        body:toGraphQL?JSON.stringify({query:body}):body,
+        body:{
+            ...toGraphQL?{query:body}:body,
+            ...getCookies().get(),
+        },
     }).
     then(response=>response.json()).
     then(data=>{
@@ -20,7 +26,7 @@ export default (endpoint,options)=>{
     }).
     catch(error=>{
         if(cordova.platformId==="browser"){console.error(error)}
-        else if(isTestEnv){alert("Error:"+JSON.stringify(error))}
+        else if(isTestEnv){alert("Error:"+JSON.stringify(error.message))}
         else if(isProdEnv){Notifier.toast({text:language.requestfailed})};
         return Promise.reject(error);
     });

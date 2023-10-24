@@ -1,3 +1,4 @@
+import {parseJSON} from "vritra";
 
 
 export {default as Person} from "./Person";
@@ -69,4 +70,16 @@ export const getAdjustedDate=(value,labeled)=>{
         label=`${isday?(day>9?day:`0${day}`):"01"}/${ismonth?(month>9?month:`0${month}`):"01"}/${isyear?year:"1"}`;
     }
     return label;
+}
+
+export const setLanguage=(language)=>{
+    if(!language){language=parseJSON(localStorage.getItem("language"))};
+    if(language){
+        const langId=language._code;
+        document.documentElement.setAttribute("lang",langId);
+        window.language=Object.freeze(language);
+        localStorage.setItem("langId",langId);
+        localStorage.setItem("language",JSON.stringify(language));
+    }
+    return language;
 }

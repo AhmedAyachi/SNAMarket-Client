@@ -12,7 +12,7 @@ export const getCookies=()=>({
                 specs+=";"+key+"="+options[key];
             }
         }
-        document.cookie=`${key}=${value}${specs};max-age=31536000;samesite=strict;Path=/`;
+        document.cookie=`${key}=${value}${specs};max-age=31536000;path=/`;//;samesite=strict
     },
     get:(key)=>{
         if(key){
@@ -35,9 +35,6 @@ export const getCookies=()=>({
         }
     },
     remove:function(key){
-        const value=this.get(key);
-        if(value!=null){
-            document.cookie=`${key}=${value};max-age=0`;
-        }
+        document.cookie=`${key}=;max-age=0;path=/`;
     },
 });

@@ -7,16 +7,18 @@
     <description>SNA Market App</description>
     <author email="aayachi032@gmail.com">Ahmed Ayachi</author>
     <content src="index.html"/>
-    <access origin="file://*"/>
-    <allow-navigation href="file://*"/>
-    <allow-intent href="file://*"/>
+    <access origin="*"/>
+    <allow-navigation href="*"/>
+    <allow-intent href="*"/>
+    <preference name="hostname" value="com.snamarket.app"/>
     <preference name="android-minSdkVersion" value="26"/>
     <!-- <preference name="android-targetSdkVersion" value=""/> -->
     <!-- <preference name="android-maxSdkVersion" value=""/> -->
     <preference name="BackgroundColor" value="#F8F8F9"/>
     <preference name="StatusBarOverlaysWebView" value="false"/>
-    <!-- <icon src=""/> -->
+    
     <platform name="android">
+        <preference name="AndroidInsecureFileModeEnabled" value="true"/>
         <icon background="@color/mainColor" foreground="src/Assets/Icon/Foregound.png" density="xxxhdpi"/>
         <edit-config 
             file="app/src/main/AndroidManifest.xml"
@@ -24,6 +26,9 @@
             mode="merge"
         >
             <activity android:theme="@style/MainActivity"/>
+        </edit-config>
+        <edit-config file="app/src/main/AndroidManifest.xml" target="/manifest/application" mode="merge">
+            <application android:usesCleartextTraffic="true"/>
         </edit-config>
         <resource-file src="src/Assets/Xml/MainActivity.xml" target="/app/src/main/res/values/MainActivity.xml"/>
         <resource-file src="src/Assets/Xml/LaunchScreen_0.xml" target="/app/src/main/res/drawable/launchscreen.xml"/>

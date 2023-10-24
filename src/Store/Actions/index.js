@@ -1,10 +1,10 @@
 import {getCookies,User,Person} from "resources";
 
 
-export const setLanguage=(language,callback)=>{
+/* export const setLanguage=(language,callback)=>{
     localStorage.setItem("langId",language._code);
     WebView.setStore("language",language,callback&&(store=>{callback(store.language)}));
-}
+} */
 
 export const setUserProperty=(key,value,callback)=>{
     new Promise(resolve=>{
@@ -33,6 +33,7 @@ export const setUser=(data,callback)=>{
         if(sessionId){data.sessionId=sessionId}
         else{cookies.set("sessionId",data.sessionId)}
         WebView.setStore("user",new User(data),({user})=>{
+            
             callback&&callback(user);
         });
     }

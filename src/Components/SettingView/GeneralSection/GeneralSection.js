@@ -22,8 +22,7 @@ export default function GeneralSection(props){
                 onPick:({option})=>{
                     const {id}=option;
                     if(state.langId!==id){
-                        localStorage.setItem("langId",id);
-                        WebView.close({reload:true});
+                        WebView.close({reload:true,langId:id});
                     }
                 },
             },

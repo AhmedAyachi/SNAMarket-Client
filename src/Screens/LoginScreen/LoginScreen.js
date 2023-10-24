@@ -1,6 +1,6 @@
 import {View} from "vritra";
 import css from "./LoginScreen.module.css";
-import {InputField,ButtonView} from "components";
+import {AlertView,InputField,ButtonView} from "components";
 import {appicon0,loginillustration0} from "assets";
 import {User} from "resources";
 import {setUser} from "actions";
@@ -43,13 +43,14 @@ export default function LoginScreen(props){
         parent:loginsection,
         label:language.login,
         onClick:()=>{
-            console.log(input);
             H.sendLoginRequest(input).
             then(user=>{
                 location.reload();
             }).
             catch(error=>{
-                console.error(error);
+                AlertView({
+                    message:error.message,
+                });
             });
         },
     });

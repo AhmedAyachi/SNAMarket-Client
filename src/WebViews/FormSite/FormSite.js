@@ -17,7 +17,7 @@ export default function FormSite(props){
         title:data.title||language[data.type],
     });
     component&&component({...data,parent:formsite});
-
+    
     return formsite;
 }
 

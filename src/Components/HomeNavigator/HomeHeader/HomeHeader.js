@@ -26,7 +26,12 @@ export default function HomeHeader(props){
             onClose:({message})=>{
                 const data=message&&parseJSON(message);
                 if(data){
-                    data.reload&&location.reload();
+                    const {langId}=data;
+                    if(langId){
+                        localStorage.setItem("langId",langId);
+                        localStorage.removeItem("language");
+                    }
+                    if(langId||data.reload){location.reload()};
                 }
             },
         });

@@ -16,7 +16,7 @@ export default class Complaint {
 
     static subjects=[
         {id:"product",icon:packages0},
-        {id:"customerService",icon:truck0},
+        {id:"customerservice",icon:truck0},
         {id:"delivery",icon:calendar0},
     ]
 }
