@@ -9,7 +9,11 @@ export default function ProductList(props){
     const productlist=FlatList({
         parent,className:css.productlist,
         emptymessage:"",
-        renderItem:({parent,item})=>ProductView({parent,product:item,onCartChange}),
+        renderItem:({parent,item})=>ProductView({
+            parent,onCartChange,
+            product:item,
+            withicon:false,
+        }),
     });
 
     productlist.beforeEndHTML=`

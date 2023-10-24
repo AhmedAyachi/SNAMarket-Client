@@ -4,11 +4,11 @@ import {ProductType} from "resources";
 
 
 export default function ProductView(props){
-    const {parent,product,onCartChange}=props;
+    const {parent,product,withicon=true,onCartChange}=props;
     const productview=View({
         parent,
         className:`${onCartChange?"button":""} ${css.productview} ${props.className||""}`,
-    }),state={icon:ProductType.icon[product.type]},{icon}=state;
+    }),state={icon:withicon&&ProductType.icon[product.type]},{icon}=state;
 
     productview.innateHTML=`
         <div class="${css.info}">
