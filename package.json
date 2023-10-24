@@ -34,8 +34,8 @@
     ]
   },
   "dependencies": {
-    "cordova-vritra": "file:../../../../Libraries/CordovaVritra",
-    "graphqlutils": "file:../../../../Libraries/GraphQLUtils/graphqlutils-0.0.1.tgz",
-    "vritra": "file:../../../../Libraries/Vritra"
+    "cordova-vritra": "https://github.com/AhmedAyachi/cordova-vritra#dev",
+    "graphqlutils": "https://github.com/AhmedAyachi/GraphQLUtils#dev",
+    "vritra": "https://github.com/AhmedAyachi/Vritra#dev"
   }
 }
