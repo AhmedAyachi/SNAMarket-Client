@@ -1,0 +1,16 @@
+.fieldview{
+    max-width:100%;
+    overflow:hidden;
+    --borderRadius:2em;
+    --border:1px solid var(--accentColor);
+}
+.label{
+    flex:1;
+    font-family:var(--mainFont);
+    font-weight:700;
+    font-size:4.5em;
+    white-space:nowrap;
+    text-transform:capitalize;
+    color:var(--textColor);
+    overflow-x:auto;
+}

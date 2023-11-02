@@ -1,0 +1,12 @@
+.itemview{
+    max-width:100%;
+    display:block;
+    font-size:1em;
+    padding:2em;
+    margin:1em 0;
+    border-radius:1em;
+    background-color:var(--minorColor);
+}
+.label{
+    font-size:4em;
+}

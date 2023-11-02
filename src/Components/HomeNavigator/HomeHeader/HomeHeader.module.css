@@ -1,0 +1,32 @@
+.homeheader{
+    max-width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:var(--spacingHorizontal);
+    background-color:var(--mainColor);
+}
+.col0{
+    flex:1 1 0;
+    display:flex;
+    justify-content:flex-start;
+    align-items:center;
+    column-gap:4em;
+}
+.col1{
+    display:flex;
+    justify-content:flex-end;
+    align-items:center;
+    column-gap:4em;
+}
+.col1>*{
+    width:7em;
+}
+.showbtn{
+    width:6em;
+}
+.title{
+    font-size:5em;
+    text-transform:capitalize;
+    color:var(--minorColor);
+}

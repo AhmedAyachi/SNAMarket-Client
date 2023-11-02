@@ -1,0 +1,33 @@
+.orderitemview{
+    max-width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:3em 0;
+    border-top:0.15em solid var(--accentColor);
+}
+.orderitemview:first-of-type{
+    padding-top:0;
+    border-top:none;
+}
+.name{
+    font-family:var(--mainFont);
+    font-weight:700;
+    font-size:5em;
+    text-transform:capitalize;
+    color:var(--textColor);
+}
+.sideinfo{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:flex-end;
+    row-gap:2em;
+}
+.sideinfo>*{
+    font-family:var(--mainFont);
+    font-weight:400;
+    font-size:4em;
+    text-transform:capitalize;
+    color:var(--mainColor);
+}

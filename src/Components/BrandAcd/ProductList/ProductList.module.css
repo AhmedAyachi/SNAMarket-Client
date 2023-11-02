@@ -1,0 +1,13 @@
+.productlist{
+    position:relative;
+    max-width:100%;
+    height:50em;max-height:100em;
+    background-color:white;
+    transition:100ms;
+}
+.productlist>*:last-child{
+    margin-bottom:1em;
+}
+.loadingview{
+    background-color:inherit !important;
+}

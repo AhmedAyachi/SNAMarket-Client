@@ -1,0 +1,10 @@
+.switchfield{
+    max-width:100%;
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+    align-items:center;
+}
+.switch{
+    margin-left:2em;
+}

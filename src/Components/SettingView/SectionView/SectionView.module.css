@@ -1,0 +1,28 @@
+.sectionview{
+    max-width:100%;
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-start;
+    align-items:stretch;
+    row-gap:3em;
+    border-top:0.1em solid var(--mainColor);
+    --paddingHorizontal:4em;
+    --paddingVertical:2em;
+    --borderRadius:2em;
+}
+.sectionview:first-of-type{
+    border-top:none;
+}
+.header{
+    display:flex;
+    justify-content:flex-start;
+    align-items:center;
+    margin-bottom:1em;
+}
+.title{
+    font-family:var(--mainFont);
+    font-weight:700;
+    font-size:6em;
+    text-transform:capitalize;
+    color:var(--mainColor);
+}

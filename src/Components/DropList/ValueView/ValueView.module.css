@@ -1,0 +1,25 @@
+.valueview{
+    max-width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+.valueview>img{
+    width:5em;
+    margin-left:2em;
+}
+.wrapper{
+    flex:1;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+.label{
+    width:100%;
+    font-size:5em;
+    text-align:inherit;
+}
+.icon{
+    width:5em;
+    margin-left:3em;
+}

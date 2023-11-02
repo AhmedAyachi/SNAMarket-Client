@@ -1,0 +1,37 @@
+.confirmationview{
+    position:absolute;
+    max-width:100%;
+    height:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0 3em;
+    column-gap:2.5em;
+    inset:0;margin:auto;
+    border-radius:2em;
+    backdrop-filter:blur(10em);
+    background-color:rgba(0,0,0,0.05);
+}
+.message{
+    font-size:5em;
+    color:var(--textColor);
+}
+.message::first-letter{
+    text-transform:uppercase;
+}
+.actions{
+    display:flex;
+    justify-content:flex-end;
+    align-items:center;
+    column-gap:6em;
+}
+.actions>*{
+    width:7em;
+}
+
+@media(min-width:15cm){
+    .confirmationview{
+        justify-content:center;
+        column-gap:10em;
+    }
+}

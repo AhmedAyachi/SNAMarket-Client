@@ -1,0 +1,20 @@
+.generalsection{
+    max-width:100%;
+}
+.logoutbtn{
+    font-size:5em;
+    color:var(--majorColor);
+    width:fit-content;
+    display:flex;
+    justify-content:flex-start;
+    align-items:center;
+    border-radius:0.33em;
+    background-color:transparent;
+}
+.logoutbtn>img{
+    margin-right:0.5em;
+}
+.logoutbtn>label{
+    flex:1;
+    text-align:left;
+}

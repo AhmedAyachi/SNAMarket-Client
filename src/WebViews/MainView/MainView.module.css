@@ -1,9 +1,3 @@
 .mainview{
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    background-color:var(--backgroundColor);
-}
-.mainview>p{
-    font-size:3em;
+    max-width:100%;
 }

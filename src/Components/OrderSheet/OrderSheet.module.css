@@ -1,0 +1,22 @@
+.ordersheet{
+    max-width:100%;
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-start;
+    align-items:stretch;
+}
+.items{
+    max-width:100%;
+    flex:1;
+}
+.amount{
+    max-width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-top:5em;
+}
+.amount>*{
+    font-size:6em;
+    text-transform:uppercase;
+}

@@ -1,0 +1,10 @@
+.fieldlist{
+    max-width:100%;
+    flex:1;
+}
+.fieldlist>*{
+    margin-top:3.733em;
+}
+.fieldlist>*:first-child{
+    margin-top:0;
+}

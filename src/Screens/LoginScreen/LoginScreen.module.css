@@ -1,0 +1,77 @@
+.loginscreen{
+    position:relative;
+    width:100%;
+    height:100%;
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-start;
+    align-items:stretch;
+    background-color:var(--mainColor);
+    overflow:hidden auto;
+}
+.row0{
+    max-width:100%;
+    flex:1 1 0;
+    background-position:right bottom;
+    background-repeat:no-repeat;
+    background-size:cover;
+}
+.row1{
+    max-width:100%;
+    flex:1 1 0;
+    min-height:85em;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    align-items:stretch;
+    padding:8em;
+    background-color:var(--backgroundColor);
+}
+.greeting{
+    position:relative;
+    left:10em;
+    top:10em;
+}
+.appicon{
+    width:10em;
+    margin-bottom:5em;
+}
+.welomemsg{
+    max-width:50%;
+    font-family:var(--mainFont);
+    font-size:6.5em;
+    letter-spacing:0.05em;
+    line-height:1.5em;
+    color:var(--minorColor);
+}
+.welomemsg::first-letter{
+    text-transform:uppercase;
+}
+.loginsection{
+    max-width:100%;
+}
+.loginsection>*{
+    width:100%;
+    margin-top:6em;
+}
+.loginsection>*:first-child{
+    margin-top:0;
+}
+.other{
+    max-width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+.other>span{
+    font-size:5em;
+    text-transform:capitalize;
+    color:var(--mainColor);
+}
+
+
+@media(min-width:12cm){
+    .row0{
+        background-size:20%;
+    }
+}

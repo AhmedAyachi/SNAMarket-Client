@@ -1,0 +1,49 @@
+.companyscreen{
+    max-width:100%;
+    height:100%;
+    overflow:hidden auto;
+}
+.info{
+    position:absolute;
+    width:100%;
+    height:fit-content;
+    left:0;
+    bottom:0;
+    border-top-left-radius:2em;
+    border-top-right-radius:2em;
+    background-color:rgba(0,0,0,0.5);
+    filter:drop-shadow(0px 2px 7px rgba(0,0,0,0.08));
+    transition:var(--transition);
+    z-index:2;
+    --transition:300ms;
+    --spacingVertical:5.333em;
+}
+.info>ul{
+    max-width:100%;
+    padding:0 var(--spacingVertical);
+    list-style:inside none;
+}
+.info>ul>li{
+    font-size:5em;
+    line-height:1.5em;
+    margin-bottom:0.5em;
+    color:var(--backgroundColor);
+}
+.header{
+    max-width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:var(--spacingVertical);
+}
+.header>img{
+    width:8em;
+    transition:var(--transition);
+}
+.title{
+    font-size:6.5em;
+    color:var(--backgroundColor);
+}
+.key{
+    text-transform:capitalize;
+}

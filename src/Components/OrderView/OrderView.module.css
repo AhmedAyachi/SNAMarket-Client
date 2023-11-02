@@ -1,0 +1,44 @@
+.orderview{
+    max-width:100%;
+    padding:4em;
+    border-radius:0.5em;
+    background-color:var(--backgroundColor);
+    box-shadow:0px 1px 7px rgba(0,0,0,0.1);
+}
+.title{
+    font-family:var(--mainFont);
+    font-weight:600;
+    font-size:4em;
+    letter-spacing:0.1em;
+    text-transform:capitalize;
+    text-align:left;
+    color:var(--textColor);
+}
+.info{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-top:3em;
+}
+.datetime{
+    font-family:var(--mainFont);
+    font-weight:500;
+    font-size:3.5em;
+    text-transform:capitalize;
+    color:var(--accentColor);
+}
+.status{
+    display:flex;
+    justify-content:flex-start;
+    align-items:center;
+}
+.status>span{
+    font-family:var(--mainFont);
+    font-weight:700;
+    font-size:3em;
+    text-transform:capitalize;
+}
+.status>img{
+    width:4em;
+    margin-left:1em;
+}

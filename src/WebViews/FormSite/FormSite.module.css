@@ -1,0 +1,19 @@
+.formsite{
+    max-width:100%;
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-start;
+    align-items:stretch;
+    overflow:hidden auto;
+    --paddingHorizontal:5.333em;
+}
+.formsite>*:last-child{
+    max-width:100%;
+    flex:1 1 0;
+    padding:0 var(--paddingHorizontal);
+    padding-bottom:var(--paddingHorizontal);
+}
+.header{
+    max-width:100%;
+    --paddingHorizontal:inherit !important;
+}

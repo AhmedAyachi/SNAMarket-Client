@@ -1,0 +1,29 @@
+.headerview{
+    position:relative;
+    max-width:100%;
+    padding:10em 0;
+    padding-left:var(--paddingHorizontal);
+    padding-right:var(--paddingHorizontal);
+    --paddingHorizontal:5.333em;
+}
+.backbtn{
+    position:absolute;
+    width:6.333em;
+    top:0;bottom:0;margin:auto 0;
+    left:var(--paddingHorizontal);
+    transform:rotateZ(90deg) translateY(1em);
+}
+.title{
+    max-width:100%;
+    font-family:var(--mainFont);
+    font-weight:700;
+    font-size:4em;
+    text-transform:uppercase;
+    text-align:center;
+    letter-spacing:0.2em;
+}
+.actions{
+    position:absolute;
+    top:0;bottom:0;margin:auto 0;
+    right:var(--paddingHorizontal);
+}

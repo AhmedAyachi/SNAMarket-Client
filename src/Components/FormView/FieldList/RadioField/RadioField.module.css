@@ -1,0 +1,39 @@
+.radiofield{
+    max-width:100%;
+    text-transform:capitalize;
+}
+.options{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    overflow:auto hidden;
+}
+.option{
+    flex:1;
+    font-size:1em !important;
+    padding:3.2em;
+    margin:1.733em;
+    border-radius:var(--borderRadius);
+    background-color:transparent;
+    border:var(--border) !important;
+}
+.option:first-child{
+    margin-left:0;
+}
+.option:last-child{
+    margin-right:0;
+}
+.option>label{
+    font-family:var(--mainFont);
+    font-weight:400;
+    font-size:3.733em;
+    white-space:nowrap;
+    text-align:center;
+    text-transform:inherit;
+    color:var(--color);
+}
+.option[active]{
+    color:white;
+    background-color:var(--mainColor);
+    border-color:transparent;
+}

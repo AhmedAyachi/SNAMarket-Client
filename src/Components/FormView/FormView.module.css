@@ -1,0 +1,12 @@
+.formview{
+    max-width:100%;
+    height:fit-content;
+    display:flex;
+    overflow:visible;
+}
+.submitbtn{
+    max-width:100%;
+    padding:3.2em 4em !important;
+    margin-top:5.6em;
+    flex-shrink:0;
+}
