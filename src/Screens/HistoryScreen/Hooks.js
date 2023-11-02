@@ -7,7 +7,13 @@ export const fetchComplaints=(options)=>{
     const properties="id,date,time,subject,body";
     return new Promise(resolve=>{
         if(isDevEnv){
-            setTimeout(()=>{resolve(localdb.complaints)},300);
+            setTimeout(()=>{
+                resolve(query?localdb.complaints:{
+                    pageindex:0,
+                    pagecount:1,
+                    items:localdb.complaints,
+                });
+            },300);
         }
         else{
             resolve(sendRequest("/graphql",{body:`{
@@ -31,7 +37,13 @@ export const fetchOrders=(options)=>{
     const properties="id,date,time,status";
     return new Promise(resolve=>{
         if(isDevEnv){
-            setTimeout(()=>{resolve(localdb.orders)},300);
+            setTimeout(()=>{
+                resolve(query?localdb.orders:{
+                    pageindex:0,
+                    pagecount:1,
+                    items:localdb.orders,
+                });
+            },300);
         }
         else{
             resolve(sendRequest("/graphql",{body:`{
