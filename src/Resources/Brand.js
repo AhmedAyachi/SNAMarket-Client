@@ -5,7 +5,7 @@ export default class Brand {
         Object.assign(this,{
             id:props.id,
             name:props.name||props.id,
-            logo:IP_ADDRESS+"/public/"+props.logo,
+            logo:(isDevEnv?"":IP_ADDRESS+"/public/")+props.logo,
         });
     }
 }

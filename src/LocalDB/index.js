@@ -25,7 +25,7 @@ export const producttypes=["ruminants","poultry","rabbit"].map(id=>({
 export const brands=[
     {id:"dyma",logo:dymalogo},
     {id:"baraka",logo:barakalogo},
-    {id:"brima",logo:brimalogo,},
+    {id:"brima",logo:brimalogo},
     {id:"siana",logo:sianalogo},
     {id:"sna",logo:snalogo},
     {id:"bedy",logo:bedylogo0},
@@ -76,7 +76,7 @@ export const orders=new Array(5).fill().map((_,i)=>({
 
 export const complaints=new Array(5).fill().map((_,i)=>({
     id:"complaint"+i,
-    subject:["product","customerService","delivery"][i%3],
+    subject:["product","customerservice","delivery"][i%3],
     date:"10/7/2022",
     time:"9:18",
     body:"Donec vulputate nunc libero, id dignissim tellus fermentum quis. Vestibulum viverra ac leo no",

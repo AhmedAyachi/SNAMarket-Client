@@ -1,6 +1,6 @@
 import {NativeView,parseJSON} from "vritra";
 import css from "./ServiceSite.module.css";
-import {SignupScreen,CheckoutScreen,CartScreen} from "screens";
+import {CheckoutScreen,CartScreen} from "screens";
 
 
 export default function ServiceSite(props){
@@ -23,7 +23,6 @@ export default function ServiceSite(props){
 }
 
 const statics={
-    signup:SignupScreen,
     checkout:CheckoutScreen,
     cart:CartScreen,
 }

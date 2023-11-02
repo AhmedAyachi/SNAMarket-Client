@@ -1,14 +1,13 @@
 import {sendRequest} from "resources";
 import {Query} from "graphqlutils";
+import * as localdb from "localdb";
 
 
 export const sendCheckRequest=()=>new Promise(async (resolve)=>{
     if(isDevEnv){
         setTimeout(()=>{
             const order=localdb.orders[0];
-            delete order.id;
-            delete order.amount;
-            resolve(order);
+            resolve(order.items);
         },500);
     }
     else{
