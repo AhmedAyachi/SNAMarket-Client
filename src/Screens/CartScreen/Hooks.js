@@ -1,5 +1,5 @@
 import {sendRequest} from "resources";
-import {Query} from "graphqlutils";
+import {Query} from "qlboost";
 import * as localdb from "localdb";
 
 

@@ -14,26 +14,33 @@ export default async function MainView(props){
     `;
 
     await fetchLanguage();
-    if(store.user){
-        const user=await H.fetchCurrentUser(store.user.id);
-        user?HomeNavigator({
-            parent:mainview,
-            initialId:"productcatalog",
-            routes:statics.routes.filter(({loginRequired})=>!(loginRequired&&user.isGuest)).map(route=>({
-                ...route,
-                component:({parent})=>route.component({parent,user}),
-            })),
-        }):AlertView({
-            message:language.sessionexpired,
-            actions:[{
-                id:"confirm",
-                label:language.confirm,
-                onTrigger:()=>{location.reload()},
-            }],
-        });
+    try{
+        let {user}=store;
+        if(user){
+            user=await H.fetchCurrentUser(user.id);
+            HomeNavigator({
+                parent:mainview,
+                initialId:"productcatalog",
+                routes:statics.routes.filter(({loginRequired})=>!(loginRequired&&user.isGuest)).map(route=>({
+                    ...route,
+                    component:({parent})=>route.component({parent,user}),
+                })),
+            })
+        }
+        else{
+            throw new Error();
+        }
     }
-    else{
-        fadeIn(LoginScreen({parent:mainview}),550);
+    catch(error){
+        new Promise(resolve=>{
+            error?.message?AlertView({
+                message:language.sessionexpired,
+                onConfirm:resolve,
+            }):resolve();
+        }).
+        then(()=>{
+            fadeIn(LoginScreen({parent:mainview}),550);
+        });
     }
     
     return mainview;

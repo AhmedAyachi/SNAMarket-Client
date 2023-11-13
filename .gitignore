@@ -5,3 +5,4 @@ plugins
 platforms
 www
 typings
+*.tgz

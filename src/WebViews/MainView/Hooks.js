@@ -24,9 +24,6 @@ then(async (data)=>{
 }).
 catch(error=>{
     const {expiredSession}=error;
-    if(expiredSession){
-        setUser(null);
-        return null;
-    }
-    else return Promise.reject(expiredSession);
+    if(expiredSession){setUser(null)};
+    return Promise.reject(error);
 });

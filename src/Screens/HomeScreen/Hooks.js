@@ -1,6 +1,6 @@
 import {Product,ProductType,sendRequest} from "resources";
 import * as localdb from "localdb";
-import {Query} from "graphqlutils";
+import {Query} from "qlboost";
 
 
 export const fetchProducts=({query})=>new Promise(resolve=>{
