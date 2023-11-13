@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "cordova-vritra": "^1.0.0",
-    "graphqlutils": "file:graphqlutils-0.0.1.tgz",
+    "qlboost": "^1.0.1",
     "vritra": "^1.0.0"
   },
   "devDependencies": {
@@ -22,7 +22,8 @@
     "cordova-plugin-statusbar": "^3.0.0",
     "vritra-plugin-notifier": "^1.0.0",
     "vritra-plugin-webview": "^1.0.0",
-    "vritra-scripts": "^1.0.0"
+    "vritra-scripts": "^1.0.0",
+    "webpack": "^5.89.0"
   },
   "cordova": {
     "plugins": {

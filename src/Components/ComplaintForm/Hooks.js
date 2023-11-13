@@ -1,4 +1,4 @@
-import {Query} from "graphqlutils";
+import {Query} from "qlboost";
 import {ComplaintSubject,sendRequest} from "resources";
 
 
