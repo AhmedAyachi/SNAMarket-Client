@@ -11,7 +11,7 @@
   "dependencies": {
     "cordova-vritra": "^1.0.0",
     "qlboost": "^1.0.1",
-    "vritra": "^1.0.0"
+    "vritra": "^1.0.1"
   },
   "devDependencies": {
     "cordova-android": "^10.1.2",
@@ -22,7 +22,7 @@
     "cordova-plugin-statusbar": "^3.0.0",
     "vritra-plugin-notifier": "^1.0.0",
     "vritra-plugin-webview": "^1.0.0",
-    "vritra-scripts": "^1.1.0"
+    "vritra-scripts": "^1.1.1"
   },
   "cordova": {
     "plugins": {
