@@ -14,14 +14,12 @@
     "vritra": "^1.0.0"
   },
   "devDependencies": {
-    "cordova-android": "^10.1.2",
     "cordova-browser": "^7.0.0",
-    "cordova-ios": "^7.0.1",
     "cordova-plugin-device": "^2.1.0",
     "cordova-plugin-ionic-keyboard": "^2.2.0",
     "cordova-plugin-statusbar": "^3.0.0",
     "vritra-plugin-notifier": "^1.0.0",
-    "vritra-plugin-webview": "^1.0.0",
+    "vritra-plugin-webview": "^1.0.1",
     "vritra-scripts": "^1.1.0"
   },
   "cordova": {
@@ -33,9 +31,7 @@
       "vritra-plugin-webview": {}
     },
     "platforms": [
-      "browser",
-      "ios",
-      "android"
+      "browser"
     ]
   }
 }
