@@ -24,17 +24,17 @@ pipeline {
                 }
             }
         }
-        /* stage("SonarQube Analysis"){
+        stage("SonarQube Analysis"){
             steps {
                 sh """
                     /opt/homebrew/bin/sonar-scanner \
-                        -Dsonar.projectKey=SNAMarket-client \
+                        -Dsonar.projectKey=SNAMarket-Client \
                         -Dsonar.sources=. \
                         -Dsonar.host.url=http://localhost:9000 \
                         -Dsonar.token=sqp_390b1679656e0a48a6ee6aa9a591d09287533dd8
                 """
             }
-        } */
+        }
         stage("Update Docker Image"){
             steps {
                 sh """
