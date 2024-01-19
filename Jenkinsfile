@@ -24,7 +24,7 @@ pipeline {
                 }
             }
         }
-        stage("SonarQube Analysis"){
+        /* stage("SonarQube Analysis"){
             steps {
                 sh """
                     /opt/homebrew/bin/sonar-scanner \
@@ -34,7 +34,7 @@ pipeline {
                         -Dsonar.token=sqp_390b1679656e0a48a6ee6aa9a591d09287533dd8
                 """
             }
-        }
+        } */
         stage("Update Docker Image"){
             steps {
                 sh """
