@@ -10,4 +10,4 @@ run mkdir /home/app/www
 
 
 #Prepare Container
-cmd cd /home/app && npm i && cordova platform add browser@7 && npm start
+cmd cd /home/app && npm i && cordova platform add browser@7 && npm start -- -t
