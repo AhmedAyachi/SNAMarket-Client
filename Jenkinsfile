@@ -31,7 +31,7 @@ pipeline {
                         -Dsonar.projectKey=SNAMarket-Client \
                         -Dsonar.sources=. \
                         -Dsonar.host.url=http://localhost:9000 \
-                        -Dsonar.token=sqp_390b1679656e0a48a6ee6aa9a591d09287533dd8
+                        -Dsonar.token=$SONAR_TOKEN
                 """
             }
         }
